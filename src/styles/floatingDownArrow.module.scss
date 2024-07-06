@@ -1,0 +1,105 @@
+
+@keyframes animated-mouse {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(6px);
+		-ms-transform: translateY(6px);
+		transform: translateY(6px);
+	}
+}
+@keyframes mouse-scroll {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: .5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes mouse-scroll {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+#mouse_scroll {
+	display: block;
+	position: fixed;
+	margin: auto;
+	left: 50%;
+	top: 95%;
+	-webkit-transform: translate(-50%, -95%);
+	z-index: 9999;
+	span {
+		display: block;
+		width: 5px;
+		height: 5px;
+		-ms-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+		transform: rotate(45deg);
+		border-right: 2px solid #fff;
+		border-bottom: 2px solid #fff;
+		margin: 0 0 3px 5px;
+	}
+	.mouse {
+		height: 21px;
+		width: 14px;
+		border-radius: 10px;
+		-webkit-transform: none;
+		-ms-transform: none;
+		transform: none;
+		border: 2px solid #ffffff;
+		top: 170px;
+	}
+	.down_arrow_1 {
+		margin-top: 6px;
+		-webkit-animation: mouse-scroll 1s infinite;
+		-moz-animation: mouse-scroll 1s infinite;
+	}
+	.down_arrow_2 {
+		-webkit-animation: mouse-scroll 1s infinite;
+		-moz-animation: mouse-scroll 1s infinite;
+		-webkit-animation-delay: .2s;
+		-moz-animation-delay: .2s;
+		-webkit-animation-direction: alternate;
+	}
+	.down_arrow_3 {
+		-webkit-animation: mouse-scroll 1s infinite;
+		-moz-animation: mouse-scroll 1s infinite;
+		-webkit-animation-delay: .3s;
+		-moz-animation-dekay: .3s;
+		-webkit-animation-direction: alternate;
+	}
+	.mouse_in {
+		height: 5px;
+		width: 2px;
+		display: block;
+		margin: 5px auto;
+		background: #ffffff;
+		position: relative;
+		-webkit-animation: animated-mouse 1.2s ease infinite;
+		moz-animation: mouse-animated 1.2s ease infinite;
+	}
+}
+#mouse_scroll {
+	.down_arrow_1 {
+		-webkit-animation-delay: .1s;
+		-moz-animation-delay: .1s;
+		-webkit-animation-direction: alternate;
+	}
+}

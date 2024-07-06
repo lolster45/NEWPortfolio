@@ -1,0 +1,81 @@
+
+
+
+.scroller {
+    width: 60%;
+    overflow: hidden;
+
+    -webkit-mask: linear-gradient(
+        90deg, 
+        transparent, 
+        white 20%, 
+        white 80% ,
+        transparent
+    );
+    mask: linear-gradient(
+        90deg, 
+        transparent, 
+        white 20%, 
+        white 80%, 
+        transparent
+    );
+
+
+    //background-color: red;
+    margin-bottom: 150px;
+
+    //border: 3px solid lime;
+
+    .scroller_inner {
+
+        display: flex;
+        flex-wrap: nowrap;
+        width: fit-content;
+
+        animation: scroll 25s linear infinite;
+
+        gap: 2rem;
+        padding-block: 1rem;
+        list-style: none;
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 40px;
+            width: 115px;
+            font-size: 0.9rem;
+            color: white;
+           // background-color: gray;
+
+            
+            img {
+                width: 25px;
+                aspect-ratio: 1 / 1;
+            }
+
+            &.test {
+                background-color: red;
+            }
+        }
+
+
+        
+
+    }
+
+}
+
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 1rem));
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .scroller {
+        max-width: 700px;
+
+    }
+}

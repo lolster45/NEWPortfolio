@@ -1,0 +1,420 @@
+#about_me_page {
+    position: relative;
+    padding-top: 10rem;
+    padding-bottom: 4rem;
+    min-height: 100vh;
+    height: fit-content;
+    color: var(--dark-blue);
+    font-family: var(--main-font);
+    background: linear-gradient(to bottom, #120e1e, #271950);
+    #main {
+        position: relative;
+        height: fit-content;
+        width: 100%;
+        margin: 0 auto;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-40px);
+        transition: 
+            visibility 1s cubic-bezier(0.25, 0.1, 0, 1.31), 
+            opacity 1s cubic-bezier(0.25, 0.1, 0, 1.31), 
+            transform 1s cubic-bezier(0.25, 0.1, 0, 1.31);
+        >h1 {
+            width: 85%;
+            margin: 0 auto;
+            font-size: 2.8rem;
+            margin-bottom: 130px;
+            color: white;
+            text-shadow: rgba(70,17,119,0.9) 0px 0px 21px;
+            text-align: center;
+        }
+        > div {
+            height: auto;
+            width: 100%;
+            >nav {
+                width: 85%;
+                margin: 0 auto;
+                font-size: 1.3rem;
+                margin-bottom: 40px;   
+                span {
+                    position: relative;
+                    cursor: pointer;
+                    font-weight: 500;
+                    margin-right: 70px;
+                    font-size: 1.3rem;
+                    color: var(--text-color);
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        height: 2px;
+                        width: 0%;
+                        left: 0;
+                        bottom: -10px;
+                        background-color: var(--background-color-rainbow);
+                        background-image: var(--gradient);
+                        transition: 0.2s;
+                    }
+                    &.active::after {
+                        color: red;
+                        width: 100%;
+                    }
+                }  
+            }
+
+            .carousel_section {
+                height: auto;
+                width: 100%;
+
+                #about_me {
+                    position: relative;
+                    display: flex !important;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    row-gap: 80px;
+    
+                    //background-color: blue;
+                    #left_side_aboutMe {
+                        position: relative;
+                        width: 50%;
+    
+                        p {
+                           font-size: 0.9rem;
+                           line-height: 28px;
+                           color: white;
+                           text-shadow: rgba(70,17,119,0.9) 0px 0px 21px;
+                        }
+    
+                        >div {
+                            position: relative;
+                            flex-wrap: wrap;
+                            display: flex;
+                            height: fit-content;
+                            width: 100%;
+                            margin-top: 70px;
+                            //background-color: green;
+                            span {
+                                margin-bottom: 30px;
+                                width: 50%;
+                                h3 {
+                                    color: var(--pink);
+                                    margin-bottom: 10px;
+                                    text-shadow: 0 0 10px rgb(118, 17, 180);
+    
+                                }
+                                span {
+                                    font-size: 0.8rem;
+                                    padding-left: 5px;
+                                    color: var(--text-color);
+                                    text-shadow: rgba(70,17,119,0.9) 0px 0px 21px;
+                                }
+                            }
+                        }
+                    }
+                    //The right side housing my profile picture...
+                    #about_me_image {
+                        position: relative !important;
+                        width: 30% !important;
+                        position: relative;
+                        display: flex;
+    
+                        img {
+                            //width: 400px !important;
+                            width: 100% !important;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+                #skills_page {
+                    display: flex !important;
+                    flex-direction: column;
+                    position: relative;
+                    max-width: 85%;
+                    margin: 0 auto;
+    
+                    div {
+                        width: 86%;
+                        margin: 0 auto;
+                    }
+    
+    
+                    > p {
+                        width: 73%;
+                        margin-bottom: 80px;
+                        font-size: 1rem;
+                        line-height: 25px;
+                        color: white;
+                        text-shadow: rgba(70,17,119,0.9) 0px 0px 21px;
+                    }
+                    #list_of_skills {
+                        position: relative;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        list-style-type: none;
+                        width: 80%;
+                        //background-color: purple;
+    
+                        li {
+                            &::before {
+                                content: "";
+                                display: inline-flex;
+                                width: 15px;
+                                height: 15px;
+                                border: 2px solid var(--pink);
+                                border-radius: 50%;
+                                margin-right: 10px; /* Adjust margin-right */
+                            }
+                            padding-right: 1.75rem;
+                            padding-bottom: 3.5rem;
+                            width: 50%;
+                            
+    
+                           // text-shadow: 0 0 10px rgb(118, 17, 180);
+    
+                            //background-color: blue;
+                            
+                            h3 {
+                                display: inline-block;
+                                margin: 0;
+                                padding-bottom: 4px;
+                                font-size: 1.4rem;
+                                position: relative;
+                                color: var(--text-color);
+                                
+                            }
+                            p {
+                                display: block;
+                                font-size: 0.9rem;
+                                margin-left: 40px;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+                #experience_page {
+                    display: flex !important;
+                    flex-direction: column;
+                    position: relative;
+                    max-width: 85%;
+                    margin: 0 auto;
+                    > p {
+                        font-size: 1rem;
+                        line-height: 30px;
+                        margin-bottom: 80px;
+                        color: white;
+                        text-shadow: rgba(70,17,119,0.9) 0px 0px 21px;
+                    }
+                    ul {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        list-style-type: none;
+                        width: 80%;
+                        li {
+                            &::before {
+                                content: "";
+                                display: inline-flex;
+                                width: 15px;
+                                height: 15px;
+                                border: 2px solid var(--pink);
+                                border-radius: 50%;
+                                margin-right: 10px; /* Adjust margin-right */
+                            }
+                            padding-right: 1.75rem;
+                            padding-bottom: 3.5rem;
+                            width: 100%; 
+                            h3 {
+                                display: inline-block;
+                                margin: 0;
+                                padding-bottom: 4px;
+                                font-size: 1.4rem;
+                                position: relative;
+                                color: var(--text-color);;
+                            }
+                            > p {
+                                margin-top: 10px;
+                                padding-left: 40px;
+                                color: white;
+                            }
+                            .types {
+                                font-size: 0.9rem;
+                                color: var(--pink);
+                            }
+                            div {
+                                color: white;
+                                margin-top: 20px;
+                                padding-left: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+         
+                            
+            
+        }
+        &.active {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1500px) {
+    #about_me_page {
+        #main {
+            max-width: 1600px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    #about_me_page {
+        #main {
+           
+            h1 {
+                width: 90%;
+            }
+            > div {
+                >nav {            
+                    width: 90%;
+                    span {
+                        font-size: 1.1rem;
+                    }
+                }
+                .carousel_section {
+                    min-height: 890px;
+                    #about_me {
+                        flex-direction: column;
+                        #left_side_aboutMe {
+                            height: 75%;
+                            width: 90%;
+                            margin: 0 auto;
+                        }
+                        #about_me_image {
+                            height: 350px;
+                            width: 90% !important;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #about_me_page {
+        padding-top: 7rem;
+        #main {
+            h1 {
+                width: 90%;
+            }
+            > div {
+                >nav {
+                    
+                    width: 90%;
+                    span {
+                        font-size: 1.1rem;
+                    }
+                }
+                .carousel_section {
+                    #about_me {
+                        width: 90% !important;
+                        margin: 0 auto; 
+                        // height: 800px;
+                        #left_side_aboutMe {
+                            width: 100%;
+                            margin: 0 auto;
+                        } 
+                    }
+                    #skills_page {
+                        max-width: 90%;
+                        margin: 0 auto; 
+                        p {
+                            width: 100%;
+                        }
+                        #list_of_skills {
+                            width: 100%;
+                        }
+                    }
+                    #experience_page {
+                        max-width: 90%;     
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #about_me_page {       
+        #main {
+            > div {
+                .carousel_section {
+                    #skills_page {
+                        #list_of_skills {
+                            flex-direction: column;
+                            li {
+                                width: 90%;
+                            }
+                        }
+                    }
+                    #experience_page {
+                        ul {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #about_me_page {
+        #main {
+            h1 {
+                font-size: 2.1rem;
+            }
+            div {
+                nav {
+                    span {
+                        margin: 0;
+                        margin-right: 40px;
+                    }
+                }
+                .carousel_section {
+                    #about_me {
+                        //min-height: 1000px !important;
+                    }
+                
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    #about_me_page {
+        #main {
+            div {
+                nav {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;    
+                    span {
+                        margin: 0;
+                        margin-bottom: 30px;
+                        font-size: 0.9rem;
+                        margin-right: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+

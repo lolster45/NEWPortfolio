@@ -1,0 +1,323 @@
+.left_arrow {
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    font-size: 1.8rem;
+    left: 40%;
+    bottom: -45px;
+    color: var(--text-color);
+}
+
+.right_arrow {
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    font-size: 1.8rem;
+    right: 40%;
+    bottom: -45px;
+    color: var(--text-color);
+}
+
+#projects_page {
+    padding-top: 6.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    height: fit-content;
+    padding-bottom: 130px;
+    //background-color: var(--main-gradient-one);
+    //background-image: var(--main-gradient-two);
+    background: linear-gradient(to bottom, #120e1e, #271950);
+
+    nav {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        height: 30px;
+        width: 80%;
+        margin-bottom: 70px;
+        a {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            height: 100%;
+            width: fit-content;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: var(--white-text);
+            &.first_nav {
+                left: 0px;
+            }
+            &.second_nav {
+                right: 32px;
+            }
+            svg {
+                position: absolute;
+                font-size: 2rem;
+                //color: var(--text-color);
+                color: var(--text-color);
+                transition: all 0.3s ease-in;
+                &:hover {
+                    // color: #7400b8;
+                    transform: translateY(-5px);
+
+                    // color: var(--text-color);
+                    // text-shadow: 0 0 10px var(--text-color);
+
+
+                 
+                    filter: drop-shadow(0px 0px 2px var(--text-color));
+                        /* Similar syntax to box-shadow */
+                    
+
+                }
+            }
+        }
+    }
+    #heading {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: fit-content;
+        width: 80%;
+        margin-bottom: 130px;
+        color: white;
+        h2 {
+            text-align: center;
+            font-size: 4rem;
+            margin-bottom: 40px;
+            color: inherit;
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.49);
+        }
+        p {
+            font-size: 1rem;
+            line-height: 30px;
+            text-align: center;
+            width: 60%;
+            color: white;
+            //text-shadow: 0 0 10px rgb(118, 17, 180);
+        }
+    }
+
+    .project_link_buttons {
+        position: relative;
+        height: 40px;
+        width: 400px;
+        margin-bottom: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        .box {
+            --clr-shadow__border: #d9a1ff;
+            --clr-text: #f6f4eb;
+            --clr-space: #120e1e;
+            --clr-space-gr: #271950;
+            --clr-star: #e9f8f9;
+            --size: 3rem;
+            position: relative;
+            outline: 1px solid var(--clr-shadow__border);
+            .button {
+                position: relative;
+                z-index: 11;
+                font-weight: 600;
+                font-size: 1.2rem;
+                letter-spacing: 0.2rem;
+                background: transparent;
+                padding: calc(var(--size) / 3) var(--size);
+                border: none;
+                cursor: pointer;
+                color: var(--clr-text);
+                text-shadow: 2px 0px var(--clr-shadow__border), 0px 2px var(--clr-shadow__border),
+                -2px 0px var(--clr-shadow__border), 0px -2px var(--clr-shadow__border);
+            }
+            .space {
+                width: 100%;
+                height: 100%;
+                bottom: 0%;
+                gap: 1.5rem;
+                transition: 0.5s ease-in-out;
+                z-index: -1;
+                opacity: 0;
+                overflow: hidden;
+                position: absolute;
+                display: flex;
+                background: linear-gradient(160deg, var(--clr-space), var(--clr-space-gr));
+                .star {
+                    height: 4rem;
+                    width: 0.3rem;
+                    transition: 0.5s;
+                    border-radius: 50px;
+                    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+                    position: relative;
+                    background-color: var(--clr-star);
+                    animation: space-animation calc(0.1s * var(--i)) linear infinite;
+                }
+
+                &.color {
+                    background: linear-gradient(160deg, #0e0f58, #271950);
+                }
+            }
+            
+            &:hover .space {
+                opacity: 1;
+                z-index: 10;
+            }
+            @keyframes space-animation {
+                0% {
+                transform: rotate(-30deg) translateY(calc(-52% * var(--i)));
+                }
+                100% {
+                transform: rotate(-30deg) translateY(calc(52% * var(--i)));
+                }
+            }
+        }
+
+        @media only screen and (max-width: 410px) {
+            height: 200px;
+            width: 100%;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+    }
+
+
+    #projects_info {
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 80px;
+        width: 90%;
+        .projects_left_side{
+            position: relative;
+            width: 60%;
+            opacity: 0;
+            transition: all 0.6s ease-in;
+            background-color: transparent;
+            &.inView {
+                opacity: 1;
+            }  
+            .actual_slider {
+                position: relative;
+                width: 100%;
+                opacity: 1;
+                transition: all 0.6s ease-in;
+                                 
+                .video_slide {
+                    max-width: 100%!important;
+                    aspect-ratio: 2.25 / 1 !important;
+
+                    .actual_video {
+                        aspect-ratio: 2.25 / 1 !important;
+                        object-fit: cover;
+                        max-width: 100% !important;
+
+                        box-shadow: 18px 11px 35px -10px rgba(0,0,0,1);
+                        -webkit-box-shadow: 18px 11px 35px -10px rgba(0,0,0,1);
+                        -moz-box-shadow: 18px 11px 35px -10px rgba(0,0,0,1); 
+                    }
+                }
+            }
+        }
+        #projects_right_side {
+            padding-left: 30px;
+            width: 35%;
+            text-align: right;
+            > p {
+                opacity: 0;
+                line-height: 40px;
+                font-size: 1.05rem;
+                color: white;
+                text-shadow: 0 0 10px rgb(100, 5, 90);
+                transition: all 0.3s ease;
+                &.active {
+                    opacity: 1;
+                }
+            }
+        }       
+    }
+
+
+   
+}
+
+@media only screen and (min-width: 1500px) {
+    #projects_page {
+
+        nav {
+            max-width: 1450px;
+        }
+
+        #projects_info {
+            max-width: 1500px;
+        }
+    }
+}
+@media only screen and (max-width: 900px) {
+    #projects_page {
+        #heading {
+    
+            p {
+                width: 80%;
+            }
+        }
+        #projects_info {
+            flex-direction: column;
+            align-items: center;
+            min-height: 590px;
+            .projects_left_side {
+                width: 100%;
+                .actual_slider {
+                    .video_slide {
+                        height: 100%;
+                        width: 100%;
+                        .actual_video {
+                            width: 100%;
+                        }
+                    }
+                }
+            }        
+            #projects_right_side {
+                height: 190px;
+                width: 80%;
+                padding: 0;
+                margin-top: 80px;                
+                > p {
+                    font-size: 1.3rem;
+                    text-align: center;
+                }    
+            }
+        }
+    }
+}
+@media only screen and (max-width: 800px) {
+    #projects_page {
+        #heading {
+            p {
+                width: 80%;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+    #projects_page {
+        #heading {
+            p {
+                width: 100%;
+            }
+        }
+        #projects_info {
+            #projects_right_side {
+                padding-left: 0px;
+                width: 100%;
+                margin-top: 40px;
+                text-align: center;
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

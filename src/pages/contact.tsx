@@ -1,14 +1,15 @@
+//React...
 import { useState } from 'react';
 import emailjs from 'emailjs-com'; // Import Email.js library
-
-// styles...
-import styles from "../styles/Contact.module.scss";
 
 //React interasection observer...
 import { useInView } from 'react-intersection-observer';
 
 //React icons...
 import { RiErrorWarningFill } from "react-icons/ri";
+
+// styles...
+import styles from "../styles/Contact.module.scss";
 
 
 interface EmailTemplate {
@@ -18,7 +19,6 @@ interface EmailTemplate {
 }
 
 const ContactForm = () => {
-
 
     const [formData, setFormData] = useState<EmailTemplate>({
       from_email: '',
@@ -35,48 +35,26 @@ const ContactForm = () => {
       });
     };
 
-
-
-
-
+    //Regular expression for email from user...
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
 
     const handleSubmitCheck = async (e: any) => {
       e.preventDefault();
       if(formData.from_email && formData.from_name && formData.message) {
 
         if(!emailPattern.test(formData.from_email)) {
-          console.log("email is invalid...")
           setEmailIsInvalid(true);
           return;
         }
-
-        //sendEmail(e);
-        //setEmailIsInvalid(false);
-        // setFormData({
-        //   from_email: '',
-        //   from_name: '',
-        //   message: ''
-        // });
-
-
+        sendEmail(e);
+        setEmailIsInvalid(false);
+         setFormData({
+           from_email: '',
+           from_name: '',
+           message: ''
+         });
       }
-
-
-      // if (formData.from_email && formData.message && formData.from_name) {
-      //     sendEmail(e);
-
-      //     // Resets form data if all passes
-      //     setFormData({
-      //       from_email: '',
-      //       from_name: '',
-      //       message: ''
-      //     });
-      // }
-
     };
-
 
     const sendEmail = async (e: any) => {
       try {
@@ -93,11 +71,8 @@ const ContactForm = () => {
       triggerOnce: true, // Trigger only once
     });
 
-  
-
   return (
     <section id={styles.contactForm_section} className='main-font-family'>
-
       <div id={styles.contact_wrap} ref={ref} className={`${inView ? styles.active : ""}`}>
         <div>
             <h1>Lets connect</h1>
@@ -145,7 +120,6 @@ const ContactForm = () => {
             <button type="submit">Submit</button>
         </form>
       </div>
-
     </section>
   );
 };

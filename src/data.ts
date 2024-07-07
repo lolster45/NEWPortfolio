@@ -22,15 +22,15 @@ const data = [
         },
         videos: [
             { 
-                src: "/DiscoveryPageJUNE.mp4",
+                src: "/DiscoveryPageJUNECOMPN.mp4",
                 text: "The discovery page offers a wide range of categories to explore with fetched data from the RestAPI known as the Jikan API. Each page offering a nice shean loading animation to signal the fetching of data. Filters have also been added to better meet the users wants."
             }, 
             { 
-                src: "/BookmarkJUNE.mp4",
+                src: "/BookmarkJUNECOMP.mp4",
                 text: "Using firebase database, you are able to bookmark whatever you desire by a click of a button but only if you are logged in via Google. Otherwise you are not able to access this feature."
             },
             { 
-                src: "/GoogleLoginJUNE.mp4",
+                src: "/GoogleLoginJUNECOMPNEW.mp4",
                 text: "With Google login funtinality, you are able to log in easily and access all the features that come with it which are bookmarking, community tab, writing reviews and such. But even when not logged in, you can read all the novels available on the website."
             }
         ],
@@ -126,19 +126,19 @@ const data = [
         },
         videos: [
             { 
-                src: "/ReadNovelsJUNE.mp4",
+                src: "/ReadNovelsJUNECOMP.mp4",
                 text: "Read a small (could grow) collection of machine translated novels. Each novel having multiple chapters in which the user can navigate through.",
             },
             { 
-                src: "/FiltersJUNE.mp4",
+                src: "/FiltersJUNECOMP.mp4",
                 text: "Going to the library page, you are able to filter the collection of novels to the generes/tags you want. Plus a cool user interface to make it simple to understand.",
             }, 
             { 
-                src: "/CommentJUNE.mp4",
+                src: "/CommentJUNECOMPN.mp4",
                 text: "Of course without feedback, none of this would be complete so any user who is logged in can comment down their review of the novel to let others know if the novel was trash or gold. Supported using Firebase database so they will stay there.",
             },
             { 
-                src: "/novelChapters.mp4",
+                src: "/novelChaptersCOMPN.mp4",
                 text: "Of course without feedback, none of this would be complete so any user who is logged in can comment down their review of the novel to let others know if the novel was trash or gold. Supported using Firebase database so they will stay there.",
             }
         ],
@@ -190,7 +190,7 @@ const data = [
         },
         videos: [
             { 
-                src: "/groceryListJune.mp4",
+                src: "/groceryListJUNECOMP.mp4",
                 text: "Read a small (could grow) collection of machine translated novels. Each novel having multiple chapters in which the user can navigate through.",
             },
             { 
@@ -198,7 +198,7 @@ const data = [
                 text: "Going to the library page, you are able to filter the collection of novels to the generes/tags you want. Plus a cool user interface to make it simple to understand.",
             }, 
             { 
-                src: "/shopingifyJUNE.mp4",
+                src: "/shopingifyJUNECOMP.mp4",
                 text: "Of course without feedback, none of this would be complete so any user who is logged in can comment down their review of the novel to let others know if the novel was trash or gold. Supported using Firebase database so they will stay there.",
             }
         ],

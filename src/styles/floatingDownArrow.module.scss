@@ -41,8 +41,9 @@
 	position: fixed;
 	margin: auto;
 	left: 50%;
-	top: 95%;
-	-webkit-transform: translate(-50%, -95%);
+	top: 88%;
+	-webkit-transform: translate(-50%, -88%);
+	transform: translate(-50%, -95%);
 	z-index: 9999;
 	span {
 		display: block;

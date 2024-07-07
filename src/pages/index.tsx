@@ -2,7 +2,14 @@
 import Head from 'next/head'
 
 //Components...
-import About from './about';
+import dynamic from 'next/dynamic';
+
+//import About from './about';
+const About = dynamic(() => import("./about"), {
+  loading: () => <p>Loading...</p>,
+  ssr: true, // This can be set to true if you want SSR support for this component
+});
+
 import FloatingDownArrow from '@nextjsportfolio/components/FloatingDownArrow';
 
 //React observer...
@@ -46,7 +53,10 @@ export default function Home() {
               <div>Front-End-Developer</div>
             </div> 
           </div> 
+          
           <FloatingDownArrow/>
+
+
           <div className={styles.sky}>
             <div className={styles.stars}></div>
             <div className={styles.stars}></div>

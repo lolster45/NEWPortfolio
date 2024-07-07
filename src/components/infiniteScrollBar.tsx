@@ -5,13 +5,10 @@ import React, { useEffect, useState } from 'react';
 import styles from "../styles/Infinite.module.scss"; // Make sure to create this CSS module
 
 
-
 interface Image {
     img: {src: string}; // Adjust the type if `img` is not a string (e.g., if it's an imported image module)
     name: string;
 }
-
-
 
 const InfiniteScrollBar = ({data}: {data: Image[]}) => {
 
@@ -20,7 +17,6 @@ const InfiniteScrollBar = ({data}: {data: Image[]}) => {
     useEffect(() => {
         setNewData([...data, ...data])
     }, [data])
-
 
     return (
         <div className={styles.scroller}>

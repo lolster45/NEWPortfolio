@@ -58,15 +58,28 @@ export default function Home() {
 
 
           <div className={styles.sky}>
-            <div className={styles.stars}></div>
-            <div className={styles.stars}></div>
-            <div className={styles.stars}></div>
 
+            <div className={styles.main_containe}>
+              <div className={styles.sub_container}>
+                <div className={styles.sky}>
+                  <div className={styles.stars}></div>
+                  <div className={styles.stars2}></div>
+                  <div className={styles.stars3}></div>
+                  <div className={styles.comet}></div>
+                </div>
+              </div>
+            </div>
+
+
+
+            {/* <div className={styles.stars}></div>
+            <div className={styles.stars}></div>
+            <div className={styles.stars}></div>
             <div className={`${styles.star} ${styles.star1}`}></div>
             <div className={`${styles.star} ${styles.star2}`}></div>
             <div className={`${styles.star} ${styles.star3}`}></div>
             <div className={`${styles.star} ${styles.star4}`}></div>
-            <div className={`${styles.star} ${styles.star5}`}></div>
+            <div className={`${styles.star} ${styles.star5}`}></div> */}
           </div>
           <div className={styles.mountains}></div>
           <div className={styles.mountainstwo}></div>

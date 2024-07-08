@@ -16,6 +16,15 @@ import "slick-carousel/slick/slick-theme.css";
 //Icons...
 import { FiArrowRightCircle } from "react-icons/fi";
 import { IoArrowBackCircleOutline } from "react-icons/io5";
+import { GoChevronLeft } from "react-icons/go";
+import { GoChevronRight } from "react-icons/go";
+
+import { BsChevronRight } from "react-icons/bs";
+import { BsChevronLeft } from "react-icons/bs";
+
+
+
+
 
 //data...
 import projData from "../../data";
@@ -54,8 +63,8 @@ interface SingleProject {
 const CustomPrevArrow = (props: any) => {
     const { leftScroll, onClick } = props;
     return (
-        <div onClick={(e) => { onClick(e); leftScroll(); }} className={styles.left_arrow}>
-            ←
+        <div onClick={(e) => { onClick(e); leftScroll(); }} className={`${styles.arrow} ${styles.left_arrow}`}>
+            <BsChevronLeft/>
         </div>
     );
 };
@@ -63,8 +72,8 @@ const CustomPrevArrow = (props: any) => {
 const CustomNextArrow = (props: any) => {
     const { rightScroll, onClick } = props;
     return (
-        <div onClick={(e) => { onClick(e); rightScroll(); }} className={styles.right_arrow}>
-            →
+        <div onClick={(e) => { onClick(e); rightScroll(); }} className={`${styles.arrow} ${styles.right_arrow}`}>
+            <BsChevronRight/>
         </div>
     );
 };
@@ -193,6 +202,8 @@ const ProjectsPage = ({ data }: { data: SingleProject }) => {
                             </div>
                         ))}
                     </Slider> 
+                    <span id={styles.slide_show_num}>{currentIndex + 1} / {data.videos.length}</span>
+
                 </div>
                 <div id={styles.projects_right_side}>
                     <p className={fade ? styles.active : ''}>

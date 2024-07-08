@@ -46,7 +46,7 @@
         height: 100vh;
         width: 100%;
         //background-color: green;
-        background: linear-gradient(to bottom, #120e1e, #271950);
+        background: linear-gradient(to bottom, #06050a, #1f153e);
 
         opacity: 0;
         transform: translateY(-50px);
@@ -57,96 +57,187 @@
             position: absolute;
             top: 0;
             left: 0;
-            height: 60%;
+            height: 80%;
             width: 100%;
+            //background-color: green;
             //background: linear-gradient(to bottom, #271950, transparent);
             // background-color: green;
-            .stars {
-                position: absolute;
-                width: 2px;
-                height: 2px;
-                background: #fff;
-                box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff;
-                animation: twinkle 5s infinite;
-            }
-            .stars:nth-child(1) {
-                top: 20%;
-                left: 40%;
-            }
-            .stars:nth-child(2) {
-                top: 35%;
-                left: 60%;
-            }
-            .stars:nth-child(3) {
-                top: 50%;
-                left: 80%;
-            }
-            @keyframes twinkle {
-                0%, 100% { opacity: 1; }
-                50% { opacity: 0.5; }
-            }
 
-            .star {
-                position: absolute;
-                width: 5px;
-                height: 5px;
-                background: #fff;
+            $starFieldWidth: 2560;
+            $starFieldHeight: 2560;
+            $starStartOffset: 600px;
+            $starOneScrollDuration: 100s;
+            $starTwoScrollDuration: 125s;
+            $starThreeScrollDuration: 175s;
+            $numStarOneStars: 1700;
+            $numStarTwoStars: 700;
+            $numStarThreeStars: 200;
+            $numComet: 10;
+
+            .main-container {
+            display: block;
+            overflow: hidden;
+            position: relative;
+            width: 100vw;
+            height: 400px;
+            background: linear-gradient(to bottom, #120e1e 0%, #120e1e 100%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            }
+            @function create-stars($n) {
+            $stars: "#{random($starFieldWidth)}px #{random($starFieldHeight)}px #FFF";
+
+            @for $i from 2 through $n {
+                $stars: "#{$stars} , #{random($starFieldWidth)}px #{random($starFieldHeight)}px #FFF";
+            }
+            @return unquote($stars);
+            }
+            @mixin star-template($numStars, $starSize, $scrollSpeed) {
+            z-index: 10;
+            width: $starSize;
+            height: $starSize;
+            border-radius: 50%;
+            background: transparent;
+            box-shadow: create-stars($numStars);
+            animation: animStar $scrollSpeed linear infinite;
+            &:after {
+                content: " ";
+                top: -$starStartOffset;
+                width: $starSize;
+                height: $starSize;
                 border-radius: 50%;
-              }
-              
-              .star1 {
-                animation: rotate 35s linear infinite;
-                transform-origin: 600px 290px;
-                bottom: 40px;
-                left: 30px;
-                // background-color: black;
-              }
-               
-              .star2 {
-               animation: rotate 39s linear infinite;
-                transform-origin: 550px 340px;
-                bottom: 40px;
-                left: 30px;
-                // background-color: red;
-              }
-              
-              .star3 {
-                animation: rotate 34s linear infinite;
-                transform-origin: 650px 400px;
-                bottom: 40px;
-                left: 30px;
-                // background-color: green;
-              }
-              
-              .star4 {
-                animation: rotate 28s linear infinite;
-                transform-origin: 609px 500px;
-                bottom: 40px;
-                left: 30px;
-                // background-color: yellow;
-              }
-              
-              .star5 {
-                animation: rotate 25s linear infinite;
-                transform-origin: 580px 400px;
-                bottom: 40px;
-                left: 30px;
-                // background-color: aqua;
-              }
-              
-              @keyframes rotate {
-                0% {
-                  transform: rotate(0deg);
-                }
-                100% {
-                  transform: rotate(180deg);
-                }
-              }
+                position: absolute;
+                background: transparent;
+                box-shadow: create-stars($numStars);
+            }
+            }
+            @mixin shooting-star-template($numStars, $starSize, $speed) {
+            z-index: 10;
+            width: $starSize;
+            height: $starSize + 80px;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(
+                to top,
+                rgba(255, 255, 255, 0),
+                rgba(255, 255, 255, 1)
+            );
+            animation: animShootingStar $speed linear infinite;
+            }
+            .stars {
+            @include star-template($numStarOneStars, 1px, $starOneScrollDuration);
+            }
+            .stars2 {
+            @include star-template($numStarTwoStars, 2px, $starTwoScrollDuration);
+            }
+            .stars3 {
+            @include star-template($numStarThreeStars, 3px, $starThreeScrollDuration);
+            }
+            .comet {
+            @include shooting-star-template($numComet, 5px, 10s);
+            }
+            @keyframes animStar {
+            from {
+                transform: translateY(0px);
+            }
+            to {
+                transform: translateY(-#{$starFieldHeight}px)
+                translateX(-#{$starFieldWidth}px);
+            }
+            }
+            @keyframes animShootingStar {
+            from {
+                transform: translateY(0px) translateX(0px) rotate(-45deg);
+                opacity: 1;
+                height: 5px;
+            }
+            to {
+                transform: translateY(-#{$starFieldHeight}px)
+                translateX(-#{$starFieldWidth}px) rotate(-45deg);
+                opacity: 1;
+                height: 800px;
+            }
+            }
 
 
-
-
-
+            // .stars {
+            //     position: absolute;
+            //     width: 2px;
+            //     height: 2px;
+            //     background: #fff;
+            //     box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff;
+            //     animation: twinkle 5s infinite;
+            // }
+            // .stars:nth-child(1) {
+            //     top: 20%;
+            //     left: 40%;
+            // }
+            // .stars:nth-child(2) {
+            //     top: 35%;
+            //     left: 60%;
+            // }
+            // .stars:nth-child(3) {
+            //     top: 50%;
+            //     left: 80%;
+            // }
+            // @keyframes twinkle {
+            //     0%, 100% { opacity: 1; }
+            //     50% { opacity: 0.5; }
+            // }
+            // .star {
+            //     position: absolute;
+            //     width: 5px;
+            //     height: 5px;
+            //     background: #fff;
+            //     border-radius: 50%;
+            //   }
+            // .star1 {
+            //     animation: rotate 35s linear infinite;
+            //     transform-origin: 600px 290px;
+            //     bottom: 40px;
+            //     left: 30px;
+            //     // background-color: black;
+            // }               
+            // .star2 {
+            //    animation: rotate 39s linear infinite;
+            //     transform-origin: 550px 340px;
+            //     bottom: 40px;
+            //     left: 30px;
+            //     // background-color: red;
+            // }             
+            // .star3 {
+            //     animation: rotate 34s linear infinite;
+            //     transform-origin: 650px 400px;
+            //     bottom: 40px;
+            //     left: 30px;
+            //     // background-color: green;
+            // }            
+            // .star4 {
+            //     animation: rotate 28s linear infinite;
+            //     transform-origin: 609px 500px;
+            //     bottom: 40px;
+            //     left: 30px;
+            //     // background-color: yellow;
+            // }           
+            // .star5 {
+            //     animation: rotate 25s linear infinite;
+            //     transform-origin: 580px 400px;
+            //     bottom: 40px;
+            //     left: 30px;
+            //     // background-color: aqua;
+            // }           
+            // @keyframes rotate {
+            //     0% {
+            //       transform: rotate(0deg);
+            //     }
+            //     100% {
+            //       transform: rotate(180deg);
+            //     }
+            // }
         }
         .mountains {
             position: absolute;

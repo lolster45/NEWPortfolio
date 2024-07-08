@@ -116,11 +116,13 @@
                         width: 30% !important;
                         position: relative;
                         display: flex;
-    
+                        
+                        
                         img {
-                            //width: 400px !important;
                             width: 100% !important;
                             margin: 0 auto;
+                            border-radius: 50%;
+                            
                         }
                     }
                 }

@@ -75,16 +75,10 @@ const About = () => {
                         <div id={styles.about_me}>
                                <div id={styles.left_side_aboutMe}>
                                     <p>
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. At illum in temporibus
-                                    sequi sapiente amet! Maxime ratione quaerat possimus minus. Debitis quo rerum hic?
-                                    Explicabo est corporis officia minus quasi! Lorem ipsum dolor sit amet
-                                    consectetur, adipisicing elit. Veniam quis ipsum ex sit?
+                                    Hi, my name is Oscar Reyes and I am an asprirign self taught Front End Web Developer. My first encounter with web development started back in high-school but only recently in 2022 did I really get into it. Now it has been close to 2 years and I just cant get enough of the beautiful world React and such languages have to offer.
                                     <br />
                                     <br />
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel odio, ipsa aliquam,
-                                    delectus eligendi quas possimus sunt ut officia non, debitis rerum quis fugit
-                                    doloremque? Saepe alias cumque commodi obcaecati? Lorem ipsum dolor sit amet
-                                    consectetur adipisicing elit. Odio repellat quae hic pariatur? Accusamus.
+                                    I have built numerous projects with React and such and have managed to make them Full-stack with firebase which I find just amazing to see when it works in the end. From this experiece I know debugging plays a major role so I have learned to embrace it.
                                     </p>
                                     <div>
                                     <span>
@@ -107,7 +101,7 @@ const About = () => {
                                         alt="profile picture of me" 
                                         layout="fill" 
                                         objectFit="contain"
-                                    />                                 
+                                    />                                   
                                 </div>
                         </div>
                         <div id={styles.skills_page}>

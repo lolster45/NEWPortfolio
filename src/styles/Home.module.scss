@@ -1,3 +1,6 @@
+
+
+
 #main_section {
     position: relative;
     min-height: 100vh;
@@ -45,125 +48,21 @@
         position: relative;
         height: 100vh;
         width: 100%;
-        //background-color: green;
         background: linear-gradient(to bottom, #06050a, #1f153e);
-
+        //background-color: brown;
         opacity: 0;
         transform: translateY(-50px);
         transition: all 1s cubic-bezier(0,-0.01, 0, 1);
-
-
         .sky {
             position: absolute;
             top: 0;
             left: 0;
             height: 80%;
             width: 100%;
-            //background-color: green;
-            //background: linear-gradient(to bottom, #271950, transparent);
-            // background-color: green;
-
-            $starFieldWidth: 2560;
-            $starFieldHeight: 2560;
-            $starStartOffset: 600px;
-            $starOneScrollDuration: 100s;
-            $starTwoScrollDuration: 125s;
-            $starThreeScrollDuration: 175s;
-            $numStarOneStars: 1700;
-            $numStarTwoStars: 700;
-            $numStarThreeStars: 200;
-            $numComet: 10;
-
-            .main-container {
-            display: block;
-            overflow: hidden;
-            position: relative;
-            width: 100vw;
-            height: 400px;
-            background: linear-gradient(to bottom, #120e1e 0%, #120e1e 100%);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            }
-            @function create-stars($n) {
-            $stars: "#{random($starFieldWidth)}px #{random($starFieldHeight)}px #FFF";
-
-            @for $i from 2 through $n {
-                $stars: "#{$stars} , #{random($starFieldWidth)}px #{random($starFieldHeight)}px #FFF";
-            }
-            @return unquote($stars);
-            }
-            @mixin star-template($numStars, $starSize, $scrollSpeed) {
-            z-index: 10;
-            width: $starSize;
-            height: $starSize;
-            border-radius: 50%;
-            background: transparent;
-            box-shadow: create-stars($numStars);
-            animation: animStar $scrollSpeed linear infinite;
-            &:after {
-                content: " ";
-                top: -$starStartOffset;
-                width: $starSize;
-                height: $starSize;
-                border-radius: 50%;
-                position: absolute;
-                background: transparent;
-                box-shadow: create-stars($numStars);
-            }
-            }
-            @mixin shooting-star-template($numStars, $starSize, $speed) {
-            z-index: 10;
-            width: $starSize;
-            height: $starSize + 80px;
-            border-top-left-radius: 50%;
-            border-top-right-radius: 50%;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            background: linear-gradient(
-                to top,
-                rgba(255, 255, 255, 0),
-                rgba(255, 255, 255, 1)
-            );
-            animation: animShootingStar $speed linear infinite;
-            }
-            .stars {
-            @include star-template($numStarOneStars, 1px, $starOneScrollDuration);
-            }
-            .stars2 {
-            @include star-template($numStarTwoStars, 2px, $starTwoScrollDuration);
-            }
-            .stars3 {
-            @include star-template($numStarThreeStars, 3px, $starThreeScrollDuration);
-            }
-            .comet {
-            @include shooting-star-template($numComet, 5px, 10s);
-            }
-            @keyframes animStar {
-            from {
-                transform: translateY(0px);
-            }
-            to {
-                transform: translateY(-#{$starFieldHeight}px)
-                translateX(-#{$starFieldWidth}px);
-            }
-            }
-            @keyframes animShootingStar {
-            from {
-                transform: translateY(0px) translateX(0px) rotate(-45deg);
-                opacity: 1;
-                height: 5px;
-            }
-            to {
-                transform: translateY(-#{$starFieldHeight}px)
-                translateX(-#{$starFieldWidth}px) rotate(-45deg);
-                opacity: 1;
-                height: 800px;
-            }
-            }
+         
 
 
+            //Old animation for background on stars...
             // .stars {
             //     position: absolute;
             //     width: 2px;
@@ -241,27 +140,32 @@
         }
         .mountains {
             position: absolute;
+            z-index: 9;
             bottom: 0px;
             right: 0px;
             height: 100%;
             width: 50%;
             //background: linear-gradient(to bottom, #1b142b, #120e1e);
             // clip-path: polygon(0 90%, 15% 70%, 30% 80%, 45% 60%, 60% 75%, 75% 55%, 90% 65%, 100% 50%, 100% 100%, 0% 100%);
-            background: #33265f;
+            //background: #33265f;
+            background: #572f01;
             clip-path: polygon(100% 51%, 92% 37%, 77% 65%, 63% 51%, 50% 73%, 40% 59%, 30% 71%, 16% 61%, 0% 80%, 0% 98%, 100% 100%);
         }
         .mountainstwo {
             position: absolute;
+            z-index: 9;
             bottom: 0px;
             left: 0px;
             height: 100%;
             width: 50%;
-            background-color: #2e2451;
+            //background-color: #2e2451;
+            background-color: #192e19;
             clip-path: polygon(9% 40%, 0% 50%, 0% 100%, 90% 100%, 50% 57%, 28% 66%);
 
         }
         .foreground {
             position: absolute;
+            z-index: 10;
             bottom: 0;
             left: 0;
             height: 50%;
@@ -283,29 +187,21 @@
 }
 #floating_nav {
     position: absolute;
-
     left: 50%;
     transform: translateX(-50%);
-
-    z-index: 5;
+    z-index: 11;
     top: 0;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     height: 80px;
-
     margin: 0 auto;
     width: 80%;
-
-
-    //background-color: green;
     > a {
+        z-index: 9;
         text-decoration: none;
         color: var(--text-color);
     }
-
     .main_nav {
         cursor: pointer;
         display: flex;
@@ -314,7 +210,6 @@
         font-size: 1.2rem;
         height: 30px;
         width: 350px;
-        //background-color: orange;
         a {
             position: relative;
             font-weight: 100;
@@ -337,7 +232,6 @@
             }
         }
     }
-
     .social_links {
         a {
             svg {
@@ -352,48 +246,38 @@
             }
         }
     }
-
-   
-
-    @media only screen and (max-width: 800px) {
-        .main_nav {
-            display: none;
+    .hamburger_menu {
+        visibility: hidden;
+        cursor: pointer;
+        position: fixed;
+        z-index: 11;
+        top: 30px;
+        right: 0px;
+        width: 35px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .bar {
+                height: 2px;
+                width: 100%;
+                background-color: white;
+                transition: all 0.3s ease;
         }
-        .social_links {
-            display: none;
+        &.active {
+                .bar:nth-child(1) {
+                    transform: translateY(13px) rotate(45deg);
+                }
+                .bar:nth-child(2) {
+                    opacity: 0;
+                }
+                .bar:nth-child(3) {
+                    transform: translateY(-4px) rotate(-45deg);
+                }
         }
     }
 }
-.hamburger_menu {
-    visibility: hidden;
-    cursor: pointer;
-    position: fixed;
-    z-index: 11;
-    top: 30px;
-    right: 3rem;
-    width: 35px;
-    height: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    .bar {
-            height: 2px;
-            width: 100%;
-            background-color: white;
-            transition: all 0.3s ease;
-    }
-    &.active {
-            .bar:nth-child(1) {
-                transform: translateY(13px) rotate(45deg);
-            }
-            .bar:nth-child(2) {
-                opacity: 0;
-            }
-            .bar:nth-child(3) {
-                transform: translateY(-4px) rotate(-45deg);
-            }
-    }
-}
+
 @media only screen and (min-width: 1500px) {
     #floating_nav {
         max-width: 1500px;
@@ -415,21 +299,33 @@
     }
 }
 @media only screen and (max-width: 800px) {
-    .hamburger_menu {
-        visibility: visible;
+    #floating_nav {
+        a {
+            display: none;
+        }
+        .main_nav {
+            display: none;
+        }
+        .social_links {
+            display: none;
+        }
+        .hamburger_menu {
+            visibility: visible;
+        }
     }
 }
 @media only screen and (max-width: 540px) {
     #main_section {
-
         #text_box {
             #pc_myname {
                 h1 {
                     font-size: 2.4rem;
-
                 }
             }
         }
+    }
+    #floating_nav {
+        width: 86%;
     }
 }
 @media only screen and (max-width: 440px) {

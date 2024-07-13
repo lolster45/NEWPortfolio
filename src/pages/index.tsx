@@ -3,12 +3,24 @@ import Head from 'next/head'
 
 //Components...
 import dynamic from 'next/dynamic';
+const StarrySky = dynamic(() => import('@nextjsportfolio/components/starrySky'), {
+  loading: () => <p>Loading...</p>,
+  ssr: true, // This can be set to true if you want SSR support for this component
+});
 
 //import About from './about';
 const About = dynamic(() => import("./about"), {
   loading: () => <p>Loading...</p>,
   ssr: true, // This can be set to true if you want SSR support for this component
 });
+
+const MoreWork = dynamic(() => import("./moreWorks"), {
+  loading: () => <p>Loading...</p>,
+  ssr: true, // This can be set to true if you want SSR support for this component
+});
+
+
+
 
 import FloatingDownArrow from '@nextjsportfolio/components/FloatingDownArrow';
 
@@ -47,46 +59,28 @@ export default function Home() {
       <main id={styles.main_section} className='main-font-family' >
 
         <div ref={ref} className={`${styles.container} ${inView ? styles.active : ""}`}>
+
           <div id={styles.text_box}>
             <div id={styles.pc_myname}>
               <h1>OSCAR REYES</h1>
               <div>Front-End-Developer</div>
             </div> 
           </div> 
-          
+
           <FloatingDownArrow/>
 
-
-          <div className={styles.sky}>
-
-            <div className={styles.main_containe}>
-              <div className={styles.sub_container}>
-                <div className={styles.sky}>
-                  <div className={styles.stars}></div>
-                  <div className={styles.stars2}></div>
-                  <div className={styles.stars3}></div>
-                  <div className={styles.comet}></div>
-                </div>
-              </div>
-            </div>
-
-
-
-            {/* <div className={styles.stars}></div>
-            <div className={styles.stars}></div>
-            <div className={styles.stars}></div>
-            <div className={`${styles.star} ${styles.star1}`}></div>
-            <div className={`${styles.star} ${styles.star2}`}></div>
-            <div className={`${styles.star} ${styles.star3}`}></div>
-            <div className={`${styles.star} ${styles.star4}`}></div>
-            <div className={`${styles.star} ${styles.star5}`}></div> */}
-          </div>
+          <StarrySky/> 
+          
           <div className={styles.mountains}></div>
           <div className={styles.mountainstwo}></div>
           <div className={styles.foreground}></div>
+          
         </div>
 
         <About/>
+        <MoreWork/>
+
+        
 
         
       </main>

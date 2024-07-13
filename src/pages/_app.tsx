@@ -44,16 +44,22 @@ export default function App({ Component, pageProps }: AppProps) {
                 <FaLinkedin/>
               </a>
         </div>
+
+        <div 
+            className={`${styles.hamburger_menu} ${mobileNav ? styles.active : ""}`} 
+            onClick={() => setMobileNav(prev => !prev)}
+          >
+            {/* This is the actualy hamburger menu icon... */}
+            <div className={styles.bar}></div>
+            <div className={styles.bar}></div>
+            <div className={styles.bar}></div>
+        </div>
+
+        
       </nav>
-      <div 
-          className={`${styles.hamburger_menu} ${mobileNav ? styles.active : ""}`} 
-          onClick={() => setMobileNav(prev => !prev)}
-        >
-          {/* This is the actualy hamburger menu icon... */}
-          <div className={styles.bar}></div>
-          <div className={styles.bar}></div>
-          <div className={styles.bar}></div>
-      </div>
+      
+
+
       <MobileNav mobileNav={mobileNav} setMobileNav={setMobileNav} />  
       <Component {...pageProps} />
     </>

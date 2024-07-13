@@ -4,7 +4,6 @@ import React from 'react';
 //Styles...
 import styles from "../styles/floatingDownArrow.module.scss"
 
-
 const FloatingDownArrow = () => {
     return (
         <a href="#">

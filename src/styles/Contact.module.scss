@@ -64,13 +64,10 @@
                     }
                     &:focus {
                         transform: scale(1.02);
-
                         &::placeholder {
                             color: transparent;
-
                         }
-                    }
-                  
+                    }       
                 }
                 #email_input_wrapper {
                     position: relative;

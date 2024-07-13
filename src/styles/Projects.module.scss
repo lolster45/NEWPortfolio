@@ -5,18 +5,15 @@
     font-size: 2rem;
     font-weight: lighter;
     color: white;
-
 }
 .left_arrow {
     left: 36%;
     bottom: -53px;
 }
-
 .right_arrow { 
     right: 36%;
     bottom: -53px;
 }
-
 #projects_page {
     padding-top: 6.4rem;
     display: flex;
@@ -241,14 +238,11 @@
         }       
     }
 }
-
 @media only screen and (min-width: 1500px) {
     #projects_page {
-
         nav {
             max-width: 1450px;
         }
-
         #projects_info {
             max-width: 1500px;
         }
@@ -256,8 +250,7 @@
 }
 @media only screen and (max-width: 900px) {
     #projects_page {
-        #heading {
-    
+        #heading {   
             p {
                 width: 80%;
             }
@@ -300,15 +293,12 @@
         }
         #projects_info {
             .projects_left_side{
-                #slide_show_num {
-                 
+                #slide_show_num {  
                     left: 50%;
                     top: 115%;
-                    transform: translate(-50%, -111%);
-                   
+                    transform: translate(-50%, -111%); 
                 }
-            }
-                 
+            }       
         }
     }
 }
@@ -325,8 +315,7 @@
                     font-size: 0.8rem;
                     left: 50%;
                     top: 125%;
-                    transform: translate(-50%, -125%);
-                   
+                    transform: translate(-50%, -125%);    
                 }
             }
             #projects_right_side {
@@ -340,19 +329,14 @@
             }
         }
     }
-
     .arrow {
-  
         font-size: 1.6rem;
         color: white;
-    
     }
-
     .left_arrow {
         left: 25%;
         bottom: -53px;
     }
-    
     .right_arrow { 
         right: 25%;
         bottom: -53px;
@@ -365,8 +349,7 @@
                 #slide_show_num {
                     left: 50%;
                     top: 135%;
-                    transform: translate(-50%, -135%);
-                   
+                    transform: translate(-50%, -135%);    
                 }
             }
         }

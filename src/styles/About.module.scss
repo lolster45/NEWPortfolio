@@ -265,7 +265,6 @@
     }
 }
 
-
 @media only screen and (min-width: 1500px) {
     #about_me_page {
         #main {
@@ -276,8 +275,7 @@
 
 @media only screen and (max-width: 1100px) {
     #about_me_page {
-        #main {
-           
+        #main {       
             h1 {
                 width: 90%;
             }
@@ -317,8 +315,7 @@
                 width: 90%;
             }
             > div {
-                >nav {
-                    
+                >nav {          
                     width: 90%;
                     span {
                         font-size: 1.1rem;
@@ -328,7 +325,6 @@
                     #about_me {
                         width: 90% !important;
                         margin: 0 auto; 
-                        // height: 800px;
                         #left_side_aboutMe {
                             width: 100%;
                             margin: 0 auto;
@@ -390,12 +386,6 @@
                         margin-right: 40px;
                     }
                 }
-                .carousel_section {
-                    #about_me {
-                        //min-height: 1000px !important;
-                    }
-                
-                }
             }
         }
     }
@@ -420,4 +410,3 @@
         }
     }
 }
-

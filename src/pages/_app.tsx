@@ -17,6 +17,7 @@ import { FaLinkedin } from "react-icons/fa";
 //Styles...
 import styles from "../styles/Home.module.scss"
 
+
 export default function App({ Component, pageProps }: AppProps) {
 
   const [mobileNav, setMobileNav] = useState<boolean>(false);
@@ -57,11 +58,14 @@ export default function App({ Component, pageProps }: AppProps) {
 
         
       </nav>
-      
-
-
       <MobileNav mobileNav={mobileNav} setMobileNav={setMobileNav} />  
       <Component {...pageProps} />
+      <footer 
+        id={styles.footer}
+        className='main-font-family' 
+      >
+        Designed and developed by me using NEXTJS, TypeScript and SCSS
+      </footer>
     </>
   )
 }

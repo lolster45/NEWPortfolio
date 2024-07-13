@@ -1,15 +1,12 @@
 //React...
 import React from 'react';
-
 import Image from 'next/image';
 
 //Images...
 import Quiz from "../../public/quizProj.png"
 import Calc from "../../public/calculatorProj.png"
 import MarkUp from "../../public/markUp.png"
-
 import ECOM from "../../public/eCom.png"
-
 import ColorS from "../../public/colorScheme.png"
 import TicTacToe from "../../public/ticTacToe.png"
 import PassWordGen from "../../public/passwordGenerator.png"

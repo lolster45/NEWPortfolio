@@ -10,21 +10,13 @@ $numStarTwoStars: 700;
 $numStarThreeStars: 200;
 $numComet: 10;
 
-
 .main_container {
     display: block;
     overflow: hidden;
     position: relative;
     height: 80vh;
     width: 100vw;
-    //background: linear-gradient(to bottom, #120e1e 0%, #120e1e 100%);
-    //background-color: red;
-    //top: 50%;
-    //left: 50%;
-    //border: 1px solid white;
-    //transform: translate(-50%, -50%);
 }
-
 
 @function create-stars($n) {
     $stars: "#{random($starFieldWidth)}px #{random($starFieldHeight)}px #FFF";

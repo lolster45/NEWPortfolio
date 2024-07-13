@@ -20,8 +20,6 @@ const MoreWork = dynamic(() => import("./moreWorks"), {
 });
 
 
-
-
 import FloatingDownArrow from '@nextjsportfolio/components/FloatingDownArrow';
 
 //React observer...
@@ -32,12 +30,10 @@ import styles from '@nextjsportfolio/styles/Home.module.scss'
 
 export default function Home() {
 
-
   const { ref, inView } = useInView({
     threshold: 0,
     triggerOnce: true,
   });
-
 
   return (
     <>
@@ -57,32 +53,21 @@ export default function Home() {
         </link>
       </Head>
       <main id={styles.main_section} className='main-font-family' >
-
         <div ref={ref} className={`${styles.container} ${inView ? styles.active : ""}`}>
-
           <div id={styles.text_box}>
             <div id={styles.pc_myname}>
               <h1>OSCAR REYES</h1>
               <div>Front-End-Developer</div>
             </div> 
           </div> 
-
           <FloatingDownArrow/>
-
           <StarrySky/> 
-          
           <div className={styles.mountains}></div>
           <div className={styles.mountainstwo}></div>
           <div className={styles.foreground}></div>
-          
         </div>
-
         <About/>
-        <MoreWork/>
-
-        
-
-        
+        <MoreWork/> 
       </main>
     </>
   )

@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 //Components...
 import dynamic from 'next/dynamic';
-const StarrySky = dynamic(() => import('@nextjsportfolio/components/starrySky'), {
+const StarrySky = dynamic(() => import('../components/StarrySky'), {
   loading: () => <p>Loading...</p>,
   ssr: true, // This can be set to true if you want SSR support for this component
 });

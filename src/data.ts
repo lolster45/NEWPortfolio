@@ -21,10 +21,7 @@ const data = [
             live: "https://animenew-82be3.web.app/"
         },
         videos: [
-            { 
-                src: "/DiscoveryPageJUNECOMPN.mp4",
-                text: "The discovery page offers a wide range of categories to explore with fetched data from the RestAPI known as the Jikan API. Each page offering a nice shean loading animation to signal the fetching of data. Filters have also been added to better meet the users wants."
-            }, 
+       
             { 
                 src: "/BookmarkJUNECOMP.mp4",
                 text: "Using firebase database, you are able to bookmark whatever you desire by a click of a button but only if you are logged in via Google. Otherwise you are not able to access this feature."
@@ -81,10 +78,6 @@ const data = [
                 src: "/MovingBetweenColumns.mp4",
                 text: "The Drag and Drop feature here was built using the library react beautifull dnd, which allows the user to save so much time and cut off stress trying to organize things in their workstation. Simply drga and move, then finally drop it on your desidred column.",
             }, 
-            { 
-                src: "/AddNewDocument.mp4",
-                text: "Using react state, I was able to create the feature that allows the user to create workstations/folders when the user needs to have multiple categories of things to do, saved using localStorage. Each being able to be named by the user for better organization",
-            }
         ],
         Images: [
             {
@@ -130,15 +123,7 @@ const data = [
                 text: "Read a small (could grow) collection of machine translated novels. Each novel having multiple chapters in which the user can navigate through.",
             },
             { 
-                src: "/FiltersJUNECOMP.mp4",
-                text: "Going to the library page, you are able to filter the collection of novels to the generes/tags you want. Plus a cool user interface to make it simple to understand.",
-            }, 
-            { 
                 src: "/CommentJUNECOMPN.mp4",
-                text: "Of course without feedback, none of this would be complete so any user who is logged in can comment down their review of the novel to let others know if the novel was trash or gold. Supported using Firebase database so they will stay there.",
-            },
-            { 
-                src: "/novelChaptersCOMPN.mp4",
                 text: "Of course without feedback, none of this would be complete so any user who is logged in can comment down their review of the novel to let others know if the novel was trash or gold. Supported using Firebase database so they will stay there.",
             }
         ],
@@ -189,10 +174,6 @@ const data = [
             live: "https://shopping-list-tawny-seven.vercel.app/"
         },
         videos: [
-            { 
-                src: "/groceryListJUNECOMP.mp4",
-                text: "Read a small (could grow) collection of machine translated novels. Each novel having multiple chapters in which the user can navigate through.",
-            },
             { 
                 src: "/activeSearchJune.mp4",
                 text: "Going to the library page, you are able to filter the collection of novels to the generes/tags you want. Plus a cool user interface to make it simple to understand.",

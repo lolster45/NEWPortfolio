@@ -45,7 +45,6 @@ export default function App({ Component, pageProps }: AppProps) {
                 <FaLinkedin/>
               </a>
         </div>
-
         <div 
             className={`${styles.hamburger_menu} ${mobileNav ? styles.active : ""}`} 
             onClick={() => setMobileNav(prev => !prev)}
@@ -54,9 +53,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <div className={styles.bar}></div>
             <div className={styles.bar}></div>
             <div className={styles.bar}></div>
-        </div>
-
-        
+        </div> 
       </nav>
       <MobileNav mobileNav={mobileNav} setMobileNav={setMobileNav} />  
       <Component {...pageProps} />

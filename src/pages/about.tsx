@@ -101,9 +101,7 @@ const About = () => {
                             </div>
                             <div id={styles.skills_page}>
                                 <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse illum, deserunt alias
-                                    quaerat distinctio quo facere. Itaque corrupti molestiae cupiditate mollitia pariatur
-                                    facere numquam officiis voluptatem error vel? Numquam, reiciendis?
+                                    I have primarily been working with React and NextJS but recently started using TypeScript and exploring other libraries like Tailwind in making clean and fast modern websites. 
                                 </p>
                                 <ul id={styles.list_of_skills}>
                                     <li>
@@ -116,7 +114,7 @@ const About = () => {
                                     </li>
                                     <li>
                                         <h3>Development</h3>
-                                        <p>Javascript(ES6 +), APIs, React, Typescript, NextJS</p>
+                                        <p>Javascript(ES6 +), APIs, React, Typescript, NextJS, Firebase</p>
                                     </li>
                                     <li>
                                         <h3>Tools</h3>

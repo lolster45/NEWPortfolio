@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Quiz from "../../public/quizProj.png"
 import Calc from "../../public/calculatorProj.png"
 import MarkUp from "../../public/markUp.png"
-import ECOM from "../../public/eCom.png"
+import Ecom from "../../public/eCom.png"
 import ColorS from "../../public/colorScheme.png"
 import TicTacToe from "../../public/ticTacToe.png"
 import PassWordGen from "../../public/passwordGenerator.png"
@@ -25,7 +25,7 @@ const moreWorks = () => {
                     <div>
                         <Image 
                            src={converter}
-                           alt="profile picture of me"                    
+                           alt="picture of my converter website project"                    
                         />    
                         <h2>Measurement Converter</h2>
                         <div>
@@ -36,7 +36,7 @@ const moreWorks = () => {
                     <div>
                         <Image 
                            src={Quiz}
-                           alt="profile picture of me"                 
+                           alt="picture of my quiz project website"                 
                         />    
                         <h2>Quiz</h2>
                         <div>
@@ -47,8 +47,7 @@ const moreWorks = () => {
                     <div>
                         <Image 
                            src={Calc}
-                           alt="profile picture of me" 
-                          
+                           alt="picture of my calculator project" 
                         />    
                         <h2>Calculator</h2>
                         <div>
@@ -59,23 +58,23 @@ const moreWorks = () => {
                     <div>
                         <Image 
                            src={MarkUp}
-                           alt="profile picture of me"      
+                           alt="picture of my markup editor website project"      
                         />    
                         <h2>MarkUp Editor</h2>
                         <div>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus quo suscipit quia ad dicta repellendus itaque saepe possimus! Vero quis accusantium et sit sint sequi dolorum aliquam. Consequatur, nobis neque?</p>
-                            <a href="">LIVE</a>                        
+                            <p>A simple markup editor where you can multiple projects opened up at the same time saved onto local storage.</p>
+                            <a href="https://mark-up-editor-six.vercel.app/">LIVE</a>                        
                         </div>
                     </div>
                     <div>
                         <Image 
-                           src={ECOM}
-                           alt="profile picture of me"    
+                           src={Ecom}
+                           alt="picture of my E commerse website project"    
                         />    
                         <h2>ECOM</h2>
                         <div>
                             <p>A modern ECOM website with built in add to car feature and an API with products on display and the option to filter through them.</p>
-                            <a href="">LIVE</a>                        
+                            <a href="https://e-commerce-eeb6a.web.app/#/">LIVE</a>                        
                         </div>
                     </div>
                     <div>
@@ -93,7 +92,6 @@ const moreWorks = () => {
                         <Image 
                            src={TicTacToe}
                            alt="profile picture of me" 
-                          
                         />    
                         <h2>Tic-Tac-Toe</h2>
                         <div>

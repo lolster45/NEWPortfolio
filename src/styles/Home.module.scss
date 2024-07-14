@@ -209,8 +209,7 @@
         width: 350px;
         a {
             position: relative;
-            font-weight: 100;
-            //color: var(--text-color);
+            font-weight: 400;
             color: white;
             text-decoration: none;
             &::after {
@@ -275,10 +274,13 @@
     }
 }
 #footer {
-    padding: 20px;
+    position: absolute;
+    transform: translateY(-50px);
+    width: 100%;
+    padding: 20px 20px 0px 20px;
     text-align: center;
     color: white;
-    background-color: #120E1E;
+    background-color: transparent;
 }
 @media only screen and (min-width: 1500px) {
     #floating_nav {
@@ -316,6 +318,11 @@
         }
     }
 }
+@media only screen and (max-width: 600px) {
+    #footer {
+        transform: translateY(-60px);
+    }
+}
 @media only screen and (max-width: 540px) {
     #main_section {
         #text_box {
@@ -342,6 +349,9 @@
             }
         }
     }
+    #footer {
+        font-size: 0.9rem;
+    }
 }
 @media only screen and (max-width: 300px) {
     #main_section {
@@ -355,6 +365,9 @@
                 }
             }
         }
+    }
+    #footer {
+        font-size: 0.8rem;
     }
 }
 @keyframes cursor {

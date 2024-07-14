@@ -1,26 +1,24 @@
 //ReactNextJS...
 import Head from 'next/head'
+import React from 'react';
 
 //Components...
-import dynamic from 'next/dynamic';
-const StarrySky = dynamic(() => import('../components/StarrySky'), {
-  loading: () => <p>Loading...</p>,
-  ssr: true, // This can be set to true if you want SSR support for this component
-});
-
-//import About from './about';
-const About = dynamic(() => import("./about"), {
-  loading: () => <p>Loading...</p>,
-  ssr: true, // This can be set to true if you want SSR support for this component
-});
-
-const MoreWork = dynamic(() => import("./moreWorks"), {
-  loading: () => <p>Loading...</p>,
-  ssr: true, // This can be set to true if you want SSR support for this component
-});
+  import FloatingDownArrow from '@nextjsportfolio/components/FloatingDownArrow';
+  import dynamic from 'next/dynamic';
+  const StarrySky = dynamic(() => import('../components/StarrySky'), {
+    loading: () => <p>Loading...</p>,
+    ssr: true, // This can be set to true if you want SSR support for this component
+  });
+  const About = dynamic(() => import("./about"), {
+    loading: () => <p>Loading...</p>,
+    ssr: true, // This can be set to true if you want SSR support for this component
+  });
+  const MoreWork = dynamic(() => import("./moreWorks"), {
+    loading: () => <p>Loading...</p>,
+    ssr: true, // This can be set to true if you want SSR support for this component
+  });
 
 
-import FloatingDownArrow from '@nextjsportfolio/components/FloatingDownArrow';
 
 //React observer...
 import { useInView } from 'react-intersection-observer';
@@ -52,7 +50,7 @@ export default function Home() {
           rel="stylesheet">
         </link>
       </Head>
-      <main id={styles.main_section} className='main-font-family' >
+      <main id={styles.main_section} className='main-font-family'>
         <div ref={ref} className={`${styles.container} ${inView ? styles.active : ""}`}>
           <div id={styles.text_box}>
             <div id={styles.pc_myname}>
@@ -67,7 +65,7 @@ export default function Home() {
           <div className={styles.foreground}></div>
         </div>
         <About/>
-        <MoreWork/> 
+        <MoreWork />
       </main>
     </>
   )

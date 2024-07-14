@@ -7,6 +7,8 @@ import Link from 'next/link';
 //Components...
 import InfiniteScrollBar from '@nextjsportfolio/components/infiniteScrollBar';
 import { useInView } from 'react-intersection-observer';
+import SpaceButton from '@nextjsportfolio/components/spaceButton';
+
 
 //React slick...
 import Slider from "react-slick";
@@ -16,15 +18,8 @@ import "slick-carousel/slick/slick-theme.css";
 //Icons...
 import { FiArrowRightCircle } from "react-icons/fi";
 import { IoArrowBackCircleOutline } from "react-icons/io5";
-import { GoChevronLeft } from "react-icons/go";
-import { GoChevronRight } from "react-icons/go";
-
 import { BsChevronRight } from "react-icons/bs";
 import { BsChevronLeft } from "react-icons/bs";
-
-
-
-
 
 //data...
 import projData from "../../data";
@@ -36,17 +31,14 @@ interface Video {
     src: string;
     text: string;
 }
-
 interface Image {
     img: { src: string };
     name: string;
 }
-
 interface Links {
     Github: string,
     live: string
 }
-
 interface SingleProject {
     index: number;
     searchTitle: string;
@@ -83,12 +75,11 @@ const ProjectsPage = ({ data }: { data: SingleProject }) => {
     const [currentIndex, setCurrentIndex] = useState<number>(0);
     const [fade, setFade] = useState(true);
 
- 
+    //Animations for react slick when users clicks the arrows to navigate thorugh videos...
     const rightScroll = () => {
         triggerFade();
         setCurrentIndex((prevIndex) => (prevIndex === data.videos.length - 1 ? 0 : prevIndex + 1));
     };
-
     const leftScroll = () => {
         triggerFade();
         setCurrentIndex((prevIndex) => (prevIndex === 0 ? data.videos.length - 1 : prevIndex - 1));
@@ -114,22 +105,6 @@ const ProjectsPage = ({ data }: { data: SingleProject }) => {
         slidesToScroll: 1,
         prevArrow: <CustomPrevArrow leftScroll={leftScroll} />,
         nextArrow: <CustomNextArrow rightScroll={rightScroll} />,
-        //afterChange: (current: number) => setCurrentIndex(current),
-    };
-
-    const handleClick = (e: any) => {
-        console.log(e.target.textContent)
-        const destination = e.target.textContent
-
-        if(destination === "Github") {
-            window.open(data.links.Github, '_blank'); // Open link in a new tab
-        }
-        else if (destination === "Live") {
-            window.open(data.links.live, '_blank'); // Open link in a new tab
-        }
-        else {
-            console.log("error...")
-        }
     };
 
     return (
@@ -152,39 +127,9 @@ const ProjectsPage = ({ data }: { data: SingleProject }) => {
             </div>
             <InfiniteScrollBar data={data.Images} />
             <div className={styles.project_link_buttons}>
-                <div className={styles.box} >
-                    <button className={styles.button} onClick={handleClick}>Github</button>
-                    <div className={styles.space}>
-                        {
-                            [31, 12, 57, 93, 23, 70, 6].map((value, index) => (
-                                <span 
-                                    key={index} 
-                                    className={styles.star}
-                                    style={{ '--i': value } as React.CSSProperties} 
-                                >                                   
-                                </span>
-
-                            ))
-                        }
-                    </div>
-                </div>     
-                <div className={styles.box}>
-                    <button className={styles.button} onClick={handleClick}>Live</button>
-                    <div className={`${styles.space} ${styles.color}`}>
-                        {
-                            [31, 12, 57, 93, 23, 70, 6].map((value, index) => (
-                                <span 
-                                    key={index} 
-                                    className={styles.star}
-                                    style={{ '--i': value } as React.CSSProperties} 
-                                >                                   
-                                </span>
-
-                            ))
-                        }
-                    </div>
-                </div>
-            </div>
+                <SpaceButton data={data} text={"Github"}/>
+                <SpaceButton data={data} text={"Live"}/>
+            </div>  
             <div id={styles.projects_info}>
                 <div ref={ref} className={`${styles.projects_left_side} ${inView ? styles.inView : ""}`}>
                     <Slider {...settings} className={styles.actual_slider}>
@@ -203,7 +148,6 @@ const ProjectsPage = ({ data }: { data: SingleProject }) => {
                         ))}
                     </Slider> 
                     <span id={styles.slide_show_num}>{currentIndex + 1} / {data.videos.length}</span>
-
                 </div>
                 <div id={styles.projects_right_side}>
                     <p className={fade ? styles.active : ''}>
@@ -219,17 +163,14 @@ export async function getStaticPaths() {
     const paths = projData.map((proj) => ({
         params: { projectID: proj.searchTitle },
     }));
-
     return {
         paths,
         fallback: false,
     };
 }
-
 export async function getStaticProps({ params }: any) {
     const { projectID } = params;
     const data = projData.find((proj) => proj.searchTitle === projectID);
-
     return {
         props: { data },
     };

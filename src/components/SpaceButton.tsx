@@ -1,10 +1,10 @@
 //React...
 import React from 'react';
 
-//Styles...
 import styles from "../styles/SpaceButton.module.scss"
 
-const SpaceButton = ({data, text} : {data : any, text: string}) => {
+const spaceButton = ({data, text} : {data : any, text: string}) => {
+
 
     const handleClick = (e: any) => {
         const destination = e.target.textContent
@@ -39,4 +39,4 @@ const SpaceButton = ({data, text} : {data : any, text: string}) => {
     );
 };
 
-export default SpaceButton;
+export default spaceButton;

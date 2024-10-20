@@ -51,8 +51,12 @@
                         width: 0%;
                         left: 0;
                         bottom: -10px;
-                        background-color: var(--background-color-rainbow);
-                        background-image: var(--gradient);
+                        // background-color: var(--background-color-rainbow);
+                        // background-image: var(--gradient);
+
+                        background-color: var(--pink);
+
+
                         transition: 0.2s;
                     }
                     &.active::after {
@@ -83,7 +87,7 @@
                         p {
                            font-size: 0.9rem;
                            line-height: 28px;
-                           color: white;
+                           color: rgb(214, 214, 214);
                            text-shadow: rgba(70,17,119,0.9) 0px 0px 21px;
                         }
     

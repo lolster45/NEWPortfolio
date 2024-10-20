@@ -1,154 +1,179 @@
 #contactForm_section {
+    overflow-y: scroll;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background: linear-gradient(to bottom, #120e1e, #271950);
-    #contact_wrap {
-        width: 60%;
-        visibility: hidden;
-        opacity: 0;
-        transform: translateY(-30px);
-        transition: visibility 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
-        @media only screen and (min-width: 1500px) {
-            max-width: 1300px !important;
+
+
+    background-color: red;
+
+
+
+   
+}
+
+
+#contact_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px;
+    padding-bottom: 100px;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+
+    background-color: #120E1E;
+
+
+    @media only screen and (min-width: 1500px) {
+        //max-width: 1300px !important;
+    }
+    > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.49);
         }
+        p {
+            width: 50%;
+            text-align: center;
+            line-height: 25px;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            color: white;
+        }
+    }
+    #form_wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 300px;
+        width: 50%;
+
+        //background-color: blue;
+
+
         > div {
+            position: relative;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 40px;
-            h1 {
-                font-size: 2.8rem;
-                margin-bottom: 20px;
-                color: white;
-                text-shadow: 2px 2px 15px rgba(0,0,0,0.49);
-            }
-            p {
-                width: 50%;
-                text-align: center;
-                line-height: 25px;
-                font-size: 0.9rem;
-                margin-bottom: 30px;
-                color: white;
-            }
-        }
-        #form_wrap {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: space-between;
-            height: 300px;
             width: 100%;
-            > div {
-                position: relative;
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-                input {
-                    padding-left: 15px;
-                    height: 50px;
-                    width: 45%;
-                    border-radius: 3px;
-                    outline: none;
-                    border: none;
-                    font-size: 0.9rem;
-                    color: white;
-                    -webkit-box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.81);
-                    -moz-box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.81);
-                    box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.81);
-                    background-color: rgb(41, 41, 41);
-                    transition: transform 0.1s ease;
-                    &::placeholder {
-                        color: rgb(160, 160, 160);
-                    }
-                    &:focus {
-                        transform: scale(1.02);
-                        &::placeholder {
-                            color: transparent;
-                        }
-                    }       
-                }
-                #email_input_wrapper {
-                    position: relative;
-                    display: flex;
-                    justify-content: center;
-                    height: 50px;
-                    width: 50%;
-                    margin-bottom: 20px;
-                    input {
-                        width: 100%;
-                    }
-                    span {
-                        position: absolute;
-                        top: 50%;
-                        left: 98%;
-                        transform: translate(-98%, -50%);
-                        display: flex;
-                        justify-content: space-evenly;
-                        width: 80px;
-                        color: red;
-                    }
-                }
-            }
-            textarea {
-                padding: 10px;
+            input {
                 padding-left: 15px;
-                height: 140px;
-                width: 100%;
-                border: none;
+                height: 40px;
+                width: 45%;
+                border-radius: 3px;
                 outline: none;
-                resize: none;
+                border: none;
                 font-size: 0.9rem;
-
                 color: white;
-                background-color: rgb(37, 37, 37);
-
-
                 -webkit-box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.81);
                 -moz-box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.81);
                 box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.81);
-
+                background-color: rgb(41, 41, 41);
                 transition: transform 0.1s ease;
-
-                &:focus {
-                    transform: scale(1.01);
+                &::placeholder {
                     color: rgb(160, 160, 160);
+                }
+                &:focus {
+                    transform: scale(1.02);
                     &::placeholder {
                         color: transparent;
-
                     }
-
-                }
-               
-
+                }       
             }
-            button {
-                cursor: pointer;
-                align-self: flex-end;
-                height: 48px;
-                width: 140px;
-                border: none;
-                border-radius: 3px;
-                outline: none;
-                font-size: 0.9rem;
-                color: white;
-                transition: background-color 0.2s ease-out;
-                &:hover {
-                    background-color: rgb(148, 2, 144);
-                    text-shadow: 2px 2px 15px white;
-
+            #email_input_wrapper {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                height: 50px;
+                width: 50%;
+                margin-bottom: 20px;
+                input {
+                    width: 100%;
                 }
-                background-color: rgb(81, 1, 78);
+                span {
+                    position: absolute;
+                    top: 50%;
+                    left: 98%;
+                    transform: translate(-98%, -50%);
+                    display: flex;
+                    justify-content: space-evenly;
+                    width: 80px;
+                    color: red;
+                }
             }
         }
-        &.active {
-            visibility: visible;
-            opacity: 1;
-            transform: translateY(0px);
+        textarea {
+            padding: 10px;
+            padding-left: 15px;
+            height: 140px;
+            width: 100%;
+            border: none;
+            outline: none;
+            resize: none;
+            font-size: 0.9rem;
+
+            color: white;
+            background-color: rgb(37, 37, 37);
+
+
+            -webkit-box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.81);
+            -moz-box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.81);
+            box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.81);
+
+            transition: transform 0.1s ease;
+
+            &:focus {
+                transform: scale(1.01);
+                color: rgb(160, 160, 160);
+                &::placeholder {
+                    color: transparent;
+
+                }
+
+            }
+           
+
+        }
+        button {
+            cursor: pointer;
+            align-self: flex-end;
+            height: 48px;
+            width: 140px;
+            border: none;
+            border-radius: 3px;
+            outline: none;
+            font-size: 0.9rem;
+            color: white;
+            transition: background-color 0.2s ease-out;
+            &:hover {
+                background-color: rgb(148, 2, 144);
+                text-shadow: 2px 2px 15px white;
+
+            }
+            background-color: rgb(81, 1, 78);
         }
     }
+    &.active {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
+
+
+
 
 @media only screen and (max-width: 980px) {
     #contactForm_section {

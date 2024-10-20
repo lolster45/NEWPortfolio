@@ -10,6 +10,9 @@ import typesciptLogo from "../public/typescriptLogo.png"
 
 
 
+
+
+
 const data = [
 
     {
@@ -31,7 +34,21 @@ const data = [
                 text: "With Google login funtinality, you are able to log in easily and access all the features that come with it which are bookmarking, community tab, writing reviews and such. But even when not logged in, you can read all the novels available on the website."
             }
         ],
-        Images: [
+        colors: {
+            featuredColor: '2F4858',
+            headerColor: 'ffffff',
+            paragraphBgColor: '1E1E1E',
+            textColor: '9EE493',
+            challengeParaBgColor: ''
+        },
+        backgroundImages: [
+            'https://wallpapers.com/images/featured/anime-scenery-ahd1eqpvwq8aoofp.jpg', 
+            'https://i.imgur.com/xFD60cC.jpg'
+        ],
+        mainImg: '/animeScreen.png',
+        longImage: '',
+        subImgs: ['/animeHomeScreenPic.png', '/animeMoreinfo.png'],
+        icons: [
             {
                 img: htmlImage, 
                 name: "HTML5"
@@ -63,6 +80,135 @@ const data = [
     },
     {
         index: 1,
+        searchTitle: "vivabkesaustin",
+        displayTitle: "VivaBikes Austin",
+        links: {
+            Github: "https://github.com/lolster45/BikesViva",
+            live: "https://bikes-viva.vercel.app/"
+        },
+        videos: [
+            { 
+                src: "/addingTask.mp4",
+                text: "As show in the video, this feature allows the user to add task they need to do on their workstation. With each task they are able to add subtaks to each just in case they need it.",
+            },
+            { 
+                src: "/MovingBetweenColumns.mp4",
+                text: "The Drag and Drop feature here was built using the library react beautifull dnd, which allows the user to save so much time and cut off stress trying to organize things in their workstation. Simply drga and move, then finally drop it on your desidred column.",
+            }, 
+        ],
+        colors: {
+            featuredColor: 'F8BB02',
+            headerColor: '',
+            paragraphBgColor: '0F0825',
+            textColor: '',
+            challengeParaBgColor: '0F0825'
+        },
+        backgroundImages: [
+            '/vivaBikesBgOne.png', 
+            '/vivaBikesBgTwo.png',
+        ],
+        mainImg: '/vivaBikeMainPicOne.png',
+        longImage: '/vivaBikesBgLong.png',
+        subImgs: [
+            '/subBikeOneImg.png', 
+            '/subBikeTwoImg.png',
+            '/vivaBikesBgThree.png',
+            '/vivaBikesBgFour.png',
+        ],
+        icons: [
+            {
+                img: htmlImage, 
+                name: "HTML5"
+            }, 
+            {
+                img: cssImage, 
+                name: "CSS3"
+            }, 
+            {
+                img: jsImage, 
+                name: "JavaScript"
+            }, 
+            {
+                img: reactImage, 
+                name: "ReactJS"
+            }, 
+            {
+                img: firebaseImage, 
+                name: "Firebase"
+            }, 
+            {
+                img: sassImage, 
+                name: "SASS"
+            }, 
+        ],
+        text: "A Non for profit organization website the gives aways bikes to communities in need all for free. On display are the currently available bikes that anyone could request for free, all you have to do is send and email which is easily avabile on the product information.",
+        github_link: "https://github.com/lolster45/Task-Mangement",
+        live_proj: "https://task-management-624c8.web.app/"
+    },
+    {
+        index: 2,
+        searchTitle: "nextlevelmovers",
+        displayTitle: "Next Level Movers",
+        links: {
+            Github: "https://github.com/lolster45/NextLevelMovers",
+            live: "https://www.nextlevelmovingcompany.com/"
+        },
+        videos: [
+            { 
+                src: "/addingTask.mp4",
+                text: "As show in the video, this feature allows the user to add task they need to do on their workstation. With each task they are able to add subtaks to each just in case they need it.",
+            },
+            { 
+                src: "/MovingBetweenColumns.mp4",
+                text: "The Drag and Drop feature here was built using the library react beautifull dnd, which allows the user to save so much time and cut off stress trying to organize things in their workstation. Simply drga and move, then finally drop it on your desidred column.",
+            }, 
+        ],
+        colors: {
+            featuredColor: '000000',
+            headerColor: '',
+            paragraphBgColor: '',
+            textColor: '',
+            challengeParaBgColor: '000000'
+        },
+        backgroundImages: [
+            '/nextLevelMoversBackground.png', 
+            '/nextLevelMoversBgTwo.png'
+        ],
+        mainImg: '/nextLevelMoversMainPic.png',
+        longImage: '/nextLevelMoversLongBg.png',
+        subImgs: ['/nextLevelMoversPicSubOne.png', '/nextLevelMoversPicSubTwo.png'],
+        icons: [
+            {
+                img: htmlImage, 
+                name: "HTML5"
+            }, 
+            {
+                img: cssImage, 
+                name: "CSS3"
+            }, 
+            {
+                img: jsImage, 
+                name: "JavaScript"
+            }, 
+            {
+                img: reactImage, 
+                name: "ReactJS"
+            }, 
+            {
+                img: firebaseImage, 
+                name: "Firebase"
+            }, 
+            {
+                img: sassImage, 
+                name: "SASS"
+            }, 
+        ],
+        text: "A Non for profit organization website the gives aways bikes to communities in need all for free. On display are the currently available bikes that anyone could request for free, all you have to do is send and email which is easily avabile on the product information.",
+        github_link: "https://github.com/lolster45/Task-Mangement",
+        live_proj: "https://task-management-624c8.web.app/"
+    },
+    {
+        index: 3,
         searchTitle: "task_manager",
         displayTitle: "Task Manager",
         links: {
@@ -79,7 +225,21 @@ const data = [
                 text: "The Drag and Drop feature here was built using the library react beautifull dnd, which allows the user to save so much time and cut off stress trying to organize things in their workstation. Simply drga and move, then finally drop it on your desidred column.",
             }, 
         ],
-        Images: [
+        colors: {
+            featuredColor: '69E5B0',
+            headerColor: '',
+            paragraphBgColor: '21212D',
+            textColor: '9590f0',
+            challengeParaBgColor: ''
+        },
+        backgroundImages: [
+            '/taskManagerBgOne.png', 
+            '/taskManagerBgTwo.png'
+        ],
+        mainImg: '/taskManagerMainPic.png',
+        longImage: '',
+        subImgs: ['/taskManagerSubPicOne.png', '/taskManagerSubPicTwo.png'],
+        icons: [
             {
                 img: htmlImage, 
                 name: "HTML5"
@@ -110,7 +270,7 @@ const data = [
         live_proj: "https://task-management-624c8.web.app/"
     },
     {
-        index: 2,
+        index: 4,
         searchTitle: "mtl_haven",
         displayTitle: "MTLHaven",
         links: {
@@ -127,7 +287,21 @@ const data = [
                 text: "Of course without feedback, none of this would be complete so any user who is logged in can comment down their review of the novel to let others know if the novel was trash or gold. Supported using Firebase database so they will stay there.",
             }
         ],
-        Images: [
+        colors: {
+            featuredColor: '69E5B0',
+            headerColor: '',
+            paragraphBgColor: '',
+            textColor: '',
+            challengeParaBgColor: ''
+        },
+        backgroundImages: [
+            '/chineseBg-transformed.jpeg', 
+            '/taskManagerBgTwo.png'
+        ],
+        mainImg: '/mtlHavenMainPic.png',
+        longImage: '',
+        subImgs: ['/mtlHavenSubPicOne.png', '/mtlHavenSubPicTwo.png'],
+        icons: [
             {
                 img: htmlImage, 
                 name: "HTML5"
@@ -166,7 +340,7 @@ const data = [
         live_proj: "https://task-management-624c8.web.app/"
     },
     {
-        index: 3,
+        index: 5,
         searchTitle: "shopping_list",
         displayTitle: "Shopping List",
         links: {
@@ -183,7 +357,21 @@ const data = [
                 text: "Of course without feedback, none of this would be complete so any user who is logged in can comment down their review of the novel to let others know if the novel was trash or gold. Supported using Firebase database so they will stay there.",
             }
         ],
-        Images: [
+        colors: {
+            featuredColor: '69E5B0',
+            headerColor: 'ffffff',
+            paragraphBgColor: '000000',
+            textColor: 'ffffff',
+            challengeParaBgColor: ''
+        },
+        backgroundImages: [
+            '/shoppingListBg.png', 
+            '/shoppingListBgTwo.png'
+        ],
+        mainImg: '/shoppingListMainPic.png',
+        longImage: '',
+        subImgs: ['/shoppingListSubPicOne.png', '/shoppingListSubPicTwo.png'],
+        icons: [
             {
                 img: htmlImage, 
                 name: "HTML5"
@@ -212,4 +400,70 @@ const data = [
 ]
 
 
-export default data
+
+
+//import converter from "/converterNEW.png"
+
+
+const projectsMain = [
+    {
+        title: 'Quiz',
+        links: {
+            github: '',
+            live: 'https://four-step-quiz.vercel.app/#/'
+        },
+        image: '/quizProj.png'
+    },
+    {
+        title: 'Calculator',
+        links: {
+            github: 'https://github.com/lolster45/Calculator-brainnest',
+            live: 'https://lolster45.github.io/Calculator-brainnest/'
+        },
+        image: '/calculatorProj.png'
+    },
+    {
+        title: "Mark Up",
+        links: {
+            github: '',
+            live: ''
+        },
+        image: '/markUp.png'
+    },
+    {
+        title: 'ECOM website',
+        links: {
+            github: '',
+            live: 'https://e-commerce-eeb6a.web.app/#/'
+        },
+        image: '/eCom.png'
+    },
+    {
+        title: 'Color Scheme Generator',
+        links: {
+            github: '',
+            live: ''
+        },
+        image: '/colorScheme.png'
+    },
+    {
+        title: 'Tic Tac Toe',
+        links: {
+            github: '',
+            live: 'https://lolster45.github.io/Tic-Tac-Toe/'
+        },
+        image: '/ticTacToe.png'
+    },
+    {
+        title: 'Password Gen.',
+        links: {
+            github: '',
+            live: 'https://lolster45.github.io/Password-generator/'
+        },
+        image: '/passwordGenerator.png'
+    }
+];
+
+
+
+export {data, projectsMain}

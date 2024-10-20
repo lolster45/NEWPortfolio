@@ -26,6 +26,9 @@ import { useInView } from 'react-intersection-observer';
 //Styles...
 import styles from '@nextjsportfolio/styles/Home.module.scss'
 
+
+import ContactComponent from '@nextjsportfolio/components/contactComponent';
+
 export default function Home() {
 
   const { ref, inView } = useInView({
@@ -44,11 +47,16 @@ export default function Home() {
 
 
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=''/>
         <link 
           href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:wght@300;400;500;700&display=swap" 
           rel="stylesheet">
         </link>
+
+    
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet"></link>
+
+
       </Head>
       <main id={styles.main_section} className='main-font-family'>
         <div ref={ref} className={`${styles.container} ${inView ? styles.active : ""}`}>
@@ -66,6 +74,10 @@ export default function Home() {
         </div>
         <About/>
         <MoreWork />
+
+        
+        <ContactComponent/>
+
       </main>
     </>
   )

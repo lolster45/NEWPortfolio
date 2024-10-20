@@ -58,7 +58,12 @@ const ContactForm = () => {
 
     const sendEmail = async (e: any) => {
       try {
-        await emailjs.sendForm('service_50xi2u4', 'template_m1oqvw5', e.target, "V19aGRH_RgVYiOgI_");
+        await emailjs.sendForm(
+          'service_50xi2u4', 
+          'template_m1oqvw5', 
+          e.target, 
+          "V19aGRH_RgVYiOgI_"
+        );
         console.log('Email sent successfully');
       } 
       catch (error) {
@@ -73,6 +78,7 @@ const ContactForm = () => {
 
   return (
     <section id={styles.contactForm_section} className='main-font-family'>
+
       <div id={styles.contact_wrap} ref={ref} className={`${inView ? styles.active : ""}`}>
         <div>
             <h1>Lets connect</h1>
@@ -120,6 +126,8 @@ const ContactForm = () => {
             <button type="submit">Submit</button>
         </form>
       </div>
+
+      
     </section>
   );
 };

@@ -1,0 +1,41 @@
+// LoadingScreen.module.scss
+.loadingScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #26184D;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.5s ease;
+}
+
+.loadingScreen.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 45px;
+    aspect-ratio: .75;
+    --c: no-repeat linear-gradient(#ffffff 0 0);
+    background: 
+      var(--c) 0%   50%,
+      var(--c) 50%  50%,
+      var(--c) 100% 50%;
+    animation: l7 1s infinite linear alternate;
+  }
+  @keyframes l7 {
+    0%  {background-size: 20% 50% ,20% 50% ,20% 50% }
+    20% {background-size: 20% 20% ,20% 50% ,20% 50% }
+    40% {background-size: 20% 100%,20% 20% ,20% 50% }
+    60% {background-size: 20% 50% ,20% 100%,20% 20% }
+    80% {background-size: 20% 50% ,20% 50% ,20% 100%}
+    100%{background-size: 20% 50% ,20% 50% ,20% 50% }
+  }

@@ -36,8 +36,8 @@ const About = () => {
     };
 
     const { ref, inView } = useInView({
-    threshold: 0.40, // Adjust this value as needed
-    triggerOnce: true, // Trigger only once
+        threshold: 0.40, // Adjust this value as needed
+        triggerOnce: true, // Trigger only once
     });
 
     return (
@@ -69,12 +69,12 @@ const About = () => {
                         <Slider ref={sliderRef} {...settings}>
                             <div id={styles.about_me}>
                                 <div id={styles.left_side_aboutMe}>
-                                        <p>
-                                        Hi, my name is Oscar Reyes and I am an asprirign self taught Front End Web Developer. My first encounter with web development started back in high-school but only recently in 2022 did I really get into it. Now it has been close to 2 years and I just cant get enough of the beautiful world React and such languages have to offer.
+                                    <p>
+                                        Hi, my name is Oscar Reyes, and I am an aspiring self-taught Front-End Web Developer. My journey into web development began back in high school, but it wasn't until 2022 that I truly immersed myself in it. Now, almost two years later, I can’t get enough of the amazing world that React and other technologies have to offer.
                                         <br />
                                         <br />
-                                        I have built numerous projects with React and such and have managed to make them Full-stack with firebase which I find just amazing to see when it works in the end. From this experiece I know debugging plays a major role so I have learned to embrace it.
-                                        </p>
+                                        I’ve built numerous projects with React and have even made them full-stack using Firebase and NodeJS, which I find incredibly rewarding when everything comes together. Through these experiences, I've come to realize the importance of debugging, and I've learned to embrace it as a key part of the process.
+                                    </p>
                                         <div>
                                         <span>
                                             <h3>Experience</h3>
@@ -101,7 +101,7 @@ const About = () => {
                             </div>
                             <div id={styles.skills_page}>
                                 <p>
-                                    I have primarily been working with React and NextJS but recently started using TypeScript and exploring other libraries like Tailwind in making clean and fast modern websites. 
+                                    I have primarily been working with React and Next.js but recently started using TypeScript and exploring other libraries like Tailwind CSS to create clean, fast, and modern websites.
                                 </p>
                                 <ul id={styles.list_of_skills}>
                                     <li>
@@ -140,7 +140,7 @@ const About = () => {
                                         <div>
                                             <p>Contribute and collaborate with other developers on open source projects</p>
                                         </div>
-                                        <p className={styles.types}>REACT | TYPESCRIPT</p>
+                                        <p className={styles.types}>REACT | TYPESCRIPT | NODEJS | FIREBASE</p>
                                     </li>
                                     <li>
                                         <h3>Brainnest</h3>

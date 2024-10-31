@@ -1,7 +1,7 @@
-// LoadingScreen.tsx
-import React, { useEffect, useState } from 'react';
+//React...
+import React from 'react';
 
-
+//Styles...
 import styles from '../styles/LoadingScreen.module.scss' // Your custom styles
 
 const LoadingScreen = ({ loading }: { loading: boolean }) => {

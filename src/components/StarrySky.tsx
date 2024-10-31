@@ -21,13 +21,3 @@ const StarrySky = () => {
 };
 
 export default StarrySky;
-
-   {/* This is the old animation.... */}
-            {/* <div className={styles.stars}></div>
-            <div className={styles.stars}></div>
-            <div className={styles.stars}></div>
-            <div className={`${styles.star} ${styles.star1}`}></div>
-            <div className={`${styles.star} ${styles.star2}`}></div>
-            <div className={`${styles.star} ${styles.star3}`}></div>
-            <div className={`${styles.star} ${styles.star4}`}></div>
-            <div className={`${styles.star} ${styles.star5}`}></div> */}

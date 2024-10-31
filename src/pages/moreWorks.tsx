@@ -1,48 +1,24 @@
 //React...
-import React, {useRef} from 'react';
+import React from 'react';
 import Image from 'next/image';
 
-//import { motion, useInView} from 'framer-motion'
-
-//Images...
-import Quiz from "../../public/quizProj.png"
-import Calc from "../../public/calculatorProj.png"
-import MarkUp from "../../public/markUp.png"
-import Ecom from "../../public/eCom.png"
-import ColorS from "../../public/colorScheme.png"
-import TicTacToe from "../../public/ticTacToe.png"
-import PassWordGen from "../../public/passwordGenerator.png"
-import converter from "../../public/converterNEW.png"
+//Components...
+import { useInView } from 'react-intersection-observer';
 
 //React icons...
 import { FaGithub } from "react-icons/fa";
 import { MdLiveTv } from "react-icons/md";
 
+//Data...
+import { projectsMain } from '@nextjsportfolio/data';
 
 //Styles...
 import styles from "../styles/MoreWorks.module.scss"
 
-import { useInView } from 'react-intersection-observer';
 
 
-import { projectsMain } from '@nextjsportfolio/data';
 
 const moreWorks = () => {
-
-
-
-
-    const { ref, inView } = useInView({
-        threshold: 0.80, // Adjust this value as needed
-        triggerOnce: true, // Trigger only once
-    });
-
-    // const ref = useRef(null);
-    // const isInView = useInView(ref, {once: false, amount: 1})
-
-
-
-
 
     return (
         <section id={styles.more_work_section}>
@@ -63,8 +39,6 @@ const moreWorks = () => {
                                 threshold: 0.30, // Adjust this value as needed
                                 triggerOnce: true, // Trigger only once
                             });
-
-
 
                             return (
                                 <div 
@@ -114,11 +88,9 @@ const moreWorks = () => {
                                         </div>
                                     </div>
                                 </div>
-
                             )
                         })
                     }
-
                 </div>
             </div>     
         </section>

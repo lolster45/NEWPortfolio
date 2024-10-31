@@ -1,7 +1,10 @@
 import { useScroll, useTransform, motion } from 'framer-motion';
 import React from 'react';
 
-const ScrollBackground: React.FC = ({data}) => {
+
+import { SingleProject } from '@nextjsportfolio/pages/projects/[projectID]';
+
+const ScrollBackground = ({data}: {data: SingleProject}) => {
   // Hook to track the scroll progress
   const { scrollYProgress } = useScroll();
 
@@ -25,7 +28,8 @@ const ScrollBackground: React.FC = ({data}) => {
           width: '100%',
           backgroundImage: `url(${data?.backgroundImages[0]})`, 
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'top',
           opacity: firstImageOpacity, // Animate opacity for the first image
           transition: 'opacity 0.5s ease-in-out',
         }}

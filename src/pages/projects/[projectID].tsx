@@ -32,60 +32,50 @@ import styles from "../../styles/Projects.module.scss";
 import ScrollBackground from '@nextjsportfolio/components/ScrollBackground';
 import LoadingScreen from '@nextjsportfolio/components/LoadingScreen';
 
-interface Video {
-    src: string;
-    text: string;
-}
-interface Image {
-    img: { src: string };
-    name: string;
-}
+
+
 interface Links {
     Github: string,
     live: string
 }
-interface SingleProject {
+export interface Icon {
+    img: string, 
+    name: string
+}
+export interface SingleProject {
     index: number;
     searchTitle: string;
     displayTitle: string;
     links: Links;
-    videos: Video[];
-    Images: Image[];
+    colors: {
+        featuredColor: string,
+        headerColor: string,
+        paragraphBgColor: string,
+        textColor: string,
+        challengeParaBgColor: string
+    };
+    backgroundImages: string[];
+    mainImg: string;
+    icons: Icon[];
+    subImgs: string[];
+    challengeImage: string;
+    paragraphs: {
+        challengeP: string;
+        textOne: string;
+        textTwo: string;
+        textThree: string;
+    }
     text: string;
-    github_link: string;
-    live_proj: string;
 }
 
-//Customs arrow functions for react slick nav sliders...
-const CustomPrevArrow = (props: any) => {
-    const { leftScroll, onClick } = props;
-    return (
-        <div onClick={(e) => { onClick(e); leftScroll(); }} className={`${styles.arrow} ${styles.left_arrow}`}>
-            <BsChevronLeft/>
-        </div>
-    );
-};
-
-const CustomNextArrow = (props: any) => {
-    const { rightScroll, onClick } = props;
-    return (
-        <div onClick={(e) => { onClick(e); rightScroll(); }} className={`${styles.arrow} ${styles.right_arrow}`}>
-            <BsChevronRight/>
-        </div>
-    );
-};
 
 
-const ProjectsPage = ({ dataM, pageLoading, setPageLoading }: any) => {
-
-    //const [loading, setLoading] = useState(false);
+const ProjectsPage = ({ dataM, pageLoading, setPageLoading }: {dataM: SingleProject, pageLoading: boolean, setPageLoading: any}) => {
 
     const router = useRouter();
 
     // Set up loading animation on route change
-    useEffect(() => {
-
-        
+    useEffect(() => { 
         const handleRouteChangeStart = (url: string) => {
             console.log('route started to change')
 
@@ -114,44 +104,7 @@ const ProjectsPage = ({ dataM, pageLoading, setPageLoading }: any) => {
     }, [router.events]);
     
 
-
-
-    //const [currentIndex, setCurrentIndex] = useState<number>(0);
-    const [fade, setFade] = useState(true);
-
-    //Animations for react slick when users clicks the arrows to navigate thorugh videos...
-    // const rightScroll = () => {
-    //     triggerFade();
-    //     setCurrentIndex((prevIndex) => (prevIndex === data.videos.length - 1 ? 0 : prevIndex + 1));
-    // };
-    // const leftScroll = () => {
-    //     triggerFade();
-    //     setCurrentIndex((prevIndex) => (prevIndex === 0 ? data.videos.length - 1 : prevIndex - 1));
-    // };
-
-    //This is for the load in animation...
-    const triggerFade = () => {
-        setFade(false);
-        setTimeout(() => {
-            setFade(true);
-        }, 300);
-    };
-    // const { ref, inView } = useInView({
-    //     threshold: 0,
-    //     triggerOnce: true,
-    // });
-
-    // const settings = {
-    //     dots: false,
-    //     speed: 500,
-    //     infinite: true,
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     prevArrow: <CustomPrevArrow leftScroll={leftScroll} />,
-    //     nextArrow: <CustomNextArrow rightScroll={rightScroll} />,
-    // };
-
-
+    //Framer motion settings for animations...
     const parentVarients = {
         visible: {
             transition: {
@@ -160,8 +113,6 @@ const ProjectsPage = ({ dataM, pageLoading, setPageLoading }: any) => {
         },
         hidden: {}
     }
-
-
     const leftCardVariants = {
         hiddenLeft: { y: '-15px', opacity: 0 },
         visible: { 
@@ -288,31 +239,7 @@ const ProjectsPage = ({ dataM, pageLoading, setPageLoading }: any) => {
                 />
 
 
-                {/* <div id={styles.projects_info}>
-                    <div ref={ref} className={`${styles.projects_left_side} ${inView ? styles.inView : ""}`}>
-                        <Slider {...settings} className={styles.actual_slider}>
-                            {data.videos.map((video, index) => (
-                                <div key={index} className={styles.video_slide}>
-                                    {index === currentIndex && (
-                                        <video
-                                            src={video.src}
-                                            className={styles.actual_video}
-                                            autoPlay
-                                            muted
-                                            loop
-                                        />
-                                    )}
-                                </div>
-                            ))}
-                        </Slider> 
-                        <span id={styles.slide_show_num}>{currentIndex + 1} / {data.videos.length}</span>
-                    </div>
-                    <div id={styles.projects_right_side}>
-                        <p className={fade ? styles.active : ''}>
-                            {data.videos[currentIndex].text}
-                        </p>
-                    </div>
-                </div>  */}
+            
 
                 <div className={styles.challenge}>
                     <div className={styles.left_challenge}>
@@ -338,30 +265,22 @@ const ProjectsPage = ({ dataM, pageLoading, setPageLoading }: any) => {
                             className={`anton-regular ${styles.challenge_para}`}
                             style={{backgroundColor: `#${dataM.colors.challengeParaBgColor}`}}
                         >
-                            This project was the very first big project I attempted to build. Starting from a simple site, to a more complex site with a backend and three sections working simultaenously, many challenges have popped up. One of many being, how to persist data on refresh, which sounds like an amateur concept to any experienced developer, but to me at the time, this was a 'Holy Sh*t' moment.
+                            {dataM.paragraphs.challengeP}
                         </p>
 
                     </div>
-                    <img src={dataM.longImage} alt="" />
+                    <img src={dataM.challengeImage} alt="" />
                 </div>
 
-
-                <img className={styles.old_anime_pic} src="/oldAnimePicProj.png" alt="" />
 
                 <div className={styles.more_info}>
                     <h2>Redesign</h2>
 
-                    <p>
-                        Going from a mess of a site (sorry old site) to current modern refreshing look was adeous task. Struggling to create something beautiful and creative to trasnfer into code requires a special type of skill, so I racked my brain for ideas on what to do. So naturally, I typed figma into my search bar and searched designs.
-                    </p>
-
-
-                    <p>At the time of making this 'masterpiece', I thought to myself 'Do I have to much power?'. To me, this felt like I had some enlightemnet, to have been able to figure everything out, to finally work with a REST API and managed to connect everything in one piece, I felt like a Genius. But like any ohter coder will tell you, I quickly figured out this was not the case...</p>
-
-                    <p>From rags to riches some say, but I went the other way. From so high and mighty to saying 'Wow... Im horrible'. A quick google search will do the trick, one look at the competition and poof, all my pride shattered... well not really. This was an eye opener for me to not be complacent, to strive to become better every single day. I slowly started building getting better and better.</p>
-
-
-
+                    <div className={styles.more_info_para_wrap}>
+                        <p>{dataM.paragraphs.textOne}</p>
+                        <p>{dataM.paragraphs.textTwo}</p>
+                        <p>{dataM.paragraphs.textThree}</p>
+                    </div>
                 </div>
             
             </>

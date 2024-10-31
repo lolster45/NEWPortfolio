@@ -18,7 +18,7 @@
         width: 100%;
         padding-bottom: 20px;
         color: white;
-        border-bottom: 1px solid gray;
+        border-bottom: 1px solid rgb(47, 47, 47);
         h1 {
             font-size: 2.5rem;
         }
@@ -52,18 +52,30 @@
                     text-decoration: none;
                     font-size: 0.8rem;
                     border-radius: 50px;
+                    transition: color 0.5s ease, background-color 0.5s ease;
+
                 }
                 a:first-of-type {
                     width: 75px;
                     border: 1px solid #0A66C2;
                     color: #0A66C2;
                     background-color: #F1F8FF;
+
+                    &:hover {
+                        color: #F1F8FF;
+                        background-color: #0A66C2;
+                    }
                 }
                 a:last-of-type {
                     width: 85px;
                     border: 1px solid black;
                     color: black;
                     background-color: #F2F2F2;
+
+                    &:hover {
+                        color: #F2F2F2;
+                        background-color: black;
+                    }
                 }
             }
         }
@@ -84,7 +96,7 @@
             height: 80px;
             width: 60%;
             color: white;
-            border-bottom: 1px solid gray;
+            border-bottom: 1px solid rgb(47, 47, 47);
             h3 {
                 display: flex;
                 align-items: center;
@@ -108,7 +120,7 @@
             width: 60%;
             padding-bottom: 20px;
             color: white;
-            border-bottom: 1px solid gray;
+            border-bottom: 1px solid rgb(47, 47, 47);
             h3 {
                 display: flex;
                 align-items: center;

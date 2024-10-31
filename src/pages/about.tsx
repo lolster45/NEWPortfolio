@@ -2,6 +2,9 @@
 import React, { useState, useRef } from 'react';
 import Image from 'next/image';
 
+//Components...
+import { useInView } from 'react-intersection-observer';
+
 //React slick...
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
@@ -12,7 +15,6 @@ import Profile from "../../public/ProfilePic.jpg"
 
 //Styles...
 import styles from '../styles/About.module.scss';
-import { useInView } from 'react-intersection-observer';
 
 const About = () => {
 
@@ -94,7 +96,6 @@ const About = () => {
                                         <Image 
                                             src={Profile}
                                             alt="profile picture of me" 
-                                            layout="fill" 
                                             objectFit="contain"
                                         />                                   
                                     </div>

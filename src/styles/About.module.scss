@@ -6,7 +6,6 @@
     height: fit-content;
     color: var(--dark-blue);
     font-family: var(--main-font);
-    // background: linear-gradient(to bottom, #120e1e, #271950);
     background: #120e1e;
     #main {
         position: relative;
@@ -19,7 +18,8 @@
         transition: 
             visibility 1s cubic-bezier(0.25, 0.1, 0, 1.31), 
             opacity 1s cubic-bezier(0.25, 0.1, 0, 1.31), 
-            transform 1s cubic-bezier(0.25, 0.1, 0, 1.31);
+            transform 1s cubic-bezier(0.25, 0.1, 0, 1.31)
+        ;
         >h1 {
             width: 85%;
             margin: 0 auto;
@@ -51,12 +51,7 @@
                         width: 0%;
                         left: 0;
                         bottom: -10px;
-                        // background-color: var(--background-color-rainbow);
-                        // background-image: var(--gradient);
-
                         background-color: var(--pink);
-
-
                         transition: 0.2s;
                     }
                     &.active::after {
@@ -65,21 +60,16 @@
                     }
                 }  
             }
-
             .carousel_section {
                 height: auto;
                 width: 100%;
                 font-weight: 400;
-
-
                 #about_me {
                     position: relative;
                     display: flex !important;
                     flex-direction: row;
                     justify-content: space-evenly;
                     row-gap: 80px;
-    
-                    //background-color: blue;
                     #left_side_aboutMe {
                         position: relative;
                         width: 50%;
@@ -117,16 +107,15 @@
                             }
                         }
                     }
-                    //The right side housing my profile picture...
                     #about_me_image {
                         position: relative !important;
+                        height: fit-content;
                         width: 30% !important;
                         position: relative;
                         display: flex;
-                        
-                        
                         img {
-                            width: 100% !important;
+                            object-fit: contain;
+                            height: 300px;
                             margin: 0 auto;
                             
                         }
@@ -301,8 +290,8 @@
                             margin: 0 auto;
                         }
                         #about_me_image {
-                            height: 350px;
-                            width: 90% !important;
+                            height: 300px;
+                            width: 100% !important;
                             margin: 0 auto;
                         }
                     }

@@ -14,7 +14,6 @@ import typesciptLogo from "../public/typescriptLogo.png"
 
 
 const data = [
-
     {
         index: 0,
         searchTitle: "Anime",
@@ -23,17 +22,6 @@ const data = [
             Github: "https://github.com/lolster45/AnimeWebsite",
             live: "https://animenew-82be3.web.app/"
         },
-        videos: [
-       
-            { 
-                src: "/BookmarkJUNECOMP.mp4",
-                text: "Using firebase database, you are able to bookmark whatever you desire by a click of a button but only if you are logged in via Google. Otherwise you are not able to access this feature."
-            },
-            { 
-                src: "/GoogleLoginJUNECOMPNEW.mp4",
-                text: "With Google login funtinality, you are able to log in easily and access all the features that come with it which are bookmarking, community tab, writing reviews and such. But even when not logged in, you can read all the novels available on the website."
-            }
-        ],
         colors: {
             featuredColor: '2F4858',
             headerColor: 'ffffff',
@@ -42,12 +30,10 @@ const data = [
             challengeParaBgColor: ''
         },
         backgroundImages: [
-            'https://wallpapers.com/images/featured/anime-scenery-ahd1eqpvwq8aoofp.jpg', 
-            'https://i.imgur.com/xFD60cC.jpg'
+            '/animeBgOne.svg',
+            '/animeBgTwo.svg'
         ],
-        mainImg: '/animeScreen.png',
-        longImage: '',
-        subImgs: ['/animeHomeScreenPic.png', '/animeMoreinfo.png'],
+        mainImg: '/NEANIME.png',
         icons: [
             {
                 img: htmlImage, 
@@ -74,9 +60,16 @@ const data = [
                 name: "SASS"
             }, 
         ],
+        subImgs: ['/animeHomeScreenPic.png', '/animeMoreinfo.png'],
+        challengeImage: '/oldAnimePicProj.png',
         text: "Anime website using a RestAPI to fetch data of anime, manga, manhwa and such and integrated with firebase so the user is able to bookmark their favorite anime to remember for later. Also offering mobile support for the best viewing experience on both platforms.",
-        github_link: "https://github.com/lolster45/AnimeWebsite",
-        live_proj: "https://animenew-82be3.web.app/"
+        paragraphs: {
+            challengeP: 'This project was the very first big project I attempted to build. Starting from a simple site, to a more complex site with a backend and three sections working simultaenously, many challenges have popped up. One of many being, how to persist data on refresh, which sounds like an amateur concept to any experienced developer, but to me at the time, this was a "Holy Sh*t" moment.',
+            textOne: 'Going from a messy, outdated site (sorry, old site) to a modern, refreshing look was an arduous task. Struggling to create something beautiful and original, and then translating it into code, requires a special kind of skill. So, I racked my brain for ideas on what to do. Naturally, I typed "Figma" into my search bar and browsed for designs.',
+            textTwo: 'At the time of creating this "masterpiece," I thought to myself, "Do I have too much power?" It felt almost enlightening—to have figured everything out, to work with a REST API, and to connect everything seamlessly. I felt like a genius. But, as any other coder will tell you, I quickly learned that this wasn’t exactly the case...',
+
+            textThree: "Some say 'from rags to riches,' but I went the other way. From feeling high and mighty to saying, 'Wow... I'm horrible.' A quick Google search revealed the competition, and, well... my pride was shattered (not really). This was an eye-opener—not to be complacent, but to strive to get better every day. Slowly, I began building, getting better and better."
+        }
     },
     {
         index: 1,
@@ -86,16 +79,6 @@ const data = [
             Github: "https://github.com/lolster45/BikesViva",
             live: "https://bikes-viva.vercel.app/"
         },
-        videos: [
-            { 
-                src: "/addingTask.mp4",
-                text: "As show in the video, this feature allows the user to add task they need to do on their workstation. With each task they are able to add subtaks to each just in case they need it.",
-            },
-            { 
-                src: "/MovingBetweenColumns.mp4",
-                text: "The Drag and Drop feature here was built using the library react beautifull dnd, which allows the user to save so much time and cut off stress trying to organize things in their workstation. Simply drga and move, then finally drop it on your desidred column.",
-            }, 
-        ],
         colors: {
             featuredColor: 'F8BB02',
             headerColor: '',
@@ -107,8 +90,8 @@ const data = [
             '/vivaBikesBgOne.png', 
             '/vivaBikesBgTwo.png',
         ],
-        mainImg: '/vivaBikeMainPicOne.png',
-        longImage: '/vivaBikesBgLong.png',
+        mainImg: '/vivaBikeMainPicZero.png',
+        challengeImage: '/vivaBikesOriginalWebsitePic.png',
         subImgs: [
             '/subBikeOneImg.png', 
             '/subBikeTwoImg.png',
@@ -142,8 +125,13 @@ const data = [
             }, 
         ],
         text: "A Non for profit organization website the gives aways bikes to communities in need all for free. On display are the currently available bikes that anyone could request for free, all you have to do is send and email which is easily avabile on the product information.",
-        github_link: "https://github.com/lolster45/Task-Mangement",
-        live_proj: "https://task-management-624c8.web.app/"
+        paragraphs: {
+            challengeP: 'My client’s non-profit organization is dedicated to providing bikes to communities in need, but they do it with a unique approach. Instead of purchasing new bikes, they repair and restore used ones, reducing costs while promoting recycling and community cleanup. When I saw their original website, it was clear they needed a modern redesign to match their mission—and I knew I had to take on the project, free of charge.',
+            textOne: 'Transforming a site with challenging color choices and lengthy information into something more readable and concise for my client was no easy task. It took a lot of thought and planning to trim down long paragraphs and remove redundant details.',
+            textTwo: 'With the original site lacking mobile support, I had to start from scratch. This project introduced me to new concepts that I had to learn on the go, which was exciting when things came together. Learning Firebase Storage for handling photos opened up huge opportunities.',
+            textThree: 'My client wanted to upload photos of the bikes he was giving away, so I researched how to accomplish this with Firebase Storage. Having previously worked with Firebase, setting it up was straightforward. In the end, the effort paid off with a beautifully designed page featuring an admin panel.'
+            
+        }
     },
     {
         index: 2,
@@ -153,21 +141,11 @@ const data = [
             Github: "https://github.com/lolster45/NextLevelMovers",
             live: "https://www.nextlevelmovingcompany.com/"
         },
-        videos: [
-            { 
-                src: "/addingTask.mp4",
-                text: "As show in the video, this feature allows the user to add task they need to do on their workstation. With each task they are able to add subtaks to each just in case they need it.",
-            },
-            { 
-                src: "/MovingBetweenColumns.mp4",
-                text: "The Drag and Drop feature here was built using the library react beautifull dnd, which allows the user to save so much time and cut off stress trying to organize things in their workstation. Simply drga and move, then finally drop it on your desidred column.",
-            }, 
-        ],
         colors: {
             featuredColor: '000000',
             headerColor: '',
-            paragraphBgColor: '',
-            textColor: '',
+            paragraphBgColor: '000000',
+            textColor: 'ffffff',
             challengeParaBgColor: '000000'
         },
         backgroundImages: [
@@ -175,7 +153,7 @@ const data = [
             '/nextLevelMoversBgTwo.png'
         ],
         mainImg: '/nextLevelMoversMainPic.png',
-        longImage: '/nextLevelMoversLongBg.png',
+        challengeImage: '/nextLevelMoversLongBg.png',
         subImgs: ['/nextLevelMoversPicSubOne.png', '/nextLevelMoversPicSubTwo.png'],
         icons: [
             {
@@ -204,8 +182,12 @@ const data = [
             }, 
         ],
         text: "A Non for profit organization website the gives aways bikes to communities in need all for free. On display are the currently available bikes that anyone could request for free, all you have to do is send and email which is easily avabile on the product information.",
-        github_link: "https://github.com/lolster45/Task-Mangement",
-        live_proj: "https://task-management-624c8.web.app/"
+        paragraphs: {
+            challengeP: 'Before working on this project, I would say i havent neccessarily say I have worked with difficult clients. This one being no exception exept for the fact that he never paid me for my work. This in turn taught me a very valuable lesson. You learn as you go and this is exactly how I learned setting up a domain and connecting it to this site',
+            textOne: 'This project taught me 2 very important lessons, that being always ask for upfront pay and how to set up a domain/connect it to your hosting service.',
+            textTwo: 'While I have the option to discontinue hosting my client’s website, I’ve chosen to keep it active. Maintaining the site has taught me valuable skills in web hosting, client management, and problem-solving that will benefit me in future projects. Keeping this site running serves as a continuous reminder of the lessons I’ve learned.',
+            textThree: ''
+        }
     },
     {
         index: 3,
@@ -215,16 +197,6 @@ const data = [
             Github: "https://github.com/lolster45/Task-Mangement",
             live: "https://task-management-624c8.web.app/"
         },
-        videos: [
-            { 
-                src: "/addingTask.mp4",
-                text: "As show in the video, this feature allows the user to add task they need to do on their workstation. With each task they are able to add subtaks to each just in case they need it.",
-            },
-            { 
-                src: "/MovingBetweenColumns.mp4",
-                text: "The Drag and Drop feature here was built using the library react beautifull dnd, which allows the user to save so much time and cut off stress trying to organize things in their workstation. Simply drga and move, then finally drop it on your desidred column.",
-            }, 
-        ],
         colors: {
             featuredColor: '69E5B0',
             headerColor: '',
@@ -236,9 +208,15 @@ const data = [
             '/taskManagerBgOne.png', 
             '/taskManagerBgTwo.png'
         ],
-        mainImg: '/taskManagerMainPic.png',
-        longImage: '',
-        subImgs: ['/taskManagerSubPicOne.png', '/taskManagerSubPicTwo.png'],
+        mainImg: '/TASK-MANAGER.svg',
+        challengeImage: '/taskManagerMainPic.png',
+        subImgs: [
+            '/taskManagerSubPicOne.png', 
+            '/taskManagerSubPicTwo.png',
+            '/taskManagerMainPic.png',
+            '/taskManagerDragFeature.png'
+
+        ],
         icons: [
             {
                 img: htmlImage, 
@@ -266,8 +244,12 @@ const data = [
             }, 
         ],
         text: "React application using react beautifull dnd library to create draggable tasks onto columns of your choice. Working with local storage to store your workstations and tasks.",
-        github_link: "https://github.com/lolster45/Task-Mangement",
-        live_proj: "https://task-management-624c8.web.app/"
+        paragraphs: {
+            challengeP: 'Structuring the data for this project was the most challenging aspect. I had never built something with such complex layers of objects and arrays, so setting it up initially felt overwhelming. However, as I progressed, the pieces started to fall into place, leading to that satisfying "aha!" moment where everything finally made sense. This journey of trial and error allowed me to create a functional task manager with an integrated drag-and-drop feature—an aspect that added both depth and excitement to the build.',
+            textOne: 'Implementing the drag-and-drop feature was by far the most time-consuming part, but the effort was well worth it. This functionality significantly enhanced the user experience, making the task manager more interactive and enjoyable to use. It’s a feature I’m particularly proud of, as it brought a unique, dynamic aspect to the final product.',
+            textTwo: 'Adding these features also required me to dive into CRUD operations, which are essential for a task manager like this. Learning and applying CRUD concepts accelerated my understanding of full-stack development, providing me with a strong foundation that will be invaluable for future projects.',
+            textThree: ''
+        }
     },
     {
         index: 4,
@@ -277,30 +259,20 @@ const data = [
             Github: "",
             live: "https://mtlhaven.web.app/"
         },
-        videos: [
-            { 
-                src: "/ReadNovelsJUNECOMP.mp4",
-                text: "Read a small (could grow) collection of machine translated novels. Each novel having multiple chapters in which the user can navigate through.",
-            },
-            { 
-                src: "/CommentJUNECOMPN.mp4",
-                text: "Of course without feedback, none of this would be complete so any user who is logged in can comment down their review of the novel to let others know if the novel was trash or gold. Supported using Firebase database so they will stay there.",
-            }
-        ],
         colors: {
-            featuredColor: '69E5B0',
+            featuredColor: '6144E9',
             headerColor: '',
-            paragraphBgColor: '',
+            paragraphBgColor: '2A2E37',
             textColor: '',
             challengeParaBgColor: ''
         },
         backgroundImages: [
-            '/chineseBg-transformed.jpeg', 
+            '/mtlHavenMainPic.svg', 
             '/taskManagerBgTwo.png'
         ],
-        mainImg: '/mtlHavenMainPic.png',
-        longImage: '',
-        subImgs: ['/mtlHavenSubPicOne.png', '/mtlHavenSubPicTwo.png'],
+        mainImg: '/MTL-HavenMain.svg',
+        challengeImage: '/mtlHavenFullOne.png',
+        subImgs: ['/mtlHavenSubPicOne.png', '/mtlHavenSubPicTwo.png', '/mtlHavenSubX.png', '/mtlHavenProfile.png'],
         icons: [
             {
                 img: htmlImage, 
@@ -336,8 +308,12 @@ const data = [
             },    
         ],
         text: "A machine translated chinese novel website displaying a collection of novels which the user can bookmark via firebase to view for later. Built using NextJS. ",
-        github_link: "https://github.com/lolster45/Task-Mangement",
-        live_proj: "https://task-management-624c8.web.app/"
+        paragraphs: {
+            challengeP: 'One of my main interest to do in my freetime is reading novels, especially in the category called "xianxia", so it came to me as a shock when my favorite website tha I read all my novels was soon to close. Knowing this, I took matters into my own hands and decided to recreate the website as exactly how it is. Taking this journey was a very exciting one since I had to look into how to structure my data to represent books and their chapters.',
+            textOne: '',
+            textTwo: '',
+            textThree: ''
+        }
     },
     {
         index: 5,
@@ -347,30 +323,25 @@ const data = [
             Github: "https://github.com/lolster45/Shopping-list",
             live: "https://shopping-list-tawny-seven.vercel.app/"
         },
-        videos: [
-            { 
-                src: "/activeSearchJune.mp4",
-                text: "Going to the library page, you are able to filter the collection of novels to the generes/tags you want. Plus a cool user interface to make it simple to understand.",
-            }, 
-            { 
-                src: "/shopingifyJUNECOMP.mp4",
-                text: "Of course without feedback, none of this would be complete so any user who is logged in can comment down their review of the novel to let others know if the novel was trash or gold. Supported using Firebase database so they will stay there.",
-            }
-        ],
         colors: {
-            featuredColor: '69E5B0',
+            featuredColor: '000000',
             headerColor: 'ffffff',
             paragraphBgColor: '000000',
             textColor: 'ffffff',
-            challengeParaBgColor: ''
+            challengeParaBgColor: 'FFC760'
         },
         backgroundImages: [
-            '/shoppingListBg.png', 
-            '/shoppingListBgTwo.png'
+            '/shoppingifyBg.svg', 
+            '/shoppingListBgTwo.png',
         ],
-        mainImg: '/shoppingListMainPic.png',
-        longImage: '',
-        subImgs: ['/shoppingListSubPicOne.png', '/shoppingListSubPicTwo.png'],
+        mainImg: '/ShopingifyMain.svg',
+        challengeImage: '/shoppingifySubList.png',
+        subImgs: [
+            '/shoppingListSubPicOne.png', 
+            '/shoppingListSubPicTwo.png', 
+            '/shoppingifySubX.png',
+            '/shoppingifySubList.png'
+        ],
         icons: [
             {
                 img: htmlImage, 
@@ -394,27 +365,63 @@ const data = [
             }, 
         ],
         text: "Just your normal average shopping list",
-        github_link: "https://github.com/lolster45/Shopping-list",
-        live_proj: "https://shopping-list-tawny-seven.vercel.app/"
+        paragraphs: {
+            challengeP: '',
+            textOne: '',
+            textTwo: '',
+            textThree: ''
+        }
     }
 ]
 
 
 
-
-//import converter from "/converterNEW.png"
-
-
 const projectsMain = [
     {
+        icons: [
+            {
+                img: htmlImage, 
+                name: "HTML5"
+            }, 
+            {
+                img: cssImage, 
+                name: "CSS3"
+            }, 
+            {
+                img: jsImage, 
+                name: "JavaScript"
+            }, 
+            {
+                img: reactImage, 
+                name: "ReactJS"
+            },
+            {
+                img: sassImage, 
+                name: "SASS"
+            }, 
+        ],  
         title: 'Quiz',
         links: {
-            github: '',
+            github: 'https://github.com/lolster45/fourStepQuiz',
             live: 'https://four-step-quiz.vercel.app/#/'
         },
         image: '/quizProj.png'
     },
     {
+        icons: [
+            {
+                img: htmlImage, 
+                name: "HTML5"
+            }, 
+            {
+                img: cssImage, 
+                name: "CSS3"
+            }, 
+            {
+                img: jsImage, 
+                name: "JavaScript"
+            }
+        ],
         title: 'Calculator',
         links: {
             github: 'https://github.com/lolster45/Calculator-brainnest',
@@ -423,41 +430,135 @@ const projectsMain = [
         image: '/calculatorProj.png'
     },
     {
+        icons: [
+            {
+                img: htmlImage, 
+                name: "HTML5"
+            }, 
+            {
+                img: cssImage, 
+                name: "CSS3"
+            }, 
+            {
+                img: jsImage, 
+                name: "JavaScript"
+            }, 
+            {
+                img: reactImage, 
+                name: "ReactJS"
+            },
+            {
+                img: sassImage, 
+                name: "SASS"
+            }, 
+        ],
         title: "Mark Up",
         links: {
-            github: '',
-            live: ''
+            github: 'https://github.com/lolster45/MarkUpEditor',
+            live: 'https://mark-up-editor-six.vercel.app/'
         },
         image: '/markUp.png'
     },
     {
+        icons: [
+            {
+                img: htmlImage, 
+                name: "HTML5"
+            }, 
+            {
+                img: cssImage, 
+                name: "CSS3"
+            }, 
+            {
+                img: jsImage, 
+                name: "JavaScript"
+            }, 
+            {
+                img: reactImage, 
+                name: "ReactJS"
+            }, 
+            {
+                img: firebaseImage, 
+                name: "Firebase"
+            }, 
+            {
+                img: sassImage, 
+                name: "SASS"
+            }, 
+        ],
         title: 'ECOM website',
         links: {
-            github: '',
+            github: 'https://github.com/lolster45/ECOM/tree/NEW-VERSION',
             live: 'https://e-commerce-eeb6a.web.app/#/'
         },
-        image: '/eCom.png'
+        image: '/ECOM.png'
     },
     {
+        icons: [
+            {
+                img: htmlImage, 
+                name: "HTML5"
+            }, 
+            {
+                img: cssImage, 
+                name: "CSS3"
+            }, 
+            {
+                img: jsImage, 
+                name: "JavaScript"
+            },
+            {
+                img: sassImage, 
+                name: "SASS"
+            }, 
+        ],
         title: 'Color Scheme Generator',
         links: {
-            github: '',
-            live: ''
+            github: 'https://github.com/lolster45/Color-Scheme-Maker',
+            live: 'https://lolster45.github.io/Color-Scheme-Maker/'
         },
         image: '/colorScheme.png'
     },
     {
+        icons: [
+            {
+                img: htmlImage, 
+                name: "HTML5"
+            }, 
+            {
+                img: cssImage, 
+                name: "CSS3"
+            }, 
+            {
+                img: jsImage, 
+                name: "JavaScript"
+            }
+        ],
         title: 'Tic Tac Toe',
         links: {
-            github: '',
+            github: 'https://lolster45.github.io/Tic-Tac-Toe/',
             live: 'https://lolster45.github.io/Tic-Tac-Toe/'
         },
         image: '/ticTacToe.png'
     },
     {
+        icons: [
+            {
+                img: htmlImage, 
+                name: "HTML5"
+            }, 
+            {
+                img: cssImage, 
+                name: "CSS3"
+            }, 
+            {
+                img: jsImage, 
+                name: "JavaScript"
+            }
+        ],
         title: 'Password Gen.',
         links: {
-            github: '',
+            github: 'https://github.com/lolster45/Password-generator',
             live: 'https://lolster45.github.io/Password-generator/'
         },
         image: '/passwordGenerator.png'

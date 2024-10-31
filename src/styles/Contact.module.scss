@@ -12,6 +12,11 @@
     opacity: 0;
     transition: visibility 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
     background-color: #120E1E;
+
+    border: 1px solid aqua;
+    background-color: blue;
+
+
     > div {
         display: flex;
         flex-direction: column;

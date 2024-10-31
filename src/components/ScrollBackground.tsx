@@ -17,7 +17,7 @@ const ScrollBackground = ({data}: {data: SingleProject}) => {
   console.log(data.backgroundImages)
 
   return (
-    <div style={{ position: 'fixed', height: '100vh', width: '100%' }}>
+    <div style={{ position: 'fixed', height: '100%', width: '100%' }}>
       {/* First image layer */}
       <motion.div
         style={{

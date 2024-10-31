@@ -263,6 +263,9 @@
             .left_card{
                 margin-bottom: 40px;
                 width: 100%;
+                h2 {
+                    text-align: center;
+                }
                 p {
                     min-width: 100%;
                     max-width: 100%;
@@ -278,9 +281,15 @@
             justify-content: center;
             .left_challenge {
                 width: 90%;
+                svg {
+                    text {
+                        font-size: 1.5rem;
+                    }
+                }
             }
             > img {
-                width: 60%;
+                margin-top: 250px;
+                width: 85%;
                 z-index: 5;
             }
         }
@@ -336,11 +345,9 @@
                 width: 80%;
             }
         }
-
         .images {
             width: 95%;
         }
-
         #projects_info {
             .projects_left_side{
                 #slide_show_num {  
@@ -378,6 +385,12 @@
                 }
             }
         }
+        .more_info {
+            width: 95%;
+            .more_info_para_wrap {
+                width: 95%;
+            }
+        }
     }
     .arrow {
         font-size: 1.6rem;
@@ -391,6 +404,8 @@
         right: 25%;
         bottom: -53px;
     }
+
+    
 }
 @media only screen and (max-width: 340px) {
     #projects_page {

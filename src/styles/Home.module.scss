@@ -46,7 +46,6 @@
         height: 100vh;
         width: 100%;
         background: linear-gradient(to bottom, #06050a, #1f153e);
-        //background-color: brown;
         opacity: 0;
         transform: translateY(-50px);
         transition: all 1s cubic-bezier(0,-0.01, 0, 1);
@@ -56,86 +55,7 @@
             left: 0;
             height: 80%;
             width: 100%;
-         
-
-
-            //Old animation for background on stars...
-            // .stars {
-            //     position: absolute;
-            //     width: 2px;
-            //     height: 2px;
-            //     background: #fff;
-            //     box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff;
-            //     animation: twinkle 5s infinite;
-            // }
-            // .stars:nth-child(1) {
-            //     top: 20%;
-            //     left: 40%;
-            // }
-            // .stars:nth-child(2) {
-            //     top: 35%;
-            //     left: 60%;
-            // }
-            // .stars:nth-child(3) {
-            //     top: 50%;
-            //     left: 80%;
-            // }
-            // @keyframes twinkle {
-            //     0%, 100% { opacity: 1; }
-            //     50% { opacity: 0.5; }
-            // }
-            // .star {
-            //     position: absolute;
-            //     width: 5px;
-            //     height: 5px;
-            //     background: #fff;
-            //     border-radius: 50%;
-            //   }
-            // .star1 {
-            //     animation: rotate 35s linear infinite;
-            //     transform-origin: 600px 290px;
-            //     bottom: 40px;
-            //     left: 30px;
-            //     // background-color: black;
-            // }               
-            // .star2 {
-            //    animation: rotate 39s linear infinite;
-            //     transform-origin: 550px 340px;
-            //     bottom: 40px;
-            //     left: 30px;
-            //     // background-color: red;
-            // }             
-            // .star3 {
-            //     animation: rotate 34s linear infinite;
-            //     transform-origin: 650px 400px;
-            //     bottom: 40px;
-            //     left: 30px;
-            //     // background-color: green;
-            // }            
-            // .star4 {
-            //     animation: rotate 28s linear infinite;
-            //     transform-origin: 609px 500px;
-            //     bottom: 40px;
-            //     left: 30px;
-            //     // background-color: yellow;
-            // }           
-            // .star5 {
-            //     animation: rotate 25s linear infinite;
-            //     transform-origin: 580px 400px;
-            //     bottom: 40px;
-            //     left: 30px;
-            //     // background-color: aqua;
-            // }           
-            // @keyframes rotate {
-            //     0% {
-            //       transform: rotate(0deg);
-            //     }
-            //     100% {
-            //       transform: rotate(180deg);
-            //     }
-            // }
         }
-        
         .mountains {
             position: absolute;
             z-index: 9;
@@ -143,9 +63,6 @@
             right: 0px;
             height: 100%;
             width: 50%;
-            //background: linear-gradient(to bottom, #1b142b, #120e1e);
-            // clip-path: polygon(0 90%, 15% 70%, 30% 80%, 45% 60%, 60% 75%, 75% 55%, 90% 65%, 100% 50%, 100% 100%, 0% 100%);
-            //background: #33265f;
             background: #3c096c;
             clip-path: polygon(100% 51%, 92% 37%, 77% 65%, 63% 51%, 50% 73%, 40% 59%, 30% 71%, 16% 61%, 0% 80%, 0% 98%, 100% 100%);
         }
@@ -156,10 +73,8 @@
             left: 0px;
             height: 100%;
             width: 50%;
-            //background-color: #2e2451;
             background-color: #44136e;
             clip-path: polygon(9% 40%, 0% 50%, 0% 100%, 90% 100%, 50% 57%, 28% 66%);
-
         }
         .foreground {
             position: absolute;
@@ -171,7 +86,6 @@
             background: #120e1e;
             clip-path: polygon(0 40%, 10% 60%, 20% 40%, 30% 60%, 40% 40%, 50% 60%, 60% 70%, 70% 50%, 80% 60%, 90% 70%, 100% 50%, 100% 100%, 0% 100%);
         }
-
         &.active {
             opacity: 1;
             transform: translateY(0px);
@@ -183,10 +97,6 @@
         height: 100vh;
     }
 }
-
-
-
-
 .floating_nav {
     position: absolute;
     left: 50%;
@@ -203,20 +113,14 @@
         display: flex;
         opacity: 1;
         visibility: visible;
-
-        background-color: red;
     }
-
-
     .home_link_container {
-
         > a {
             z-index: 9;
             text-decoration: none;
             color: var(--text-color);
         }
     }
-
     .main_nav {
         cursor: pointer;
         display: flex;
@@ -263,8 +167,6 @@
             }
         }
     }
-
-
     .hamburger_menu {
         visibility: hidden;
         cursor: pointer;
@@ -295,12 +197,7 @@
             }
         }
     }
-
-
-  
 }
-
-
 #footer {
     position: relative;
     display: flex;
@@ -313,26 +210,18 @@
     color: rgb(154, 154, 154);
     background-color: #120E1E;
 }
-
-
 @media only screen and (min-width: 1500px) {
     .floating_nav {
         max-width: 1500px;
     }
-
 }
-
-
 @media only screen and (max-width: 900px) {
     #main_section {
-
         #text_box {
             #pc_myname {
                 h1 {
                     font-size: 3rem;
-
-                }
-              
+                }   
             }
         }
     }
@@ -351,11 +240,6 @@
         .hamburger_menu {
             visibility: visible;
         }
-    }
-}
-@media only screen and (max-width: 600px) {
-    #footer {
-        transform: translateY(-60px);
     }
 }
 @media only screen and (max-width: 540px) {
@@ -411,6 +295,5 @@
 @keyframes typing {
     from {
         width: 0;
-
     }
 }

@@ -1,5 +1,5 @@
 //React...
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 //NextJS...
@@ -7,22 +7,12 @@ import Link from 'next/link';
 
 //Components...
 import InfiniteScrollBar from '@nextjsportfolio/components/infiniteScrollBar';
-import { useInView } from 'react-intersection-observer';
 import SpaceButton from '@nextjsportfolio/components/SpaceButton';
-
 import { motion } from 'framer-motion'
 
-
-//React slick...
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-//Icons...
+//React Icons...
 import { FiArrowRightCircle } from "react-icons/fi";
 import { IoArrowBackCircleOutline } from "react-icons/io5";
-import { BsChevronRight } from "react-icons/bs";
-import { BsChevronLeft } from "react-icons/bs";
 
 //data...
 import { data } from "../../data";
@@ -139,19 +129,11 @@ const ProjectsPage = ({ dataM, pageLoading, setPageLoading }: {dataM: SingleProj
     };
 
 
-
     return (
         <section id={styles.projects_page} className='main-font-family'>
-
-
             <LoadingScreen loading={pageLoading}/>
-
-
-            <ScrollBackground data={dataM}/>
-
-
+            <ScrollBackground data={dataM}/> 
             {!pageLoading &&
-            
             <>
                 <nav className={`${pageLoading === false ? styles.active : ''}`}>
                     {dataM.searchTitle !== "Anime" && (
@@ -171,7 +153,6 @@ const ProjectsPage = ({ dataM, pageLoading, setPageLoading }: {dataM: SingleProj
                         </Link>
                     )}
                 </nav> 
-
                 <motion.div 
                     id={styles.heading}
                     initial='hidden'
@@ -206,48 +187,26 @@ const ProjectsPage = ({ dataM, pageLoading, setPageLoading }: {dataM: SingleProj
                     </motion.div>
 
                 </motion.div>
-
-
-
-
                 <InfiniteScrollBar data={dataM.icons} />
                 <div className={styles.project_link_buttons}>
                     <SpaceButton data={dataM} text={"Github"}/>
                     <SpaceButton data={dataM} text={"Live"}/>
                 </div>  
-
-
-                <img 
-                    className={styles.images} 
-                    src={dataM.subImgs[0]} 
-                    alt="image of the website showing off its features" 
-                />
-                <img 
-                    className={styles.images} 
-                    src={dataM.subImgs[1]} 
-                    alt="image of the website showing off its features" 
-                />
-                <img 
-                    className={styles.images} 
-                    src={dataM.subImgs[2]} 
-                    alt="image of the website showing off its features" 
-                />
-                <img 
-                    className={styles.images} 
-                    src={dataM.subImgs[3]} 
-                    alt="image of the website showing off its features" 
-                />
-
-
-            
-
+                {dataM.subImgs.map(img => {
+                    return (
+                        <img 
+                            className={styles.images}
+                            src={img}
+                            alt='image of my project website and it features and pages'
+                        />
+                    )
+                })}
                 <div className={styles.challenge}>
                     <div className={styles.left_challenge}>
                         <svg 
                             height="1000" 
                             width="500" 
                             xmlns="http://www.w3.org/2000/svg" 
-                            
                         >
                             <circle r="450" cx="40" cy="480" fill="transparent" stroke='white'/>
                             <text 
@@ -271,25 +230,16 @@ const ProjectsPage = ({ dataM, pageLoading, setPageLoading }: {dataM: SingleProj
                     </div>
                     <img src={dataM.challengeImage} alt="" />
                 </div>
-
-
                 <div className={styles.more_info}>
                     <h2>Redesign</h2>
-
                     <div className={styles.more_info_para_wrap}>
                         <p>{dataM.paragraphs.textOne}</p>
                         <p>{dataM.paragraphs.textTwo}</p>
                         <p>{dataM.paragraphs.textThree}</p>
                     </div>
                 </div>
-            
             </>
-            
-            }
-
-
-            
-                 
+            }   
         </section>
     );
 };

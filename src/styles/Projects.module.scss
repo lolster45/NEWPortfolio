@@ -17,12 +17,8 @@
     color: rgb(17, 17, 17);
 }
 
-
-
-
-
 #projects_page {
-    //padding-top: 6.4rem;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,11 +26,7 @@
     height: fit-content;
     padding-bottom: 200px;
     background: linear-gradient(to bottom, #120e1e, #271950);
-
-
     scroll-behavior: smooth;
-
-
     nav {
         position: absolute;
         top: 100px;
@@ -43,12 +35,9 @@
         height: 30px;
         width: 80%;
         margin-bottom: 70px;
-
         visibility: 0;
         opacity: 0;
         transition: visibility 1s ease, opacity 1s ease;
-
-        //background-color: red;
         a {
             display: flex;
             align-items: center;
@@ -67,75 +56,43 @@
             svg {
                 position: absolute;
                 font-size: 2rem;
-                //color: var(--text-color);
                 color: var(--text-color);
                 transition: all 0.3s ease-in;
                 &:hover {
-                    // color: #7400b8;
                     transform: translateY(-5px);
-
-                    // color: var(--text-color);
-                    // text-shadow: 0 0 10px var(--text-color);
-
-
-                 
-                    filter: drop-shadow(0px 0px 2px var(--text-color));
-                        /* Similar syntax to box-shadow */
-                    
-
+                    filter: drop-shadow(0px 0px 2px var(--text-color));                    
                 }
             }
         }
-
-
         &.active {
             visibility: visible;
             opacity: 1;
         }
     }
-
-
-
     #heading {
         position: relative;
         display: flex;
-        //flex-direction: column;
-        //justify-content: space-between;
         align-items: center;
-        //height: fit-content;
-        //width: 100%;
         margin-top: 150px;
         margin-bottom: 130px;
         color: white;
-
-
         width: 80%;
-        height: 450px;
-
-
-        //background-color: green;
-
+        height: 400px;
         .left_card {
             position: relative;
             z-index: 6;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-
             width: 40%;
-
-            //background-color: blue;
-
             h2, p {
                 width: 100%;
             }
-
             .featured {
                 font-size: 0.8rem;
                 margin-bottom: 5px;
                 color: #D0E3AF;
-            }
-            
+            } 
             h2 {
                 font-size: 3.7rem;
                 margin-bottom: 1rem;
@@ -150,24 +107,19 @@
                 line-height: 30px;
                 text-align: start;
                 color: #ffffff;
-                //text-shadow: 0 0 10px rgb(118, 17, 180);
+
+
 
                 -webkit-box-shadow: 10px 10px 24px 0px rgb(29, 29, 29);
                 -moz-box-shadow: 10px 10px 24px 0px rgb(29, 29, 29);
                 box-shadow: 10px 10px 24px 0px rgb(29, 29, 29);
-
-                background-color: #039750;
-
-                background-color: #1E1E1E;
-
-                background-color: #000000;
             }
-
         }
 
         .right_card {
             position: relative;
             z-index: 5;
+            height: 100%;
             width: 60%;
 
            
@@ -175,8 +127,10 @@
             background-color: transparent;
 
             img {
+                height: 100%;
                 width: 100%;
                 object-fit: cover;
+                object-position: top;
                 -webkit-box-shadow: 10px 10px 24px 0px rgb(29, 29, 29);
                 -moz-box-shadow: 10px 10px 24px 0px rgb(29, 29, 29);
                 box-shadow: 10px 10px 24px 0px rgb(29, 29, 29);
@@ -184,15 +138,11 @@
         }
 
     }
-
-
     .images {
         position: relative;
         margin-top: 150px;
         width: 70%;
     }
-
-
     .project_link_buttons {
         position: relative;
         height: 40px;
@@ -208,130 +158,38 @@
             margin-bottom: 10px;
         }
     }
-    #projects_info {
-        position: relative;
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 80px;
-        width: 90%;
-        .projects_left_side{
-            position: relative;
-            width: 60%;
-            opacity: 0;
-            transition: all 0.6s ease-in;
-            background-color: transparent;
-            &.inView {
-                opacity: 1;
-            }  
-            .actual_slider {
-                position: relative;
-                width: 100%;
-                opacity: 1;
-                transition: all 0.6s ease-in;
-                                 
-                .video_slide {
-                    min-width: 100% !important;
-                    max-width: 100%!important;
-                    aspect-ratio: 2.25 / 1 !important;
-
-                    .actual_video {
-                        aspect-ratio: 2.25 / 1 !important;
-                        object-fit: cover;
-                        max-width: 100% !important;
-
-                        // box-shadow: 18px 11px 35px -10px rgba(0,0,0,1);
-                        // -webkit-box-shadow: 18px 11px 35px -10px rgba(0,0,0,1);
-                        // -moz-box-shadow: 18px 11px 35px -10px rgba(0,0,0,1); 
-                    }
-                }
-            }
-            #slide_show_num {
-                position: absolute;
-                z-index: 50;
-                left: 50%;
-                top: 111%;
-                transform: translate(-50%, -111%);
-                font-size: 0.92rem;
-                color: white;
-            }
-        }
-        #projects_right_side {
-            padding-left: 30px;
-            width: 35%;
-            text-align: right;
-            > p {
-                opacity: 0;
-                line-height: 40px;
-                font-size: 1.05rem;
-                color: white;
-                text-shadow: 0 0 10px rgb(100, 5, 90);
-                transition: all 0.3s ease;
-                &.active {
-                    opacity: 1;
-                }
-            }
-        }       
-    }
-
-
     .challenge {
         position: relative;
         margin-top: 700px;
         position: relative;
-
         display: flex;
         justify-content: center;
         gap: 20px;
-
         height: auto;
         width: 100%;
-
         margin-bottom: 150px;
-
-       
-
-
         color: rgb(33, 240, 230);
-        //background-color: red;
-
         .left_challenge {
-            //position: relative;
             padding: 20px;
-
             height: auto;
             width: 40%;
-
-            //background-color: blue;
-
             svg {
                 position: absolute;
                 z-index: 1;
-
                 left: 0px;
-
                 stroke-width: 0.5px;
-
-                //background-color: black;
-
                 text {
                     font-size: 2.5rem;
                     font-weight: 800;
                     fill: white;
-
                     display: inline-block;
                     transform: scaleY(2.1);
                 }
             }
-            
-
             h2 {
                 font-size: 1.5rem;
                 margin-bottom: 20px;
-                //background-color: red;
             }
-
-         
-    
             p {
                 position: relative;
                 z-index: 2;
@@ -339,60 +197,100 @@
                 padding: 25px;
                 line-height: 40px;
                 font-size: 0.9rem;
-                background-color: #0E2C60;
-
-                    
-
+                background-color: rgb(27, 27, 27);
             }
-
         }
-
-
         img {
-            height: 900px;
+            height: auto;
             width: 40%;
             object-fit: cover;
             object-position: top;
         }
     }
-
-
     .old_anime_pic {
         margin-top: 300px;
     }
-
-
     .more_info {
         position: relative;
+        display: flex;
+        align-items: center;
         height: auto;
-        width: 50%;
+        width: 80%;
         margin-top: 10rem;
         color: white;
-        //background-color: green;
-
         h2 {
+            width: 25%;
             font-size: 2.2rem;
             margin-bottom: 20px;
         }
-
-        p {
-            padding: 25px 0px;
-            line-height: 30px;
-
-            color: rgb(214, 214, 214);
-            background-color: #0E2C60;
+        .more_info_para_wrap {
+            width: 75%;
+            p {
+                padding: 25px 0px;
+                line-height: 30px;
+                color: rgb(214, 214, 214);
+            }
         }
     }
-
-
 }
 @media only screen and (min-width: 1500px) {
     #projects_page {
         nav {
             max-width: 1450px;
         }
+        #heading {
+            max-width: 1500px;
+            background-color: red;
+        }
+        .images {
+            max-width: 1500px;
+        }
+        .challenge {
+            max-width: 1500px;
+        }
+        .more_info {
+            max-width: 1500px;
+        }
         #projects_info {
             max-width: 1500px;
+        }
+    }
+}
+@media only screen and (max-width: 999px) {
+    #projects_page {
+        #heading {
+            height: auto;
+            flex-direction: column;
+            .left_card{
+                margin-bottom: 40px;
+                width: 100%;
+                p {
+                    min-width: 100%;
+                    max-width: 100%;
+                }
+            }
+            .right_card {
+                width: 100%;
+            }
+        }
+        .challenge {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .left_challenge {
+                width: 90%;
+            }
+            > img {
+                width: 60%;
+                z-index: 5;
+            }
+        }
+        .more_info {
+            text-align: center;
+            flex-direction: column;
+            h2 {
+                width: 100%;
+            }
         }
     }
 }
@@ -439,6 +337,11 @@
                 width: 80%;
             }
         }
+
+        .images {
+            width: 95%;
+        }
+
         #projects_info {
             .projects_left_side{
                 #slide_show_num {  

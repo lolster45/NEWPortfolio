@@ -1,18 +1,4 @@
-#contactForm_section {
-    overflow-y: scroll;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(to bottom, #120e1e, #271950);
 
-
-    background-color: red;
-
-
-
-   
-}
 
 
 #contact_wrap {
@@ -25,13 +11,7 @@
     visibility: hidden;
     opacity: 0;
     transition: visibility 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
-
     background-color: #120E1E;
-
-
-    @media only screen and (min-width: 1500px) {
-        //max-width: 1300px !important;
-    }
     > div {
         display: flex;
         flex-direction: column;
@@ -59,10 +39,6 @@
         justify-content: space-evenly;
         height: 300px;
         width: 50%;
-
-        //background-color: blue;
-
-
         > div {
             position: relative;
             display: flex;
@@ -172,61 +148,38 @@
     }
 }
 
+@media only screen and (min-width: 1500px) {
+    #contact_wrap {
+        margin: 0 auto;
+        max-width: 1500px !important;
+    }
+}
+
 
 
 
 @media only screen and (max-width: 980px) {
-    #contactForm_section {
-        #contact_wrap {
-            width: 80%;
+    #contact_wrap {
+        flex-direction: column;
+        > div {
+            width: 100%;
+        }
+        #form_wrap {
+            width: 100%;
         }
     }
 }
-
-@media only screen and (max-width: 450px) {
-    #contactForm_section {
-        padding-top: 0px;
-        padding-bottom: 40px;
-        overflow-y: scroll;
-        #contact_wrap {
-            height: fit-content;
-            width: 90%;
-            #form_wrap {
-                height: fit-content;
-                >div {
-                    flex-direction: column;
-                    margin-bottom: 10px;
-                    input {
-                        width: 100%;
-                        margin-bottom: 40px;
-                    }
-                    #email_input_wrapper {
-                        width: 100%;
-                    }
-                    textarea {
-                        min-height: 400px;
-                    }
-                }
-                button {
-                    margin-top: 20px;
-                }
+@media only screen and (max-width: 680px) {
+    #contact_wrap {
+        padding: 30px;
+        > div {
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 0.8rem;
             }
         }
     }
 }
 
-@media only screen and (max-width: 350px) {
-    #contactForm_section {
-        #contact_wrap {
-            > div {
-                margin-top: 30px;
-                h1 {
-                    font-size: 2.3rem;
-                }
-                p {
-                    width: 80%;
-                }
-            }
-        }
-    }
-}

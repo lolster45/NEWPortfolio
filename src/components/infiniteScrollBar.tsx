@@ -1,18 +1,16 @@
 //React...
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 //Styles...
 import styles from "../styles/Infinite.module.scss"; // Make sure to create this CSS module
 
 
-interface Image {
-    img: {src: string}; // Adjust the type if `img` is not a string (e.g., if it's an imported image module)
-    name: string;
-}
+import { Icon } from '@nextjsportfolio/pages/projects/[projectID]';
 
-const InfiniteScrollBar = ({data}: {data: Image[]}) => {
+const InfiniteScrollBar = ({data}: {data: Icon[]}) => {
 
-    const [newData, setNewData] = useState<Image[]>([])
+    const [newData, setNewData] = useState<Icon[]>([])
 
     useEffect(() => {
         setNewData([...data, ...data])
@@ -25,7 +23,7 @@ const InfiniteScrollBar = ({data}: {data: Image[]}) => {
                     newData.map((item, i) => {
                         return (
                             <li key={`${item.name} - ${i}`}>
-                                <img src={item.img.src} alt="" />
+                                <Image src={item.img} alt="" />
                                 {item.name}
                             </li>
                         )

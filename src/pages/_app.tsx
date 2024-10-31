@@ -9,7 +9,7 @@ import type { AppProps } from 'next/app';
 
 //Components...
 import MobileNav from '@nextjsportfolio/components/mobileNav';
-import LayoutComponent from '@nextjsportfolio/components/LayoutComponent';
+import { motion } from 'framer-motion';
 
 //React icons...
 import { FaGithub } from "react-icons/fa";
@@ -18,22 +18,20 @@ import { FaLinkedin } from "react-icons/fa";
 //Styles...
 import styles from "../styles/Home.module.scss";
 
-import { motion } from 'framer-motion';
 
 export default function App({ Component, pageProps }: AppProps) {
 
+  //State for my mobile nav...
   const [mobileNav, setMobileNav] = useState<boolean>(false);
 
 
+  //Transition page...
   const [pageLoading, setPageLoading] = useState(false);
-
-  //const navBarItems = ['projects', 'Resume', 'Contact'];
 
 
   const navBarItems = [
     { route: 'projects/Anime', name: 'Projects'}, 
     { route: 'resume', name: 'Resume'}, 
-    // { route: 'contact', name: 'Contact'}, 
   ];
 
   // Animation variants for staggering
@@ -56,7 +54,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <nav 
           className={`${styles.floating_nav} main-font-family `} 
         >  
-          {/* Stagger for Oscar Reyes */}
           <motion.div
             className={styles.home_link_container}
             initial="hidden"
@@ -66,8 +63,6 @@ export default function App({ Component, pageProps }: AppProps) {
           >
             <Link href={"/"}>Oscar Reyes</Link>
           </motion.div>
-
-          {/* Stagger for NavBar Items */}
           <div className={styles.main_nav}>
             {
               navBarItems.map((item, i) => (
@@ -85,8 +80,6 @@ export default function App({ Component, pageProps }: AppProps) {
               ))
             }
           </div>
-
-          {/* Stagger for Social Links */}
           <motion.div
             initial="hidden"
             animate="visible"
@@ -101,8 +94,6 @@ export default function App({ Component, pageProps }: AppProps) {
               <FaLinkedin/>
             </a>
           </motion.div>
-
-          {/* Hamburger Menu */}
           <div 
             className={`${styles.hamburger_menu} ${mobileNav ? styles.active : ""}`} 
             onClick={() => setMobileNav(prev => !prev)}
@@ -114,20 +105,12 @@ export default function App({ Component, pageProps }: AppProps) {
         </nav>
 
       }
-
-
-
       <MobileNav mobileNav={mobileNav} setMobileNav={setMobileNav} />  
-
-
       <Component {...pageProps} pageLoading={pageLoading} setPageLoading={setPageLoading}/>
-
-
       <footer 
         id={styles.footer}
         className='main-font-family'
       >
-        <button onClick={() => console.log(pageLoading)}>CLICK ME</button>
         Designed and developed by me using NEXTJS, TypeScript, and SCSS
       </footer>
     </>

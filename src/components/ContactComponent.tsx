@@ -6,10 +6,8 @@ import { useInView } from 'react-intersection-observer';
 // Import Email.js library
 import emailjs from 'emailjs-com'; 
 
-
 //React icons...
 import { RiErrorWarningFill } from "react-icons/ri";
-
 
 //Styles...
 import styles from '../styles/Contact.module.scss'
@@ -26,39 +24,52 @@ const ContactComponent = () => {
         from_email: '',
         from_name: '',
         message: ''
-      });
-      const [emailIsInvalid, setEmailIsInvalid] = useState<boolean>(false);
+    });
+    const [emailIsInvalid, setEmailIsInvalid] = useState<boolean>(false);
+
+    const { ref, inView } = useInView({
+      threshold: 0, // Adjust this value as needed
+      triggerOnce: true, // Trigger only once
+    });
   
-      const handleChange = (e: any) => {
+    const handleChange = (e: any) => {
         const { name, value } = e.target;
         setFormData({ 
             ...formData, 
             [name]: value 
         });
-      };
+    };
   
-      //Regular expression for email from user...
-      const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    //Regular expression for email from user...
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+
+    const [message, setMessage] = useState('Submit');
   
-      const handleSubmitCheck = async (e: any) => {
-        e.preventDefault();
-        if(formData.from_email && formData.from_name && formData.message) {
+    const handleSubmitCheck = async (e: any) => {
+      e.preventDefault();
+      if(formData.from_email && formData.from_name && formData.message) {
   
-          if(!emailPattern.test(formData.from_email)) {
-            setEmailIsInvalid(true);
-            return;
-          }
-          sendEmail(e);
-          setEmailIsInvalid(false);
-           setFormData({
-             from_email: '',
-             from_name: '',
-             message: ''
-           });
+        if(!emailPattern.test(formData.from_email)) {
+          setMessage('Loading')
+          setEmailIsInvalid(true);
+          return;
         }
-      };
+        sendEmail(e);
+        setEmailIsInvalid(false);
+        setFormData({
+          from_email: '',
+          from_name: '',
+            message: ''
+        });
+        setMessage('Submitted');
+        setTimeout(() => {
+          setMessage('Submit')
+        }, 5000)
+      }
+    };
   
-      const sendEmail = async (e: any) => {
+    const sendEmail = async (e: any) => {
         try {
           await emailjs.sendForm(
             'service_50xi2u4', 
@@ -66,17 +77,13 @@ const ContactComponent = () => {
             e.target, 
             "V19aGRH_RgVYiOgI_"
           );
-          console.log('Email sent successfully');
         } 
         catch (error) {
           console.error('Error sending email:', error);
         }
-      };
+    };
   
-      const { ref, inView } = useInView({
-        threshold: 0, // Adjust this value as needed
-        triggerOnce: true, // Trigger only once
-      });
+    
 
 
     return (
@@ -118,13 +125,13 @@ const ContactComponent = () => {
                     </div>
                 </div>
                 <textarea
-                name="message"
-                placeholder="Message"
-                value={formData.message}
-                onChange={handleChange}
-                required
+                  name="message"
+                  placeholder="Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
                 />
-                <button type="submit">Submit</button>
+                <button type="submit">{message}</button>
             </form>
       </div>
     );

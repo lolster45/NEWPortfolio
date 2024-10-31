@@ -17,13 +17,15 @@ const MobileNav: React.FC<MobileNavProps> = ({mobileNav, setMobileNav}) => {
     }
 
     return (
-        <div className={`${styles.mobile_nav} ${mobileNav ? styles.active : ""} main-font-family`}>
-            <div className={styles.actual_menu_mobile}>
+        <div 
+            className={`${styles.mobile_nav} ${mobileNav ? styles.active : ""} main-font-family`}
+            onClick={removeNav}
+        >
+            <div onClick={(e) => e.stopPropagation()} className={styles.actual_menu_mobile}>
                 <ul>
                     <Link onClick={removeNav} href="/">Home</Link>
-                    <Link onClick={removeNav} href="projects/Anime">Projects</Link >
+                    <Link onClick={removeNav} href="/projects/Anime">Projects</Link >
                     <Link onClick={removeNav} href="/resume">Resume</Link >
-                    <Link onClick={removeNav} href="/contact">Contact</Link>
                 </ul>
             </div>
         </div>

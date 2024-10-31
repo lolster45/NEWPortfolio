@@ -199,15 +199,6 @@
     height: 80px;
     margin: 0 auto;
     width: 80%;
-
-
-    //display: none;
-    //opacity: 0;
-    //visibility: 0;
-    //transition: visibility 1s ease, opacity 1s ease;
-
-    //background-color: blue;
-
     &.active {
         display: flex;
         opacity: 1;
@@ -272,6 +263,8 @@
             }
         }
     }
+
+
     .hamburger_menu {
         visibility: hidden;
         cursor: pointer;
@@ -291,15 +284,15 @@
                 transition: all 0.3s ease;
         }
         &.active {
-                .bar:nth-child(1) {
-                    transform: translateY(13px) rotate(45deg);
-                }
-                .bar:nth-child(2) {
-                    opacity: 0;
-                }
-                .bar:nth-child(3) {
-                    transform: translateY(-4px) rotate(-45deg);
-                }
+            .bar:nth-child(1) {
+                transform: translateY(13px) rotate(45deg);
+            }
+            .bar:nth-child(2) {
+                opacity: 0;
+            }
+            .bar:nth-child(3) {
+                transform: translateY(-4px) rotate(-45deg);
+            }
         }
     }
 
@@ -309,20 +302,27 @@
 
 
 #footer {
-    position: absolute;
-    transform: translateY(-50px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
     width: 100%;
-    padding: 20px 20px 0px 20px;
-    text-align: center;
-    color: white;
-    background-color: transparent;
+    padding: 20px 20px 20px 20px;
+    font-size: 0.9rem;
+    color: rgb(154, 154, 154);
+    background-color: #120E1E;
 }
+
+
 @media only screen and (min-width: 1500px) {
-    #floating_nav {
+    .floating_nav {
         max-width: 1500px;
     }
 
 }
+
+
 @media only screen and (max-width: 900px) {
     #main_section {
 
@@ -338,7 +338,7 @@
     }
 }
 @media only screen and (max-width: 800px) {
-    #floating_nav {
+    .floating_nav {
         a {
             display: none;
         }

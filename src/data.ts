@@ -489,7 +489,7 @@ const projectsMain = [
         title: 'ECOM website',
         links: {
             github: 'https://github.com/lolster45/ECOM/tree/NEW-VERSION',
-            live: 'https://e-commerce-eeb6a.web.app/#/'
+            live: 'https://ecom-nu-three.vercel.app/'
         },
         image: '/ECOM.png'
     },

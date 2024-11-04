@@ -9,10 +9,6 @@ import nextJSLogo from "../public/NextJSLogo.png"
 import typesciptLogo from "../public/typescriptLogo.png"
 
 
-
-
-
-
 const data = [
     {
         index: 0,
@@ -30,8 +26,8 @@ const data = [
             challengeParaBgColor: ''
         },
         backgroundImages: [
-            '/animeBgOne.svg',
-            '/animeBgTwo.svg'
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FAnimeProjImages%2FanimeBgOne.svg?alt=media&token=3eb5284b-4314-406c-a15e-540121e809e8',
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FAnimeProjImages%2FanimeBgTwo.svg?alt=media&token=40794473-4c93-4b93-a57b-8e7562c237f2'
         ],
         mainImg: '/NEANIME.png',
         icons: [
@@ -60,7 +56,10 @@ const data = [
                 name: "SASS"
             }, 
         ],
-        subImgs: ['/animeHomeScreenPic.png', '/animeMoreinfo.png'],
+        subImgs: [
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FAnimeProjImages%2FanimeHomeScreenPic.png?alt=media&token=d0f6cd3d-4fa2-4822-8a37-2131238bedaf', 
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FAnimeProjImages%2FanimeMoreInfo.png?alt=media&token=a230bda3-862f-40c4-93eb-a70fd9bf477f'
+        ],
         challengeImage: '/oldAnimePicProj.png',
         text: "Anime website using a RestAPI to fetch data of anime, manga, manhwa and such and integrated with firebase so the user is able to bookmark their favorite anime to remember for later. Also offering mobile support for the best viewing experience on both platforms.",
         paragraphs: {
@@ -87,16 +86,16 @@ const data = [
             challengeParaBgColor: '0F0825'
         },
         backgroundImages: [
-            '/vivaBikesBgOne.png', 
-            '/vivaBikesBgTwo.png',
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FVivaBikeProjImages%2FvivaBikesBgOne.png?alt=media&token=291d6124-ad29-4b5c-ae05-ebb90a3811f9', 
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FVivaBikeProjImages%2FvivaBikesBgTwo.png?alt=media&token=df7fe378-fd6f-46bb-bdae-3ec1cc512350',
         ],
-        mainImg: '/vivaBikeMainPicZero.png',
-        challengeImage: '/vivaBikesOriginalWebsitePic.png',
+        mainImg: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FVivaBikeProjImages%2FvivaBikeMainPicZero.png?alt=media&token=49c4804f-33d7-4e81-928d-c61acb50cba1',
+        challengeImage: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FVivaBikeProjImages%2FvivaBikesOriginalWebsitePic.png?alt=media&token=5d6ff9f6-9bd6-4195-8386-8da1d87a3a3a',
         subImgs: [
-            '/subBikeOneImg.png', 
-            '/subBikeTwoImg.png',
-            '/vivaBikesBgThree.png',
-            '/vivaBikesBgFour.png',
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FVivaBikeProjImages%2FsubBikeOneImg.png?alt=media&token=3fbf5a30-51eb-4132-905c-df0975fb263c', 
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FVivaBikeProjImages%2FsubBikeTwoImg.png?alt=media&token=50e444d3-f469-4d91-a8a3-743f666d8033',
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FVivaBikeProjImages%2FvivaBikesBgThree.png?alt=media&token=2d7571c2-034f-43a2-9328-1fb0056ac5a2',
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FVivaBikeProjImages%2FvivaBikesBgFour.png?alt=media&token=5b5c75a0-325e-4a72-8f8d-ee2feb5f880a',
         ],
         icons: [
             {
@@ -152,9 +151,12 @@ const data = [
             '/nextLevelMoversBackground.png', 
             '/nextLevelMoversBgTwo.png'
         ],
-        mainImg: '/nextLevelMoversMainPic.png',
-        challengeImage: '/nextLevelMoversLongBg.png',
-        subImgs: ['/nextLevelMoversPicSubOne.png', '/nextLevelMoversPicSubTwo.png'],
+        mainImg: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FNextLevelMoversProjImages%2FnextLevelMoversMainPic.png?alt=media&token=7a0ddd07-6ef0-4a48-8605-d1555a70563f',
+        challengeImage: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FNextLevelMoversProjImages%2FnextLevelMoversLongBg.png?alt=media&token=f6980752-060b-4ebb-a49a-03aeb4fbea61',
+        subImgs: [
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FNextLevelMoversProjImages%2FnextLevelMoversPicSubOne.png?alt=media&token=478d6cef-f393-4ba1-8af1-578dbdacb8bf', 
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FNextLevelMoversProjImages%2FnextLevelMoversPicSubTwo.png?alt=media&token=63021c06-549f-4f5e-8500-48ca27fa60f8'
+        ],
         icons: [
             {
                 img: htmlImage, 
@@ -208,13 +210,13 @@ const data = [
             '/taskManagerBgOne.png', 
             '/taskManagerBgTwo.png'
         ],
-        mainImg: '/TASK-MANAGER.svg',
-        challengeImage: '/taskManagerMainPic.png',
+        mainImg: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FTaskManagerProjImages%2FTASK-MANAGER.svg?alt=media&token=e791380d-1a77-4887-a1dc-67e34bdb0eaa',
+        challengeImage: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FTaskManagerProjImages%2FtaskManagerMainPic.png?alt=media&token=f909c948-c7de-445c-a314-44284e295740',
         subImgs: [
-            '/taskManagerSubPicOne.png', 
-            '/taskManagerSubPicTwo.png',
-            '/taskManagerMainPic.png',
-            '/taskManagerDragFeature.png'
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FTaskManagerProjImages%2FtaskManagerSubPicOne.png?alt=media&token=752f7546-95a0-424b-88ea-e33c03c48629', 
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FTaskManagerProjImages%2FtaskManagerSubPicTwo.png?alt=media&token=73416cdd-cb51-4e66-8d23-29b304262e6d',
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FTaskManagerProjImages%2FtaskManagerMainPic.png?alt=media&token=f909c948-c7de-445c-a314-44284e295740',
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FTaskManagerProjImages%2FtaskManagerDragFeature.png?alt=media&token=206cd46a-29d0-4b5b-b7fb-2f68dad75d8d'
 
         ],
         icons: [
@@ -270,9 +272,14 @@ const data = [
             '/mtlHavenMainPic.svg', 
             '/taskManagerBgTwo.png'
         ],
-        mainImg: '/MTL-HavenMain.svg',
-        challengeImage: '/mtlHavenFullOne.png',
-        subImgs: ['/mtlHavenSubPicOne.png', '/mtlHavenSubPicTwo.png', '/mtlHavenSubX.png', '/mtlHavenProfile.png'],
+        mainImg: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FMTLHavenProjImages%2FMTL-HavenMain.svg?alt=media&token=39cce1a8-e124-4dc2-9bff-5eb4a9769ea7',
+        challengeImage: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FMTLHavenProjImages%2FmtlHavenFullOne.png?alt=media&token=a8ea0929-af5b-4495-b755-e71869aa80ed',
+        subImgs: [
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FMTLHavenProjImages%2FmtlHavenSubPicOne.png?alt=media&token=6ab47690-6236-4bb7-a804-e333153efe2f', 
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FMTLHavenProjImages%2FmtlHavenSubPicTwo.png?alt=media&token=959c2f1d-e5d8-447e-ba54-96fc608752db', 
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FMTLHavenProjImages%2FmtlHavenSubX.png?alt=media&token=0cb87b75-00d6-4898-a09d-d46e21cc5aa3', 
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FMTLHavenProjImages%2FmtlHavenProfile.png?alt=media&token=7a488a3b-9941-44ef-9628-99ee3360c44c'
+        ],
         icons: [
             {
                 img: htmlImage, 
@@ -331,16 +338,16 @@ const data = [
             challengeParaBgColor: 'FFC760'
         },
         backgroundImages: [
-            '/shoppingifyBg.svg', 
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FShoppingifyProjImages%2FshoppingifyBg.svg?alt=media&token=b1da98e6-6bae-4e94-856c-5adb1254bbd6', 
             '/shoppingListBgTwo.png',
         ],
-        mainImg: '/ShopingifyMain.svg',
-        challengeImage: '/shoppingifySubList.png',
+        mainImg: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FShoppingifyProjImages%2FShopingifyMain.svg?alt=media&token=580712b9-bf5f-4e90-8a3b-864272016b15',
+        challengeImage: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FShoppingifyProjImages%2FshoppingifySubList.png?alt=media&token=4e7006fd-4f74-49cd-8749-24a27f092b33',
         subImgs: [
-            '/shoppingListSubPicOne.png', 
-            '/shoppingListSubPicTwo.png', 
-            '/shoppingifySubX.png',
-            '/shoppingifySubList.png'
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FShoppingifyProjImages%2FshoppingListSubPicOne.png?alt=media&token=5d28d722-5cc7-4d08-a561-b156b69143d6', 
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FShoppingifyProjImages%2FshoppingListSubPicOne.png?alt=media&token=5d28d722-5cc7-4d08-a561-b156b69143d6', 
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FShoppingifyProjImages%2FshoppingifySubX.png?alt=media&token=4c49a223-9d2c-4b81-a40c-e47a6e6ceecf',
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FShoppingifyProjImages%2FshoppingifySubList.png?alt=media&token=4e7006fd-4f74-49cd-8749-24a27f092b33'
         ],
         icons: [
             {
@@ -374,8 +381,6 @@ const data = [
     }
 ]
 
-
-
 const projectsMain = [
     {
         icons: [
@@ -405,7 +410,7 @@ const projectsMain = [
             github: 'https://github.com/lolster45/fourStepQuiz',
             live: 'https://four-step-quiz.vercel.app/#/'
         },
-        image: '/quizProj.png'
+        image: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioHeroSectionImages%2FquizProj.png?alt=media&token=0c83623b-2817-41d4-a19a-8ce42201a591'
     },
     {
         icons: [
@@ -427,7 +432,7 @@ const projectsMain = [
             github: 'https://github.com/lolster45/Calculator-brainnest',
             live: 'https://lolster45.github.io/Calculator-brainnest/'
         },
-        image: '/calculatorProj.png'
+        image: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioHeroSectionImages%2FcalculatorProj.png?alt=media&token=f15d7a79-55a1-48b9-8bd2-19be08b7ded4',
     },
     {
         icons: [
@@ -457,7 +462,7 @@ const projectsMain = [
             github: 'https://github.com/lolster45/MarkUpEditor',
             live: 'https://mark-up-editor-six.vercel.app/'
         },
-        image: '/markUp.png'
+        image: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioHeroSectionImages%2FmarkUp.png?alt=media&token=e3a96133-a4bb-4558-9375-d2c48f01a5d7'
     },
     {
         icons: [
@@ -491,7 +496,7 @@ const projectsMain = [
             github: 'https://github.com/lolster45/ECOM/tree/NEW-VERSION',
             live: 'https://ecom-nu-three.vercel.app/'
         },
-        image: '/ECOM.png'
+        image: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioHeroSectionImages%2FECOM.png?alt=media&token=14e0dd12-a4f8-491d-9401-a9bf9f9e117e'
     },
     {
         icons: [
@@ -517,7 +522,7 @@ const projectsMain = [
             github: 'https://github.com/lolster45/Color-Scheme-Maker',
             live: 'https://lolster45.github.io/Color-Scheme-Maker/'
         },
-        image: '/colorScheme.png'
+        image: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioHeroSectionImages%2FcolorScheme.png?alt=media&token=5f4c581a-d180-46a2-9d16-c18450ff32d8'
     },
     {
         icons: [
@@ -539,7 +544,7 @@ const projectsMain = [
             github: 'https://lolster45.github.io/Tic-Tac-Toe/',
             live: 'https://lolster45.github.io/Tic-Tac-Toe/'
         },
-        image: '/ticTacToe.png'
+        image: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioHeroSectionImages%2FticTacToe.png?alt=media&token=1411dd65-7e87-440e-bdda-60eb3c21ba23'
     },
     {
         icons: [
@@ -561,7 +566,7 @@ const projectsMain = [
             github: 'https://github.com/lolster45/Password-generator',
             live: 'https://lolster45.github.io/Password-generator/'
         },
-        image: '/passwordGenerator.png'
+        image: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioHeroSectionImages%2FpasswordGenerator.png?alt=media&token=c053c37e-508b-4ac5-b1ed-788df20dab6e'
     }
 ];
 

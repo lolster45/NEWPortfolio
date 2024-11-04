@@ -29,7 +29,7 @@ const data = [
             'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FAnimeProjImages%2FanimeBgOne.svg?alt=media&token=3eb5284b-4314-406c-a15e-540121e809e8',
             'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FAnimeProjImages%2FanimeBgTwo.svg?alt=media&token=40794473-4c93-4b93-a57b-8e7562c237f2'
         ],
-        mainImg: '/NEANIME.png',
+        mainImg: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FAnimeProjImages%2FNEANIME.png?alt=media&token=8eb32aa7-04d8-4521-b45a-450bc44d4b76',
         icons: [
             {
                 img: htmlImage, 
@@ -149,7 +149,7 @@ const data = [
         },
         backgroundImages: [
             '/nextLevelMoversBackground.png', 
-            '/nextLevelMoversBgTwo.png'
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FNextLevelMoversProjImages%2FnextLevelMoversBgTwo.png?alt=media&token=fa7700b3-ae9c-427e-8a5c-7ef17f798dc9'
         ],
         mainImg: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FNextLevelMoversProjImages%2FnextLevelMoversMainPic.png?alt=media&token=7a0ddd07-6ef0-4a48-8605-d1555a70563f',
         challengeImage: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FNextLevelMoversProjImages%2FnextLevelMoversLongBg.png?alt=media&token=f6980752-060b-4ebb-a49a-03aeb4fbea61',
@@ -207,8 +207,8 @@ const data = [
             challengeParaBgColor: ''
         },
         backgroundImages: [
-            '/taskManagerBgOne.png', 
-            '/taskManagerBgTwo.png'
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FTaskManagerProjImages%2FtaskManagerBgOne.png?alt=media&token=b86701d9-6e80-4df5-a4e1-5dca77c47bcb', 
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FTaskManagerProjImages%2FtaskManagerBgTwo.png?alt=media&token=e9944ae6-96dd-431a-97f7-4440e699da07'
         ],
         mainImg: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FTaskManagerProjImages%2FTASK-MANAGER.svg?alt=media&token=e791380d-1a77-4887-a1dc-67e34bdb0eaa',
         challengeImage: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FTaskManagerProjImages%2FtaskManagerMainPic.png?alt=media&token=f909c948-c7de-445c-a314-44284e295740',
@@ -269,7 +269,7 @@ const data = [
             challengeParaBgColor: ''
         },
         backgroundImages: [
-            '/mtlHavenMainPic.svg', 
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FMTLHavenProjImages%2FmtlHavenMainPic.svg?alt=media&token=1f67ac50-2450-4158-9f51-3f53eba58ce1', 
             '/taskManagerBgTwo.png'
         ],
         mainImg: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FMTLHavenProjImages%2FMTL-HavenMain.svg?alt=media&token=39cce1a8-e124-4dc2-9bff-5eb4a9769ea7',

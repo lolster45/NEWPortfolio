@@ -12,67 +12,7 @@ import typesciptLogo from "../public/typescriptLogo.png"
 const data = [
     {
         index: 0,
-        searchTitle: "Anime",
-        displayTitle: "Anime",
-        links: {
-            Github: "https://github.com/lolster45/AnimeWebsite",
-            live: "https://animenew-82be3.web.app/"
-        },
-        colors: {
-            featuredColor: '2F4858',
-            headerColor: 'ffffff',
-            paragraphBgColor: '1E1E1E',
-            textColor: '9EE493',
-            challengeParaBgColor: ''
-        },
-        backgroundImages: [
-            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FAnimeProjImages%2FanimeBgOne.svg?alt=media&token=3eb5284b-4314-406c-a15e-540121e809e8',
-            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FAnimeProjImages%2FanimeBgTwo.svg?alt=media&token=40794473-4c93-4b93-a57b-8e7562c237f2'
-        ],
-        mainImg: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FAnimeProjImages%2FNEANIME.png?alt=media&token=8eb32aa7-04d8-4521-b45a-450bc44d4b76',
-        icons: [
-            {
-                img: htmlImage, 
-                name: "HTML5"
-            }, 
-            {
-                img: cssImage, 
-                name: "CSS3"
-            }, 
-            {
-                img: jsImage, 
-                name: "JavaScript"
-            }, 
-            {
-                img: reactImage, 
-                name: "ReactJS"
-            }, 
-            {
-                img: firebaseImage, 
-                name: "Firebase"
-            }, 
-            {
-                img: sassImage, 
-                name: "SASS"
-            }, 
-        ],
-        subImgs: [
-            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FAnimeProjImages%2FanimeHomeScreenPic.png?alt=media&token=d0f6cd3d-4fa2-4822-8a37-2131238bedaf', 
-            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FAnimeProjImages%2FanimeMoreInfo.png?alt=media&token=a230bda3-862f-40c4-93eb-a70fd9bf477f'
-        ],
-        challengeImage: '/oldAnimePicProj.png',
-        text: "Anime website using a RestAPI to fetch data of anime, manga, manhwa and such and integrated with firebase so the user is able to bookmark their favorite anime to remember for later. Also offering mobile support for the best viewing experience on both platforms.",
-        paragraphs: {
-            challengeP: 'This project was the very first big project I attempted to build. Starting from a simple site, to a more complex site with a backend and three sections working simultaenously, many challenges have popped up. One of many being, how to persist data on refresh, which sounds like an amateur concept to any experienced developer, but to me at the time, this was a "Holy Sh*t" moment.',
-            textOne: 'Going from a messy, outdated site (sorry, old site) to a modern, refreshing look was an arduous task. Struggling to create something beautiful and original, and then translating it into code, requires a special kind of skill. So, I racked my brain for ideas on what to do. Naturally, I typed "Figma" into my search bar and browsed for designs.',
-            textTwo: 'At the time of creating this "masterpiece," I thought to myself, "Do I have too much power?" It felt almost enlightening—to have figured everything out, to work with a REST API, and to connect everything seamlessly. I felt like a genius. But, as any other coder will tell you, I quickly learned that this wasn’t exactly the case...',
-
-            textThree: "Some say 'from rags to riches,' but I went the other way. From feeling high and mighty to saying, 'Wow... I'm horrible.' A quick Google search revealed the competition, and, well... my pride was shattered (not really). This was an eye-opener—not to be complacent, but to strive to get better every day. Slowly, I began building, getting better and better."
-        }
-    },
-    {
-        index: 1,
-        searchTitle: "vivabkesaustin",
+        searchTitle: "vivabikesaustin",
         displayTitle: "VivaBikes Austin",
         links: {
             Github: "https://github.com/lolster45/BikesViva",
@@ -133,6 +73,66 @@ const data = [
         }
     },
     {
+        index: 1,
+        searchTitle: "Anime",
+        displayTitle: "Anime",
+        links: {
+            Github: "https://github.com/lolster45/AnimeWebsite",
+            live: "https://animenew-82be3.web.app/"
+        },
+        colors: {
+            featuredColor: '2F4858',
+            headerColor: 'ffffff',
+            paragraphBgColor: '1E1E1E',
+            textColor: '9EE493',
+            challengeParaBgColor: ''
+        },
+        backgroundImages: [
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FAnimeProjImages%2FanimeBgOne.svg?alt=media&token=3eb5284b-4314-406c-a15e-540121e809e8',
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FAnimeProjImages%2FanimeBgTwo.svg?alt=media&token=40794473-4c93-4b93-a57b-8e7562c237f2'
+        ],
+        mainImg: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FAnimeProjImages%2FNEANIME.png?alt=media&token=8eb32aa7-04d8-4521-b45a-450bc44d4b76',
+        icons: [
+            {
+                img: htmlImage, 
+                name: "HTML5"
+            }, 
+            {
+                img: cssImage, 
+                name: "CSS3"
+            }, 
+            {
+                img: jsImage, 
+                name: "JavaScript"
+            }, 
+            {
+                img: reactImage, 
+                name: "ReactJS"
+            }, 
+            {
+                img: firebaseImage, 
+                name: "Firebase"
+            }, 
+            {
+                img: sassImage, 
+                name: "SASS"
+            }, 
+        ],
+        subImgs: [
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FAnimeProjImages%2FanimeHomeScreenPic.png?alt=media&token=d0f6cd3d-4fa2-4822-8a37-2131238bedaf', 
+            'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FAnimeProjImages%2FanimeMoreInfo.png?alt=media&token=a230bda3-862f-40c4-93eb-a70fd9bf477f'
+        ],
+        challengeImage: '/oldAnimePicProj.png',
+        text: "Anime website using a RestAPI to fetch data of anime, manga, manhwa and such and integrated with firebase so the user is able to bookmark their favorite anime to remember for later. Also offering mobile support for the best viewing experience on both platforms.",
+        paragraphs: {
+            challengeP: 'This project was the very first big project I attempted to build. Starting from a simple site, to a more complex site with a backend and three sections working simultaenously, many challenges have popped up. One of many being, how to persist data on refresh, which sounds like an amateur concept to any experienced developer, but to me at the time, this was a "Holy Sh*t" moment.',
+            textOne: 'Going from a messy, outdated site (sorry, old site) to a modern, refreshing look was an arduous task. Struggling to create something beautiful and original, and then translating it into code, requires a special kind of skill. So, I racked my brain for ideas on what to do. Naturally, I typed "Figma" into my search bar and browsed for designs.',
+            textTwo: 'At the time of creating this "masterpiece," I thought to myself, "Do I have too much power?" It felt almost enlightening—to have figured everything out, to work with a REST API, and to connect everything seamlessly. I felt like a genius. But, as any other coder will tell you, I quickly learned that this wasn’t exactly the case...',
+
+            textThree: "Some say 'from rags to riches,' but I went the other way. From feeling high and mighty to saying, 'Wow... I'm horrible.' A quick Google search revealed the competition, and, well... my pride was shattered (not really). This was an eye-opener—not to be complacent, but to strive to get better every day. Slowly, I began building, getting better and better."
+        }
+    },
+    {
         index: 2,
         searchTitle: "nextlevelmovers",
         displayTitle: "Next Level Movers",
@@ -148,7 +148,7 @@ const data = [
             challengeParaBgColor: '000000'
         },
         backgroundImages: [
-            '/nextLevelMoversBackground.png', 
+            '/nextLevelMoversBgOne.png', 
             'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FNextLevelMoversProjImages%2FnextLevelMoversBgTwo.png?alt=media&token=fa7700b3-ae9c-427e-8a5c-7ef17f798dc9'
         ],
         mainImg: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FNextLevelMoversProjImages%2FnextLevelMoversMainPic.png?alt=media&token=7a0ddd07-6ef0-4a48-8605-d1555a70563f',
@@ -399,6 +399,62 @@ const projectsMain = [
             {
                 img: reactImage, 
                 name: "ReactJS"
+            }, 
+            {
+                img: firebaseImage, 
+                name: "Firebase"
+            }, 
+            {
+                img: sassImage, 
+                name: "SASS"
+            }, 
+        ],
+        title: 'ECOM website',
+        links: {
+            github: 'https://github.com/lolster45/ECOM/tree/NEW-VERSION',
+            live: 'https://ecom-nu-three.vercel.app/'
+        },
+        image: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioHeroSectionImages%2FECOM.png?alt=media&token=14e0dd12-a4f8-491d-9401-a9bf9f9e117e'
+    },
+    {
+        icons: [
+            {
+                img: htmlImage, 
+                name: "HTML5"
+            }, 
+            {
+                img: cssImage, 
+                name: "CSS3"
+            }, 
+            {
+                img: jsImage, 
+                name: "JavaScript"
+            }
+        ],
+        title: 'Tic Tac Toe',
+        links: {
+            github: 'https://lolster45.github.io/Tic-Tac-Toe/',
+            live: 'https://lolster45.github.io/Tic-Tac-Toe/'
+        },
+        image: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioHeroSectionImages%2FticTacToe.png?alt=media&token=1411dd65-7e87-440e-bdda-60eb3c21ba23'
+    },
+    {
+        icons: [
+            {
+                img: htmlImage, 
+                name: "HTML5"
+            }, 
+            {
+                img: cssImage, 
+                name: "CSS3"
+            }, 
+            {
+                img: jsImage, 
+                name: "JavaScript"
+            }, 
+            {
+                img: reactImage, 
+                name: "ReactJS"
             },
             {
                 img: sassImage, 
@@ -463,41 +519,7 @@ const projectsMain = [
             live: 'https://mark-up-editor-six.vercel.app/'
         },
         image: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioHeroSectionImages%2FmarkUp.png?alt=media&token=e3a96133-a4bb-4558-9375-d2c48f01a5d7'
-    },
-    {
-        icons: [
-            {
-                img: htmlImage, 
-                name: "HTML5"
-            }, 
-            {
-                img: cssImage, 
-                name: "CSS3"
-            }, 
-            {
-                img: jsImage, 
-                name: "JavaScript"
-            }, 
-            {
-                img: reactImage, 
-                name: "ReactJS"
-            }, 
-            {
-                img: firebaseImage, 
-                name: "Firebase"
-            }, 
-            {
-                img: sassImage, 
-                name: "SASS"
-            }, 
-        ],
-        title: 'ECOM website',
-        links: {
-            github: 'https://github.com/lolster45/ECOM/tree/NEW-VERSION',
-            live: 'https://ecom-nu-three.vercel.app/'
-        },
-        image: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioHeroSectionImages%2FECOM.png?alt=media&token=14e0dd12-a4f8-491d-9401-a9bf9f9e117e'
-    },
+    },   
     {
         icons: [
             {
@@ -523,29 +545,7 @@ const projectsMain = [
             live: 'https://lolster45.github.io/Color-Scheme-Maker/'
         },
         image: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioHeroSectionImages%2FcolorScheme.png?alt=media&token=5f4c581a-d180-46a2-9d16-c18450ff32d8'
-    },
-    {
-        icons: [
-            {
-                img: htmlImage, 
-                name: "HTML5"
-            }, 
-            {
-                img: cssImage, 
-                name: "CSS3"
-            }, 
-            {
-                img: jsImage, 
-                name: "JavaScript"
-            }
-        ],
-        title: 'Tic Tac Toe',
-        links: {
-            github: 'https://lolster45.github.io/Tic-Tac-Toe/',
-            live: 'https://lolster45.github.io/Tic-Tac-Toe/'
-        },
-        image: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioHeroSectionImages%2FticTacToe.png?alt=media&token=1411dd65-7e87-440e-bdda-60eb3c21ba23'
-    },
+    },  
     {
         icons: [
             {

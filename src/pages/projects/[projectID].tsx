@@ -136,7 +136,7 @@ const ProjectsPage = ({ dataM, pageLoading, setPageLoading }: {dataM: SingleProj
             {!pageLoading &&
             <>
                 <nav className={`${pageLoading === false ? styles.active : ''}`}>
-                    {dataM.searchTitle !== "Anime" && (
+                    {dataM.searchTitle !== "vivabikesaustin" && (
                         <Link 
                             className={styles.first_nav} 
                             href={`/projects/${data[dataM.index - 1].searchTitle}`}
@@ -183,7 +183,6 @@ const ProjectsPage = ({ dataM, pageLoading, setPageLoading }: {dataM: SingleProj
                         variants={rightCardVariants}
                     >
                         <img src={dataM.mainImg} alt="main image showing off the project i built, also known as the homepage of my website" />
-
                     </motion.div>
 
                 </motion.div>

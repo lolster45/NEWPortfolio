@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
 
   const navBarItems = [
-    { route: 'projects/Anime', name: 'Projects'}, 
+    { route: 'projects/vivabikesaustin', name: 'Projects'}, 
     { route: 'resume', name: 'Resume'}, 
   ];
 

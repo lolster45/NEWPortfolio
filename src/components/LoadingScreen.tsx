@@ -8,6 +8,7 @@ const LoadingScreen = ({ loading }: { loading: boolean }) => {
     return (
         <div className={`${styles.loadingScreen} ${loading ? styles.active : ''}`}>
             <div className={styles.loader}></div> {/* Cool animation */}
+            <h1>Loading...</h1>
         </div>
     );
 };

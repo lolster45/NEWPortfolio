@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     padding: 30px 10px 30px 10px;
-    background-image: url('/blob-scene-haikei.svg');
+    background-image: url('/moreProjBg.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -23,7 +23,7 @@
             margin-top: 40px;
             margin-bottom: 30px;
             font-size: 2rem;
-            color: white;
+            color: var(--pink);
         }
         .projects_wrapper {
             position: relative;
@@ -57,7 +57,7 @@
                         opacity: 0;
                         transform: translateY(280px);
                         
-                        filter: grayscale(100%) brightness(70%) blur(2px) !important;
+                        filter: brightness(70%) blur(2px) !important;
 
                         transition: transform 1s ease, opacity 1s ease, filter 0.8s ease;
 
@@ -87,21 +87,19 @@
                         a svg {
                             font-size: 1rem;
                             color: white;
+
+                            &:hover {
+                                color: var(--pink);
+                            }
                         }
-                       
-                        .git_link svg:hover {
-                            color: #90E0EF;
-                        }
-                        .live_link svg:hover {
-                            color: red;
-                        }
+                     
                         
                     }
 
                     &:hover {
 
                         img {
-                            filter: grayscale(0%) brightness(100%) !important;
+                            filter: brightness(100%) !important;
                         }
 
 
@@ -234,6 +232,11 @@
                     flex-direction: row;
                     grid-column: 1 / span 2;
                     grid-row: 5;
+                    .image_container {
+                        img {
+                            object-position: top;
+                        }
+                    }
                 }
                 &:nth-of-type(6) {
                     grid-column: 1 / span 2;

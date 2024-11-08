@@ -8,11 +8,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #26184D;
+    background-color: #120E1E;
     z-index: 999;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s ease, visibility 0.5s ease;
+
+    display: flex;
+    flex-direction: column;
+    color: var(--pink);
+
+    h1 {
+      margin-top: 40px;
+      font-weight: 100;
+      font-size: 1rem;
+    }
 }
 
 .loadingScreen.active {
@@ -21,21 +31,41 @@
 }
 
 /* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
 .loader {
-    width: 45px;
-    aspect-ratio: .75;
-    --c: no-repeat linear-gradient(#ffffff 0 0);
-    background: 
-      var(--c) 0%   50%,
-      var(--c) 50%  50%,
-      var(--c) 100% 50%;
-    animation: l7 1s infinite linear alternate;
-  }
-  @keyframes l7 {
-    0%  {background-size: 20% 50% ,20% 50% ,20% 50% }
-    20% {background-size: 20% 20% ,20% 50% ,20% 50% }
-    40% {background-size: 20% 100%,20% 20% ,20% 50% }
-    60% {background-size: 20% 50% ,20% 100%,20% 20% }
-    80% {background-size: 20% 50% ,20% 50% ,20% 100%}
-    100%{background-size: 20% 50% ,20% 50% ,20% 50% }
-  }
+  width: 50px;
+  aspect-ratio: 1;
+  color: #000;
+  border: 2px solid;
+  display: grid;
+  box-sizing: border-box;
+  animation: l1 4s infinite linear;
+}
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  margin: auto;
+  width: 70.7%;
+  aspect-ratio: 1;
+  border: 2px solid;
+  box-sizing: content-box;
+  animation: inherit;
+}
+.loader {
+  border: 2px solid white;
+}
+.loader::before {
+  border: 2px solid white;
+}
+.loader::after {
+  width: 50%;
+  aspect-ratio: 1;
+  border: 2px solid white;
+  color: white;
+  animation-duration: 2s;
+}
+@keyframes l1{
+  100% {transform:rotate(1turn)}
+}

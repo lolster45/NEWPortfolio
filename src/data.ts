@@ -399,6 +399,122 @@ const projectsMain = [
             {
                 img: reactImage, 
                 name: "ReactJS"
+            },
+            {
+                img: sassImage, 
+                name: "SASS"
+            }, 
+        ],
+        title: "AnimeCodex",
+        links: {
+            github: 'https://github.com/lolster45/AnimeWebsite',
+            live: 'https://anime-web-new.vercel.app/'
+        },
+        image: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FAnimeProjImages%2FNEANIME.png?alt=media&token=8eb32aa7-04d8-4521-b45a-450bc44d4b76 '
+    }, 
+    {
+        icons: [
+            {
+                img: htmlImage, 
+                name: "HTML5"
+            }, 
+            {
+                img: cssImage, 
+                name: "CSS3"
+            }, 
+            {
+                img: jsImage, 
+                name: "JavaScript"
+            }, 
+            {
+                img: reactImage, 
+                name: "ReactJS"
+            },
+            {
+                img: sassImage, 
+                name: "SASS"
+            }, 
+        ],
+        title: "VivaBikesAustin",
+        links: {
+            github: 'https://github.com/lolster45/BikesViva',
+            live: 'https://bikes-viva.vercel.app/'
+        },
+        image: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FVivaBikeProjImages%2FvivaBikeMainPicZero.png?alt=media&token=49c4804f-33d7-4e81-928d-c61acb50cba1'
+    },
+    {
+        icons: [
+            {
+                img: htmlImage, 
+                name: "HTML5"
+            }, 
+            {
+                img: cssImage, 
+                name: "CSS3"
+            }, 
+            {
+                img: jsImage, 
+                name: "JavaScript"
+            }, 
+            {
+                img: reactImage, 
+                name: "ReactJS"
+            },
+            {
+                img: sassImage, 
+                name: "SASS"
+            }, 
+        ],
+        title: "NextLevelMovers",
+        links: {
+            github: 'https://github.com/lolster45/NextLevelMovers',
+            live: 'https://www.nextlevelmovingcompany.com/'
+        },
+        image: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FNextLevelMoversProjImages%2FnextLevelMoversMainPic.png?alt=media&token=7a0ddd07-6ef0-4a48-8605-d1555a70563f'
+    },  
+    {
+        icons: [
+            {
+                img: htmlImage, 
+                name: "HTML5"
+            }, 
+            {
+                img: cssImage, 
+                name: "CSS3"
+            }, 
+            {
+                img: jsImage, 
+                name: "JavaScript"
+            },
+            {
+                img: sassImage, 
+                name: "SASS"
+            }, 
+        ],
+        title: 'Task Manager',
+        links: {
+            github: 'https://github.com/lolster45/Task-Mangement',
+            live: 'https://task-management-624c8.web.app/'
+        },
+        image: "https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioProjectsImageSection%2FTaskManagerProjImages%2FtaskManagerSubPicOne.png?alt=media&token=752f7546-95a0-424b-88ea-e33c03c48629"
+    }, 
+    {
+        icons: [
+            {
+                img: htmlImage, 
+                name: "HTML5"
+            }, 
+            {
+                img: cssImage, 
+                name: "CSS3"
+            }, 
+            {
+                img: jsImage, 
+                name: "JavaScript"
+            }, 
+            {
+                img: reactImage, 
+                name: "ReactJS"
             }, 
             {
                 img: firebaseImage, 
@@ -468,106 +584,58 @@ const projectsMain = [
         },
         image: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioHeroSectionImages%2FquizProj.png?alt=media&token=0c83623b-2817-41d4-a19a-8ce42201a591'
     },
-    {
-        icons: [
-            {
-                img: htmlImage, 
-                name: "HTML5"
-            }, 
-            {
-                img: cssImage, 
-                name: "CSS3"
-            }, 
-            {
-                img: jsImage, 
-                name: "JavaScript"
-            }
-        ],
-        title: 'Calculator',
-        links: {
-            github: 'https://github.com/lolster45/Calculator-brainnest',
-            live: 'https://lolster45.github.io/Calculator-brainnest/'
-        },
-        image: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioHeroSectionImages%2FcalculatorProj.png?alt=media&token=f15d7a79-55a1-48b9-8bd2-19be08b7ded4',
-    },
-    {
-        icons: [
-            {
-                img: htmlImage, 
-                name: "HTML5"
-            }, 
-            {
-                img: cssImage, 
-                name: "CSS3"
-            }, 
-            {
-                img: jsImage, 
-                name: "JavaScript"
-            }, 
-            {
-                img: reactImage, 
-                name: "ReactJS"
-            },
-            {
-                img: sassImage, 
-                name: "SASS"
-            }, 
-        ],
-        title: "Mark Up",
-        links: {
-            github: 'https://github.com/lolster45/MarkUpEditor',
-            live: 'https://mark-up-editor-six.vercel.app/'
-        },
-        image: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioHeroSectionImages%2FmarkUp.png?alt=media&token=e3a96133-a4bb-4558-9375-d2c48f01a5d7'
-    },   
-    {
-        icons: [
-            {
-                img: htmlImage, 
-                name: "HTML5"
-            }, 
-            {
-                img: cssImage, 
-                name: "CSS3"
-            }, 
-            {
-                img: jsImage, 
-                name: "JavaScript"
-            },
-            {
-                img: sassImage, 
-                name: "SASS"
-            }, 
-        ],
-        title: 'Color Scheme Generator',
-        links: {
-            github: 'https://github.com/lolster45/Color-Scheme-Maker',
-            live: 'https://lolster45.github.io/Color-Scheme-Maker/'
-        },
-        image: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioHeroSectionImages%2FcolorScheme.png?alt=media&token=5f4c581a-d180-46a2-9d16-c18450ff32d8'
-    },  
-    {
-        icons: [
-            {
-                img: htmlImage, 
-                name: "HTML5"
-            }, 
-            {
-                img: cssImage, 
-                name: "CSS3"
-            }, 
-            {
-                img: jsImage, 
-                name: "JavaScript"
-            }
-        ],
-        title: 'Password Gen.',
-        links: {
-            github: 'https://github.com/lolster45/Password-generator',
-            live: 'https://lolster45.github.io/Password-generator/'
-        },
-        image: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioHeroSectionImages%2FpasswordGenerator.png?alt=media&token=c053c37e-508b-4ac5-b1ed-788df20dab6e'
-    }
+    // {
+    //     icons: [
+    //         {
+    //             img: htmlImage, 
+    //             name: "HTML5"
+    //         }, 
+    //         {
+    //             img: cssImage, 
+    //             name: "CSS3"
+    //         }, 
+    //         {
+    //             img: jsImage, 
+    //             name: "JavaScript"
+    //         }
+    //     ],
+    //     title: 'Calculator',
+    //     links: {
+    //         github: 'https://github.com/lolster45/Calculator-brainnest',
+    //         live: 'https://lolster45.github.io/Calculator-brainnest/'
+    //     },
+    //     image: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioHeroSectionImages%2FcalculatorProj.png?alt=media&token=f15d7a79-55a1-48b9-8bd2-19be08b7ded4',
+    // },
+    // {
+    //     icons: [
+    //         {
+    //             img: htmlImage, 
+    //             name: "HTML5"
+    //         }, 
+    //         {
+    //             img: cssImage, 
+    //             name: "CSS3"
+    //         }, 
+    //         {
+    //             img: jsImage, 
+    //             name: "JavaScript"
+    //         },
+    //         {
+    //             img: null,
+    //             name: 'Jest'
+    //         }
+    //     ],
+    //     title: 'Password Gen.',
+    //     links: {
+    //         github: 'https://github.com/lolster45/Password-generator',
+    //         live: 'https://lolster45.github.io/Password-generator/'
+    //     },
+    //     image: 'https://firebasestorage.googleapis.com/v0/b/image-uploader-ff8b1.appspot.com/o/MyPortfolioHeroSectionImages%2FpasswordGenerator.png?alt=media&token=c053c37e-508b-4ac5-b1ed-788df20dab6e'
+    // },
+
+  
+
+
 ];
 
 

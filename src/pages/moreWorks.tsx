@@ -23,7 +23,7 @@ const moreWorks = () => {
     return (
         <section id={styles.more_work_section}>
             <div className={styles.projects}>
-                <h1>Notable Projects</h1>
+                <h1 className='bebas-neue-regular'>Notable Projects</h1>
                 <div 
                     className={styles.projects_wrapper}
                 > 

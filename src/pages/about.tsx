@@ -45,7 +45,7 @@ const About = () => {
     return (
         <section id={styles.about_me_page} className="main-font-family">
             <main id={styles.main} ref={ref} className={`${inView ? styles.active : ""}`}>
-                <h1>Experience and Skills</h1>
+                <h1 className='bebas-neue-regular'>Myself</h1>
                 <div>
                     <nav>
                         <span
@@ -96,7 +96,7 @@ const About = () => {
                                         <Image 
                                             src={Profile}
                                             alt="profile picture of me" 
-                                            objectFit="contain"
+                                            style={{ objectFit: "contain" }} 
                                         />                                   
                                     </div>
                             </div>
@@ -115,7 +115,7 @@ const About = () => {
                                     </li>
                                     <li>
                                         <h3>Development</h3>
-                                        <p>Javascript(ES6 +), APIs, React, Typescript, NextJS, Firebase</p>
+                                        <p>Javascript(ES6 +), APIs, React, Typescript, NextJS, Firebase, NodeJS, Express</p>
                                     </li>
                                     <li>
                                         <h3>Tools</h3>

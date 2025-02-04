@@ -4,9 +4,9 @@
     padding-bottom: 4rem;
     min-height: 100vh;
     height: fit-content;
-    color: var(--dark-blue);
+    //color: var(--dark-blue);
     font-family: var(--main-font);
-    background: #120e1e;
+    background: #080808;
     #main {
         position: relative;
         height: fit-content;
@@ -26,7 +26,7 @@
             font-size: 2.8rem;
             margin-bottom: 130px;
             color: white;
-            text-shadow: rgba(70,17,119,0.9) 0px 0px 21px;
+            text-shadow: 0 0 5px rgb(255, 255, 255);
             text-align: center;
         }
         > div {
@@ -44,6 +44,7 @@
                     margin-right: 70px;
                     font-size: 1.3rem;
                     color: var(--text-color);
+                    color: rgb(255, 255, 255);
                     &::after {
                         content: "";
                         position: absolute;
@@ -51,7 +52,7 @@
                         width: 0%;
                         left: 0;
                         bottom: -10px;
-                        background-color: var(--pink);
+                        background-color: rgb(255, 255, 255);
                         transition: 0.2s;
                     }
                     &.active::after {
@@ -70,6 +71,8 @@
                     flex-direction: row;
                     justify-content: space-evenly;
                     row-gap: 80px;
+
+                    //background-color: black;
                     #left_side_aboutMe {
                         position: relative;
                         width: 50%;
@@ -79,6 +82,7 @@
                            line-height: 28px;
                            color: rgb(214, 214, 214);
                            text-shadow: rgba(70,17,119,0.9) 0px 0px 21px;
+
                         }
     
                         >div {
@@ -93,9 +97,9 @@
                                 margin-bottom: 30px;
                                 width: 50%;
                                 h3 {
-                                    color: var(--pink);
+                                    color: white;
                                     margin-bottom: 10px;
-                                    text-shadow: 0 0 10px rgb(118, 17, 180);
+                                    text-shadow: 0 0 8px rgb(255, 255, 255);
     
                                 }
                                 span {
@@ -157,33 +161,26 @@
                                 display: inline-flex;
                                 width: 15px;
                                 height: 15px;
-                                border: 2px solid var(--pink);
+                                border: 2px solid white;
                                 border-radius: 50%;
                                 margin-right: 10px; /* Adjust margin-right */
                             }
                             padding-right: 1.75rem;
                             padding-bottom: 3.5rem;
                             width: 50%;
-                            
-    
-                           // text-shadow: 0 0 10px rgb(118, 17, 180);
-    
-                            //background-color: blue;
-                            
                             h3 {
                                 display: inline-block;
                                 margin: 0;
-                                padding-bottom: 4px;
-                                font-size: 1.4rem;
+                                padding-bottom: 8px;
+                                font-size: 1.3rem;
                                 position: relative;
                                 color: var(--text-color);
-                                
                             }
                             p {
                                 display: block;
                                 font-size: 0.9rem;
                                 margin-left: 40px;
-                                color: white;
+                                color: rgb(210, 210, 210);
                             }
                         }
                     }
@@ -214,7 +211,7 @@
                                 display: inline-flex;
                                 width: 15px;
                                 height: 15px;
-                                border: 2px solid var(--pink);
+                                border: 2px solid white;
                                 border-radius: 50%;
                                 margin-right: 10px; /* Adjust margin-right */
                             }
@@ -236,7 +233,7 @@
                             }
                             .types {
                                 font-size: 0.9rem;
-                                color: var(--pink);
+                                color: var(--text-color);
                             }
                             div {
                                 color: white;

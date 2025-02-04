@@ -1,0 +1,120 @@
+
+.rouge_wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 400px;
+    width: 100%;
+    background-color: #070707;
+    border-top: 2px solid #f1a814;
+    border-bottom: 2px solid #f1a814;
+    background-image: url('../../public/Group2.png');
+    background-position: top;
+    background-size: cover;
+    .left {
+        text-align: center;
+        h2 {
+            font-size: 2rem;
+            letter-spacing: 1px;
+            color: white;
+            margin-bottom: 30px;
+            color: #fdfdfd;
+            letter-spacing: 4px;
+        }
+        p {
+            font-size: 1.2rem;
+            color: rgb(218, 216, 216);
+        }
+    }
+
+    form {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 40%;
+        padding-top: 20px;
+        input {
+            height: 50px;
+            width: 100%;
+            border: none;
+            outline: none;
+            padding-left: 15px;
+            font-size: 1.3rem;
+            color: black;
+            background-color: rgb(30, 30, 30);
+            border: 2px solid black;
+            background-color: #f1ba1498;
+            &::placeholder {
+                color: black;
+            }
+            &:focus::placeholder {
+                color: transparent;
+            }
+
+            transition: margin-bottom 0.2s ease;
+
+            &.active {
+                margin-bottom: 50%;
+            }
+        }
+        .ai_output {
+            top: 70px;
+            position: absolute;
+            padding-top: 40px;
+            height: auto;
+            font-size: 1.5rem;
+            width: 100%;
+            padding-left: 10px;
+            line-height: 28px;
+            color: white;
+
+            //background-color: green;
+        }
+        .loader {
+            width: 20px;
+            aspect-ratio: 1;
+            --c: linear-gradient(black 0 0);
+            --m: radial-gradient(farthest-side,black 92%,hsla(0, 0%, 100%, 0));
+            background: 
+            var(--c),var(--m),
+            var(--c),var(--m), 
+            var(--c),var(--m);
+            background-size: 5px 9px,5px 5px;
+            background-repeat: no-repeat;
+            animation: l17 1s infinite linear;
+        }
+        @keyframes l17 {
+            0%,5% {background-position: 0 50%             ,0 0               ,50% 50%             ,50% 0               ,100% 50%             ,100% 0}
+            12.5% {background-position: 0 50%             ,0 calc(50% - 10px),50% 50%             ,50% 0               ,100% 50%             ,100% 0}
+            25%   {background-position: 0 calc(50% + 10px),0 50%             ,50% 50%             ,50% 0               ,100% 50%             ,100% 0}
+            37.5% {background-position: 0 calc(50% + 10px),0 50%             ,50% 50%             ,50% calc(50% - 10px),100% 50%             ,100% 0}
+            50%   {background-position: 0 50%             ,0 0               ,50% calc(50% + 10px),50% 50%             ,100% 50%             ,100% 0}
+            62.5% {background-position: 0 50%             ,0 0               ,50% calc(50% + 10px),50% 50%             ,100% 50%             ,100% calc(50% - 10px)}
+            75%   {background-position: 0 50%             ,0 0               ,50% 50%             ,50% 0               ,100% calc(50% + 10px),100% 50%}
+            87.5% {background-position: 0 50%             ,0 0               ,50% 50%             ,50% 0               ,100% calc(50% + 10px),100% 50%}
+            95%,
+            100%  {background-position: 0 50%             ,0 0               ,50% 50%             ,50% 0               ,100% 50%             ,100% 0}
+        }
+
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+
+
+    .rouge_wrap {
+        padding-top: 20px;
+        flex-direction: column;
+        align-items: center;
+        form {
+            width: 80%;
+            .ai_output {
+                overflow-y: scroll;
+            }
+        }
+    }
+}
